@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video controls>
+        <source src="video/sample-video.mp4" />
+        <source src="video/sample-video.webm">
+        <track src="legenda.vtt" kind="captions" srclang="en" />
+        <track default src="legenda-pt-br.vtt" kind="captions" srclang="pt-br" />
+        youtr browser does not support the video
+    </video>
+</body>
+</html>
+
+<!--
+  TAG <video> — Resumo rápido
+
+  A <video> é usada para incorporar vídeos diretamente em páginas HTML.
+  Permite controlar reprodução, áudio, legendas e configurações visuais.
+
+  ---------------------------------------------------------------
+  FUNÇÃO PRINCIPAL:
+    Exibir e controlar vídeos locais ou externos no navegador.
+
+  ---------------------------------------------------------------
+  ATRIBUTOS ESSENCIAIS:
+
+    src           → Caminho do vídeo (MP4, WebM, Ogg)
+                     Ex.: "videos/intro.mp4"
+
+    controls      → Exibe controles padrão (play, pause, volume)
+
+    autoplay      → Reproduz automaticamente ao carregar
+                     *Geralmente exige "muted" por política dos navegadores.*
+
+    muted         → Começa sem áudio / necessário para autoplay automático
+
+    loop          → Reinicia o vídeo ao terminar
+
+    poster        → Imagem de capa exibida antes do play
+
+    width / height → Tamanho do player (melhor controlar por CSS)
+
+  ---------------------------------------------------------------
+  ATRIBUTOS ÚTEIS:
+
+    preload       → Controle do carregamento:
+                     - "none"      → não carrega nada antecipado
+                     - "metadata"  → carrega apenas informações básicas
+                     - "auto"      → navegador decide (padrão)
+
+    playsinline   → Permite reprodução "inline" em mobile (sem tela cheia forçada)
+
+    crossorigin   → Controle CORS quando vídeo é externo:
+                     - "anonymous"
+                     - "use-credentials"
+
+  ---------------------------------------------------------------
+  ELEMENTOS INTERNOS IMPORTANTES:
+
+    <source>      → Permite múltiplos formatos de vídeo
+                     (navegador escolhe o compatível)
+
+    <track>       → Adiciona legendas, captions ou descrições:
+                     atributos:
+                      - kind="subtitles" | "captions" | "descriptions"
+                      - src="legendas.vtt"
+                      - srclang="pt"
+                      - label="Português"
+                      - default
+
+  ---------------------------------------------------------------
+  EXEMPLO COMPLETO:
+
+    <video width="600" controls poster="capa.jpg" preload="metadata">
+      <source src="video.mp4" type="video/mp4">
+      <source src="video.webm" type="video/webm">
+
+      <track
+        src="legendas.vtt"
+        kind="subtitles"
+        srclang="pt"
+        label="Português"
+        default
+      />
+
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+  ---------------------------------------------------------------
+  BOAS PRÁTICAS:
+    - Sempre usar múltiplos formatos com <source> se possível.
+    - Usar preload="none" para economizar dados.
+    - Em autoplay, sempre adicionar muted.
+    - Controlar layout e tamanho por CSS.
+    - Usar <track> para acessibilidade.
+
+-->

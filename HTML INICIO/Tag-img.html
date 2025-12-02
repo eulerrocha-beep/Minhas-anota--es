@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midia img</title>
+</head>
+<body>
+    <img src="globe.svg" >
+    <img src="image/photo.jpg" >
+    <img src="image/photo.png" >
+    <img src="image/logotipo" title="logotipo" alt="descrição da imagem" >
+</body>
+</html>
+
+<!--
+  TAG <img> — Resumo rápido
+
+  A <img> é usada para exibir imagens em páginas HTML.
+  Ela é uma tag auto-fechada (não possui conteúdo interno).
+
+  ---------------------------------------------------------------
+  FUNÇÃO PRINCIPAL:
+    Exibir uma imagem a partir de um arquivo externo (URL, local ou base64).
+
+  ---------------------------------------------------------------
+  ATRIBUTOS ESSENCIAIS:
+
+    src       → Caminho da imagem (obrigatório)
+                 Exemplos: "img/foto.png", "https://site.com/img.jpg"
+
+    alt       → Texto alternativo (obrigatório para acessibilidade)
+                 Exibe descrição caso a imagem não carregue
+                 Importante para leitores de tela e SEO
+
+  ---------------------------------------------------------------
+  ATRIBUTOS MUITO ÚTEIS:
+
+    width     → Largura da imagem (px ou %)
+    height    → Altura da imagem (px ou %)
+                 *Evite definir os dois para não distorcer.*
+
+    title     → Texto exibido ao passar o mouse (tooltip)
+
+    loading   → Controle de carregamento:
+                 - "lazy"  → carrega apenas quando visível na tela (melhor performance)
+                 - "eager" → carrega imediatamente
+
+    decoding  → Ajuda no processamento:
+                 - "async"  → decodificação assíncrona
+                 - "sync"   → decodificação síncrona
+                 - "auto"   → navegador decide
+
+    referrerpolicy → Define política de referência ao carregar a imagem
+                      Ex: "no-referrer"
+
+    crossorigin → Necessário para imagens externas em canvas:
+                   - "anonymous"
+                   - "use-credentials"
+
+  ---------------------------------------------------------------
+  ATRIBUTOS RELACIONADOS A RESPONSIVIDADE:
+
+    srcset    → Conjunto de imagens para diferentes tamanhos de tela
+    sizes     → Largura da imagem conforme o tamanho da viewport
+
+    Exemplo:
+      <img
+        src="img/grande.jpg"
+        srcset="img/pequena.jpg 480w, img/media.jpg 800w, img/grande.jpg 1200w"
+        sizes="(max-width: 600px) 480px, 800px"
+        alt="Exemplo de imagem responsiva"
+      />
+
+  ---------------------------------------------------------------
+  BOAS PRÁTICAS:
+    - Sempre use alt para acessibilidade e SEO.
+    - Prefira imagens otimizadas (webp, avif).
+    - Use loading="lazy" para melhorar performance.
+    - Defina width/height ou use CSS para evitar layout shift.
+    - Para responsividade, combine srcset + sizes.
+
+  ---------------------------------------------------------------
+  EXEMPLO SIMPLES:
+
+    <img src="img/foto.jpg" alt="Foto de perfil" width="150" loading="lazy" />
+
+-->

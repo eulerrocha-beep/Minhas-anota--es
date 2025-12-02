@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <title> Meu primeiro HTML </title>
+</head>
+
+<body>
+    <h1> Olá, Mundo! </h1>
+    <p> Este é o meu primeiro arquivo HTML. </p>
+    <I>My Name is: EULER </I>
+    <strong><i>My Name is: Euler </i></strong>
+    <strong>My Name is: Euler <i> HTML </i></strong>
+    <input type="text">
+    <img src="" alt="">
+    <strong id="text"></strong>
+    <strong style="color: wheat;"></strong>
+    <strong class="Titulo principal"></strong>
+
+    <H1>DIO.me <sup> R </sup></H1>
+    <h2>Implemente o seu futuro globlal</h2>
+    <p>
+        Quando você clica em Novo Jogo, você vê um céu azul. Então você vê palavras de um homem chamado Takakura.
+        Ele está falando sobre uma fazenda. Você pergunta O que você está fazendo aqui, mas Takakura diz que é uma
+        surpresa. Depois,
+        Takakura pergunta como você se sentiria no comando de uma fazenda. Você reage com um ! Takakura diz que sabia
+        que você reagiria daquele jeito.
+        Takakura diz que ele e seu pai [é o seu pai, e não o pai do Takakura] tinham um sonho de criar uma fazenda.
+    </p>
+
+    <blockquote>
+        <p> "A vida é como andar de bicicleta. Para manter o equilíbrio, você deve continuar em movimento." - Albert
+            Einstein </p>
+    </blockquote>
+    <h2>
+        "O sucesso é ir de fracasso em fracasso sem perder o entusiasmo."
+    </h2>
+    <P>
+        "A única maneira de fazer um excelente trabalho é amar o que você faz." <mark> - Steve Jobs</mark>
+    </P>
+    <H2>
+        Pratique com desafios de codigo
+    </H2>
+    <p>
+        A prática leva à <strong>perfeição</strong>. Quanto mais você pratica, melhor você se torna em qualquer
+        habilidade.
+        Não tenha medo de cometer erros, pois eles são parte do processo de aprendizado. Continue praticando e
+        você verá melhorias significativas ao longo do tempo.
+    </p>
+    // lista ordenada
+    <ol>
+        <li>Primeiro item</li>
+        <li>Segundo item</li>
+        <li>Terceiro item</li>
+        <li>
+            <ol>
+                <li>quarto item</li>
+            </ol>
+        </li>
+        <ul>
+            // lista não ordenada
+            <li>Item A</li>
+            <li>Item B</li>
+            <li>Item C</li>
+        </ul>
+
+        <h1>Meu primeiro site</h1>
+        <ul>
+            <li>
+            <a href="https://web.dio.me/home"title="Clique aqui e confira"   target="_blank">dio.me</a>
+            </li>
+            <li>
+            <a href="https://www.google.com/?gws_rd=ssl" target="_self">Google</a>
+            </li>
+            <li>
+            <a href="https://www.youtube.com/">youtube</a>
+            </li>
+            <li>
+                <a href="about.html">Voltar</a>
+            </li>
+        </ul>
+</body>
+
+</html>
+
+<!--
+  ARQUIVO index.html — Resumo rápido
+
+  O arquivo "index.html" é o arquivo principal de um site.
+  Ele funciona como a "página inicial" (home) padrão em servidores web.
+
+  ---------------------------------------------------------------
+  FUNÇÃO PRINCIPAL:
+
+    - É o primeiro arquivo carregado quando alguém acessa:
+        https://meusite.com/
+    - Se não for especificado um caminho, o servidor procura automaticamente:
+        index.html
+        index.htm
+        index.php (dependendo do servidor)
+
+  ---------------------------------------------------------------
+  POR QUE USAR index.html?
+
+    - Define a estrutura inicial da aplicação/site.
+    - Evita erro de listagem de diretório no navegador.
+    - É reconhecido como o "entry point" da aplicação.
+    - Usado pelo GitHub Pages, Vercel, Netlify e servidores tradicionais.
+
+  ---------------------------------------------------------------
+  O QUE DEVE CONTER EM UM INDEX:
+
+    - A estrutura HTML padrão (doctype, head, body).
+    - Importações iniciais (CSS, scripts, fontes, meta tags).
+    - Conteúdo principal ou container da aplicação.
+
+  ---------------------------------------------------------------
+  ESTRUTURA BÁSICA DO index.html:
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Meu Site</title>
+
+    CSS global -->
+      <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+      <h1>Bem-vindo!</h1>
+
+      <!-- Scripts iniciais -->
+      <script src="app.js"></script>
+    </body>
+    </html>
+
+  ---------------------------------------------------------------
+  BOAS PRÁTICAS:
+
+    - Sempre definir lang no <html> (SEO + acessibilidade).
+    - Sempre usar <meta viewport> para responsividade.
+    - Nomear o arquivo exatamente como: index.html
+    - Deixar apenas um index por pasta (evita conflitos).
+    - Evitar colocar lógica pesada diretamente no HTML; usar JS externo.
+
+  ---------------------------------------------------------------
+  ONDE É USADO:
+
+    - Sites estáticos
+    - Portfólios
+    - Landing pages
+    - GitHub Pages (obrigatório)
+    - Aplicações SPA (React, Vue, Angular)

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Tabelas</title>
+</head>
+<body>
+    <table summary="Está tabela se refere as idades das turmas A" border="1" width="50%" align="center" cellpadding="10" cellspacing="5">
+        <tr>
+            <td>Nome</td>
+            <td>Idade</td>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>30</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+<!--
+  TAG <table> — Resumo rápido
+
+  A <table> é usada para criar tabelas estruturadas em HTML.
+  Ela organiza dados em linhas (<tr>) e colunas (<td> ou <th>).
+
+  ---------------------------------------------------------------
+  TAGS PRINCIPAIS DA TABELA:
+
+    <table>   → Contêiner principal da tabela
+    <tr>      → Linha da tabela (table row)
+    <td>      → Célula comum (table data)
+    <th>      → Célula de cabeçalho (table header), geralmente em negrito
+    <caption> → Título da tabela
+    <thead>   → Agrupa cabeçalho da tabela
+    <tbody>   → Agrupa o corpo da tabela
+    <tfoot>   → Agrupa o rodapé
+
+  ---------------------------------------------------------------
+  ATRIBUTOS ÚTEIS EM <table>:
+
+    border        → Define borda da tabela (não recomendado em HTML5, use CSS)
+    cellpadding   → Espaço interno das células (use CSS)
+    cellspacing   → Espaço entre as células (use CSS)
+    width         → Largura (use CSS)
+    summary       → Texto descritivo para acessibilidade (deprecated)
+
+  * Observação: A maioria dos atributos antigos foi substituída por CSS.
+
+  ---------------------------------------------------------------
+  ATRIBUTOS ÚTEIS EM <tr>, <td> e <th>:
+
+    colspan    → Faz a célula ocupar várias colunas
+    rowspan    → Faz a célula ocupar várias linhas
+    headers    → Associa células de dados a cabeçalhos (acessibilidade)
+    scope      → Indica se o <th> se aplica à coluna, linha, colgroup etc.
+
+  ---------------------------------------------------------------
+  DICAS IMPORTANTES:
+
+    - Use <thead>, <tbody> e <tfoot> para organizar e melhorar acessibilidade.
+    - Prefira CSS para bordas, espaçamentos, cores e layout.
+    - Use <th> para cabeçalhos, melhora leitura e acessibilidade.
+    - Use colspan e rowspan para unir células quando necessário.

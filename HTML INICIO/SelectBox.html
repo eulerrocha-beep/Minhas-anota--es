@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio contato</title>
+</head>
+<body>
+    <form onsubmit="" method="get">
+    <label>Nome:</label> <input type="text" name="name"><br>
+    <label>Cargo:</label> 
+    <select name="role">
+        <option value="">Selecione o Cargo</option>
+        <option value="administrativo">administrativo</option>
+        <option selected value="gerente">gerente</option>
+        <option value="diretor">diretor</option>
+        <option value="presidente">presidente</option>
+    </select>
+    <br>
+    <label>Assunto:</label> <input type="text" name="subject"><br>
+
+    <button type="submit">Enviar</button>   
+    </form>
+</body>
+</html>
+
+<!--
+  TAG <select> — Resumo rápido (Selectbox)
+
+  A <select> cria menus suspensos (dropdowns) em formulários.
+  Funciona junto com a tag <option> (opções) e opcionalmente <optgroup> (grupos).
+
+  ---------------------------------------------------------------
+  FUNÇÃO PRINCIPAL:
+    Permitir que o usuário selecione uma ou várias opções de uma lista.
+
+  ---------------------------------------------------------------
+  TAGS RELACIONADAS:
+
+    <select>      → Contêiner do selectbox
+    <option>      → Cada opção dentro do select
+    <optgroup>    → Grupo de opções (com label)
+
+  ---------------------------------------------------------------
+  ATRIBUTOS ESSENCIAIS DO <select>:
+
+    name        → Nome do campo no envio do formulário
+    id          → Identificador único para CSS/JS
+
+  ---------------------------------------------------------------
+  ATRIBUTOS MUITO ÚTEIS:
+
+    multiple    → Permite seleção múltipla (Ctrl/Cmd + clique)
+    size        → Quantidade de opções visíveis sem abrir o dropdown
+    required    → Obriga o usuário a escolher uma opção
+    disabled    → Desativa o select
+    autofocus   → Foca automaticamente ao carregar a página
+    form        → Associa o select a um formulário específico mesmo fora dele
+
+  ---------------------------------------------------------------
+  ATRIBUTOS DO <option>:
+
+    value       → Valor enviado no formulário (se ausente, envia o texto da opção)
+    selected    → Deixa a opção selecionada por padrão
+    disabled    → Desativa a opção individualmente
+
+  ---------------------------------------------------------------
+  ATRIBUTOS DO <optgroup>:
+
+    label       → Nome exibido do grupo
+    disabled    → Desativa todas as opções do grupo
+
+  ---------------------------------------------------------------
+  DICAS IMPORTANTES:
+
+    - Sempre use <label> associado ao select para acessibilidade.
+    - Para seleção múltipla, use "multiple" e trate como array no backend.
+    - Evite opções com textos muito longos — prejudicam UX.
+    - Defina value em todas as options para garantir dados limpos.
+
+  ---------------------------------------------------------------
+  EXEMPLO PRÁTICO:
+
+    <label for="estado">Estado:</label>
+    <select id="estado" name="estado" required>
+      <option value="">Selecione...</option>
+
+      <optgroup label="Sudeste">
+        <option value="sp">São Paulo</option>
+        <option value="rj">Rio de Janeiro</option>
+        <option value="mg">Minas Gerais</option>
+      </optgroup>
+
+      <optgroup label="Sul">
+        <option value="pr">Paraná</option>
+        <option value="sc">Santa Catarina</option>
+        <option value="rs">Rio Grande do Sul</option>
+      </optgroup>
+    </select>
+
+  ---------------------------------------------------------------
+  EXEMPLO DE SELECT MÚLTIPLO:
+
+    <select name="tecnologias[]" id="tech" multiple size="4">
+      <option value="js">JavaScript</option>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="sql">SQL</option>
+    </select>
+
+-->

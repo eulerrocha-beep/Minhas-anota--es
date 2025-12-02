@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio contato</title>
+</head>
+<body>
+    <form onsubmit="" method="get">
+    <label>Nome:</label> <input type="text" name="name"><br>
+    <label>Cargo:</label> 
+    <select name="role">
+        <option value="">Selecione o Cargo</option>
+        <option value="administrativo">administrativo</option>
+        <option selected value="gerente">gerente</option>
+        <option value="diretor">diretor</option>
+        <option value="presidente">presidente</option>
+    </select>
+    <br>
+    <label>Assunto:</label> <input type="text" name="subject"><br>
+    <label>Mensagem:</label><br>
+    <textarea name="message" rows="5" cols="50">Digite sua mensagem aqui</textarea>
+
+    <button type="submit">Enviar</button>   
+    </form>
+</body>
+</html>
+
+<!--
+  TAG <textarea> — Resumo rápido
+
+  A <textarea> é usada para criar campos de texto multilinha em formulários.
+  Diferente de <input type="text">, permite escrever textos longos.
+
+  ---------------------------------------------------------------
+  FUNÇÃO PRINCIPAL:
+    Permitir que o usuário digite várias linhas de texto
+    (descrições, comentários, mensagens, anotações etc.).
+
+  ---------------------------------------------------------------
+  ATRIBUTOS ESSENCIAIS:
+
+    name        → Nome do campo no envio do formulário
+    id          → Identificador único para CSS/JS
+    rows        → Quantidade de linhas visíveis
+    cols        → Quantidade de colunas (largura aproximada)
+
+  ---------------------------------------------------------------
+  ATRIBUTOS MUITO ÚTEIS:
+
+    placeholder → Texto exibido antes do usuário digitar
+                  Ex.: "Digite sua mensagem..."
+
+    maxlength   → Número máximo de caracteres permitidos
+
+    minlength   → Número mínimo de caracteres exigidos
+
+    required    → Torna o campo obrigatório
+
+    disabled    → Impede edição e envio do campo
+
+    readonly    → Impede edição, mas ainda permite copiar conteúdos
+
+    autofocus   → Coloca o cursor automaticamente no textarea
+
+    wrap        → Controle de quebra de linha ao enviar:
+                  - "soft"  → quebra visual, mas não envia a quebra
+                  - "hard"  → quebra visual e envia a quebra no texto
+
+    form        → Associa o textarea a um formulário específico
+                  mesmo estando fora dele
+
+  ---------------------------------------------------------------
+  ATRIBUTOS DE SEGURANÇA/UX:
+
+    autocomplete → (on/off) Habilita sugestões do navegador
+
+    spellcheck   → (true/false) Habilita corretor ortográfico
+
+  ---------------------------------------------------------------
+  DICAS IMPORTANTES:
+    - Prefira CSS ao invés de usar cols e rows para controlar tamanho.
+    - Use maxlength para limitar campos de comentários/controlar input.
+    - readonly é ideal para exibir texto copiado que não deve ser editado.
+    - placeholder ≠ label — sempre use <label> junto para acessibilidade.
+
+  ---------------------------------------------------------------
+  EXEMPLO PRÁTICO:
+
+    <textarea
+      id="mensagem"
+      name="mensagem"
+      rows="5"
+      cols="40"
+      placeholder="Digite sua mensagem..."
+      maxlength="300"
+      required
+    ></textarea>
+
+-->

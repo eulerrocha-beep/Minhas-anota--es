@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-lateral">
+        <div id="links">
+            <ul>
+                <li><a href="HTML%20INICIO/Tagsa.html">Tag &lt;a&gt;</a></li>
+                <li><a href="HTML%20INICIO/Tagsdivspan.html">Tags &lt;div&gt; e &lt;span&gt;</a></li>
+                <li><a href="HTML%20INICIO/Tagsp.html">Tag &lt;p&gt;</a></li>
+                <li><a href="HTML%20INICIO/Tagstable.html">Tag &lt;table&gt;</a></li>
+                <li><a href="HTML%20INICIO/Tagsform.html">Tag &lt;form&gt;</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="menu-vertical">
+        <div id="links">
+            <ul>
+                <p>Dio<span>.</span>me</p>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--
+  TAGS <div> e <span> — Resumo rápido
+
+  Ambas são tags genéricas usadas para estruturar e organizar conteúdo no HTML.
+  A diferença principal é no comportamento de exibição:
+
+    <div>  → elemento de bloco (block-level)
+    <span> → elemento de linha (inline)
+
+  ---------------------------------------------------------------
+  FUNÇÃO DA <div>:
+    - Agrupar grandes blocos de conteúdo.
+    - Criar seções estruturais.
+    - Usada como container/layout.
+    - Por padrão, ocupa 100% da largura disponível.
+
+    Exemplos de uso:
+      - Containers, cards, seções, colunas, blocos de conteúdo.
+
+  ---------------------------------------------------------------
+  FUNÇÃO DA <span>:
+    - Agrupar pequenas partes de texto dentro de uma linha.
+    - Aplicar estilos a palavras específicas.
+    - Não quebra linha automaticamente (inline).
+
+    Exemplos de uso:
+      - Destacar uma palavra, aplicar cor, estilizar texto específico.
+
+  ---------------------------------------------------------------
+  ATRIBUTOS ÚTEIS (para ambas):
+
+    id       → Identificador único (JS, CSS)
+    class    → Uma ou mais classes (CSS)
+    style    → Estilos inline (não recomendado, apenas exceções)
+    title    → Texto exibido ao passar o mouse (tooltip)
+    hidden   → Oculta o elemento
+    data-*   → Armazena dados personalizados (ex.: data-user="123")
+
+    Exemplo de atributo data:
+      <div data-status="ativo"></div>
+
+  ---------------------------------------------------------------
+  COMPORTAMENTO NO CSS:
+
+    <div>:
+      display: block;
+      - Ocupa linha inteira.
+      - Sempre começa em uma nova linha.
+      - Pode ter largura/altura definidas.
+
+    <span>:
+      display: inline;
+      - Não quebra linha.
+      - Largura/altura não funcionam sem alterar o display.
+
+  ---------------------------------------------------------------
+  QUANDO USAR <div>:
+    - Para layout (containers, colunas)
+    - Para estruturar componentes
+    - Quando precisa de blocos grandes
+
+  QUANDO USAR <span>:
+    - Para estilizar texto dentro de uma frase
+    - Para pequenas marcações sem quebra de linha
+
+  ---------------------------------------------------------------
+  EXEMPLOS PRÁTICOS:
+
+    <div id="card" class="container">
+      <h2>Produto</h2>
+      <p>Preço: <span class="preco">R$ 50,00</span></p>
+    </div>
+
+    <span style="color: red;">Texto destacado</span>
+
+  ---------------------------------------------------------------
+  BOAS PRÁTICAS:
+    - Não usar <div> para tudo: prefira tags semânticas (<section>, <header>, etc.).
+    - Use <span> apenas para pequenas partes de texto.
+    - Evite excesso de divs ("div soup").
+    - Use data-* para armazenar informações úteis no HTML.
+
+-->

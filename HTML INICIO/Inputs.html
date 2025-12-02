@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Digite aqui: </label><input type="text" /><br>
+        <label>Number: </label><input type ="number" min="0" step="5" max="99"/><br>
+        <label>Range: </label><input type="range"min="0" max="100" value="90" /><br>
+        <label>Color: </label><input type="color" /><br>
+        <label>E-mail: </label><input type="email" /><br>
+        <label>url: </label><input type="url" /><br>
+        <label>data:</label><input type="date" /><br>
+        <label>week: </label><input type="week" /><br> // nao funciona no firefox
+        <label>month: </label><input type="month" /><br>
+        <label>chekbox: </label><input type="checkbox" /><br>
+        <label>Radio: </label><input type="radio" name="Aceita"/></label><input type="radio" name="Aceita"> /><br>
+        <label>hidden: </label><input type="hidden" /><br>
+        <label>file: </label><input type="file" multiple /><br>
+        <label>search: </label><input type="search" /><br>
+        <label>Button: </label><input type ="submit" value ="Enviar" /><br>
+    </form>
+</body>
+</html>
+
+<!--
+  TAG <input> — Resumo rápido
+
+  A <input> é usada para coletar dados do usuário.
+  É uma das tags mais versáteis do HTML, podendo assumir muitos tipos.
+
+  ---------------------------------------------------------------
+  PRINCIPAIS TIPOS DE INPUT (type):
+
+    text        → Texto curto
+    password    → Texto oculto (senha)
+    email       → Validação de email
+    number      → Apenas números
+    tel         → Telefone
+    url         → Validação de URL
+    date        → Data
+    time        → Hora
+    datetime-local → Data e hora local
+    month       → Mês
+    week        → Semana
+
+    checkbox    → Opção múltipla ON/OFF
+    radio       → Seleção única (grupo mesmo name)
+
+    file        → Enviar arquivos
+    range       → Slider numérico
+    color       → Seletor de cor
+
+    hidden      → Valor invisível enviado no formulário
+    search      → Campo com otimização para buscas
+
+    submit      → Botão de envio
+    reset       → Limpa o formulário
+    button      → Botão genérico
+
+  ---------------------------------------------------------------
+  ATRIBUTOS MAIS IMPORTANTES (gerais):
+
+    name        → Nome do campo no envio do formulário
+    id          → Identificador único para CSS/JS
+    value       → Valor inicial
+
+    placeholder → Texto de ajuda antes de digitar
+    required    → Torna obrigatório
+    disabled    → Desabilita o campo
+    readonly    → Somente leitura (não editável)
+    autofocus   → Foco automático ao carregar a página
+
+    autocomplete → Sugestões do navegador (on/off)
+
+    form        → Associa o input a um formulário específico
+                  mesmo fora da tag <form>
+
+  ---------------------------------------------------------------
+  ATRIBUTOS ESPECÍFICOS POR TIPO:
+
+    (text, password, email, etc.)
+      minlength / maxlength → Limites de caracteres
+      pattern               → Regex para validação
+      size                  → Largura (não recomendado; use CSS)
+
+    (number, range)
+      min / max             → Valores permitidos
+      step                  → Intervalo de incremento
+
+    (checkbox, radio)
+      checked               → Marcado por padrão
+
+    (file)
+      accept                → Tipos permitidos (ex.: image/*, .pdf)
+      multiple              → Aceita múltiplos arquivos
+
+    (color)
+      value                 → Cor inicial (ex.: #ff0000)
+
+  ---------------------------------------------------------------
+  EXEMPLOS ÚTEIS:
+
+    Texto -->
+    <input type="text" name="usuario" placeholder="Digite seu nome" required>
+
+    <!-- Email com validação -->
+    <input type="email" name="email" required>
+
+    <!-- Número limitado -->
+    <input type="number" name="idade" min="0" max="120">
+
+    <!-- Checkbox -->
+    <input type="checkbox" name="aceito" value="sim" required>
+
+    <!-- Radio (grupo) -->
+    <input type="radio" name="sexo" value="M">
+    <input type="radio" name="sexo" value="F">
+
+    <!-- Upload de arquivo -->
+    <input type="file" name="arquivo" accept="image/*" multiple>
+
+    <!-- Cor -->
+    <input type="color" name="tema" value="#0000ff">
+
+    <!-- Slider -->
+    <input type="range" name="volume" min="0" max="100" step="1">
+
+  ---------------------------------------------------------------
+  BOAS PRÁTICAS:
+
+    - Sempre usar <label> associado ao input para acessibilidade.
+    - Evitar usar size para layout; prefira CSS.
+    - Para checkbox/radio, sempre definir value.
+    - Usar pattern para validações mais fortes (ex.: CPF, telefone).
+    - Usar autocomplete quando útil (emails, nomes, etc.).
+

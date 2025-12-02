@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Trilha HTML - Dio</title>
+</head>
+<body>
+    <h1>Embeds vs Iframe</h1>
+
+    <embed src="Trailer.mp4" width="400" height="250">
+
+        <video controls autoplay width="400" height="250">
+            <source src="Trailer.mp4"> 
+        </video>
+
+    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime laudantium iste, quam esse ipsam nemo sint facilis provident explicabo exercitationem deserunt impedit illum tempora dolorem est dolore, tempore dignissimos quisquam.</span></p> <br>
+    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit minus delectus impedit dicta error voluptatum quas vero culpa tempore eaque numquam inventore nulla beatae eligendi et, veritatis distinctio laboriosam autem?</span></p>
+</body>
+</html>
+
+<!--
+📌 Tag <embed> no HTML
+------------------------------------------------------------
+Função:
+- A tag <embed> é usada para incorporar conteúdo externo interativo
+  ou multimídia dentro de uma página HTML.
+- Normalmente utilizada para plugins, arquivos de mídia (como vídeo,
+  áudio, PDF, SVG) ou aplicações externas.
+
+Atributos Úteis:
+- src="URL" → caminho do recurso a ser incorporado (arquivo ou link).
+- type="mime/type" → tipo de mídia (ex: application/pdf, image/svg+xml).
+- width="valor" → largura do conteúdo incorporado.
+- height="valor" → altura do conteúdo incorporado.
+- title="texto" → fornece descrição acessível do conteúdo.
+- Any atributo global do HTML também pode ser usado (id, class, style, etc).
+
+Boas Práticas:
+- Sempre definir "type" para garantir que o navegador saiba como renderizar.
+- Usar "title" para acessibilidade.
+- Evitar dependência de plugins externos obsoletos (como Flash).
+- Para vídeos e áudios, prefira <video> e <audio> quando possível,
+  pois oferecem suporte nativo e melhor acessibilidade.
+
+Exemplo:
+<embed src="documento.pdf" type="application/pdf" width="600" height="400" title="Manual do usuário">
+
+------------------------------------------------------------
+💡 Dica: Use <embed> apenas quando não houver suporte nativo melhor
+(<video>, <audio>, <iframe>), pois é menos flexível.
+-->

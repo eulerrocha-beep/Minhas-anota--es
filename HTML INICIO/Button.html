@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Cadastro</title>
+</head>
+<body>
+    <form onsubmit="" method="get">
+        <label>Nome: </label> <input type="text" name="name"><br>
+        <label>Idade:</label> <input type="number" name="Age"><br>
+        <label>Password:</label> <input type="password" name ="Password"><br>
+
+        <button type="button" onmouseover="alert('passei aqui')" >Clicavel</button>
+        <button type="reset">Limpar</button>
+        <button type="submit">Enviar Formulario</button>
+    </form>
+</body>
+</html>
+
+<!-- 📌 Resumo da Tag <button> no HTML
+
+A tag <button> é usada para criar botões interativos em páginas web.
+Ela pode ser acionada por JavaScript, enviar formulários, ou simplesmente executar ações personalizadas via eventos.
+
+✅ Função principal
+
+Criar um botão clicável que pode:
+
+Enviar formulários (type="submit")
+
+Resetar formulários (type="reset")
+
+Executar ações via JavaScript (type="button")
+
+🔧 Atributos mais úteis
+1. type
+
+Define o tipo do botão.
+
+button → Botão comum (não envia formulário)
+
+submit → Envia os dados do formulário
+
+reset → Redefine valores do formulário
+
+🔹 Ex.: <button type="submit">Enviar</button>
+
+2. id
+
+Identificador único do botão.
+
+Usado para CSS ou JavaScript.
+
+🔹 Ex.: <button id="btnSalvar">Salvar</button>
+
+3. class
+
+Classe(s) do botão para estilização via CSS.
+
+🔹 Ex.: <button class="btn primario">OK</button>
+
+4. name
+
+Nome do campo quando o botão faz parte de um formulário.
+
+🔹 Ex.: <button name="acao" value="confirmar">Confirmar</button>
+
+5. value
+
+Valor enviado quando o botão é um submit ou reset.
+
+🔹 Ex.: <button type="submit" value="enviar">Enviar</button>
+
+6. disabled
+
+Desativa o botão (não pode ser clicado).
+
+🔹 Ex.: <button disabled>Carregando...</button>
+
+7. autofocus
+
+Coloca o foco automaticamente no botão ao carregar a página.
+
+🔹 Ex.: <button autofocus>Iniciar</button>
+
+8. form
+
+Vincula o botão a um formulário específico mesmo estando fora dele.
+
+🔹 Ex.: <button form="formLogin">Entrar</button>
+
+9. formaction (somente submit)
+
+Define uma URL específica para onde enviar os dados.
+
+🔹 Ex.: <button type="submit" formaction="/api/salvar">Salvar</button>
+
+10. formmethod
+
+Método de envio do formulário (GET ou POST).
+
+🔹 Ex.: <button type="submit" formmethod="post">Enviar</button>
+
+11. formtarget
+
+Define onde abrir a resposta da requisição.
+
+🔹 Ex.: <button formtarget="_blank">Enviar em nova aba</button>
+
+12. formnovalidate
+
+Ignora validações do formulário ao enviar.
+
+🔹 Ex.:
+<button type="submit" formnovalidate>Enviar sem validar</button>
+
+🎨 Conteúdo dentro do <button>
+
+Ao contrário do <input>, o <button> permite colocar elementos dentro:
+
+Texto
+
+Ícones
+
+Imagens
+
+HTML
+
+Exemplo:
+
+<button>
+  <img src="icon.png" alt="">
+  Salvar
+</button>
+
+🧠 Dicas importantes
+
+Prefira <button> ao invés de <input type="button"> por ser mais flexível.
+
+Sempre defina o type para evitar comportamento inesperado dentro de formulários.
+
+Use disabled para estados temporários (carregando, bloqueado, etc).
+
+Para JS: sempre use id ou class para selecionar o botão. -->

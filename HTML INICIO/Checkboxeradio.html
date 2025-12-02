@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario cadastro</title>
+</head>
+<body>
+    <form method="post">
+        <h3>Voce selecionou Pizza de Calabresa</h3>
+        <p>Quais Opcionais voce deseja?</p>
+        <input type="checkbox" name="Opcional[]" value="queijo"> + queijo<br>
+        <input type="checkbox" name="Opcional[]" value="Calabresa"> + Calabresa<br>
+        <input type="checkbox" name="Opcional[]" value="cebola"> + cebola <br>
+        <input type="checkbox" name="Opcional[]" value="azeitona"> + azeitona <br>
+        <p>Borda Recheada?</p>
+        <input type="radio" name="Borda" value="sim">sim<br>
+        <input type="radio" name="Borda" value="nao">não<br>
+        <p>Bebida</p>
+        <input type="radio" name="Bebida" value="suco">suco<br>
+        <input type="radio" name="Bebida" value="refrigerante">refrigerante<br>
+        <input type="radio" name="Bebida" value="agua">agua<br>
+        <input type="radio" name="Bebida" value="nenhum">nenhum<br>
+
+        <button type="submit">Enviar Pedido</button>
+    </form>
+</body>
+</html>
+
+<!--
+📌 Checkbox e Radio no HTML
+------------------------------------------------------------
+Função:
+- São usados para criar opções de seleção em formulários.
+- <input type="checkbox"> → permite selecionar múltiplas opções independentes.
+- <input type="radio"> → permite selecionar apenas uma opção dentro de um grupo.
+
+Atributos Úteis:
+- type="checkbox" | type="radio" → define o tipo do input.
+- name="grupo" → agrupa inputs (necessário para radio funcionar corretamente).
+- value="valor" → valor enviado ao servidor quando selecionado.
+- checked → deixa a opção marcada por padrão.
+- disabled → desabilita o campo, impedindo interação.
+- required → torna obrigatório selecionar pelo menos uma opção.
+- id="identificador" → usado para vincular ao <label>.
+- form="idForm" → associa o input a um formulário específico.
+- autofocus → coloca foco automático no campo ao carregar a página.
+
+Boas Práticas:
+- Sempre usar <label for="id"> para melhorar acessibilidade e usabilidade.
+- Para radio, todos os botões do mesmo grupo devem compartilhar o mesmo "name".
+- Para checkbox, cada opção pode ter "name" diferente ou igual, dependendo da lógica de envio.
+
+Exemplo:
+<form>
+  <label for="aceito">Aceito os termos</label>
+  <input type="checkbox" id="aceito" name="termos" value="sim" required>
+
+  <p>Escolha seu gênero:</p>
+  <label for="masc">Masculino</label>
+  <input type="radio" id="masc" name="genero" value="M">
+  
+  <label for="fem">Feminino</label>
+  <input type="radio" id="fem" name="genero" value="F">
+</form>
+
+------------------------------------------------------------
+💡 Dica: Use checkbox para múltiplas escolhas e radio para escolha única.
+-->

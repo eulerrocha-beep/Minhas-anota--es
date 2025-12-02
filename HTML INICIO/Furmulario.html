@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formúlario de Cadastro</title>
+</head>
+<body>
+    <form name="signup" autocomplete="on" onsubmit="alert('Enviei o formulario-')" action="process_form.php" method="post" target="_blank">
+        Nome: <input type="text" name="name" /><br>
+        Idade: <input type="number" name="age" /><br>
+        Nome: <input type="password" name="password" /><br>
+        <button type="submit"> Enviar </button>
+    </form>
+</body>
+</html>
+
+<!--
+📌 Tag <form> no HTML
+------------------------------------------------------------
+Função:
+- Define um formulário para coleta e envio de dados do usuário.
+- Agrupa campos de entrada (<input>, <textarea>, <select>, <button>) e
+  envia as informações para um servidor ou processador.
+
+Atributos Úteis:
+- action="URL" → destino para onde os dados serão enviados.
+- method="get|post" → define o método HTTP de envio:
+   • get → dados aparecem na URL (consultas rápidas).
+   • post → dados enviados no corpo da requisição (mais seguro).
+- enctype="tipo" → tipo de codificação dos dados (ex: multipart/form-data para upload de arquivos).
+- target="_self|_blank|_parent|_top" → onde abrir a resposta (mesma aba, nova aba, etc).
+- autocomplete="on|off" → ativa/desativa preenchimento automático.
+- novalidate → desativa validação automática do navegador.
+- name="identificador" → nome do formulário (útil em scripts).
+- accept-charset="UTF-8" → define conjunto de caracteres aceito.
+
+Atributos Globais (também aplicáveis):
+- id → identificador único.
+- class → aplicar estilos via CSS.
+- style → aplicar estilos inline.
+- title → texto de ajuda ao passar o mouse.
+
+Boas Práticas:
+- Sempre usar <label> para associar campos e melhorar acessibilidade.
+- Prefira method="post" para dados sensíveis.
+- Use enctype correto ao lidar com uploads.
+- Combine com atributos de validação nos inputs (required, pattern, etc).
+
+Exemplo:
+<form action="/enviar" method="post" enctype="multipart/form-data">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" required>
+  
+  <label for="arquivo">Arquivo:</label>
+  <input type="file" id="arquivo" name="arquivo">
+  
+  <button type="submit">Enviar</button>
+</form>
+
+------------------------------------------------------------
+💡 Dica: <form> é a base para qualquer interação de usuário com o servidor.
+-->

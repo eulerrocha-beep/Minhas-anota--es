@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><u>Iframe</u></h1>
+
+    <iframe src="http://dio.me" width="500" height="400"> </iframe>
+</body>
+</html>
+
+<!--
+  TAG <iframe> — RESUMO ÚTIL
+
+  Função:
+    - Permite incorporar conteúdo externo dentro da página, como vídeos, mapas, sites, formulários ou qualquer página HTML.
+    - Cria uma “janela” dentro do documento, renderizando outra página independente.
+
+  Atributos mais úteis:
+    • src="URL"
+        Define o endereço da página que será carregada dentro do iframe.
+
+    • width="valor" | height="valor"
+        Controlam tamanho do iframe (px, %, etc).
+
+    • title="texto descritivo"
+        Descrição acessível para leitores de tela (muito importante para acessibilidade).
+
+    • allowfullscreen
+        Permite que o conteúdo seja exibido em tela cheia (usado muito com vídeos).
+
+    • loading="lazy"
+        Carrega o iframe somente quando entrar na área visível da tela. Melhora performance.
+
+    • allow="permissões"
+        Controla o que o conteúdo interno pode fazer (ex.: "camera; microphone; autoplay").
+        Exemplo comum: allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+    • frameborder="0"
+        Remove borda do iframe (obsoleto, mas ainda funciona).
+
+    • sandbox="opções"
+        Restringe ações do conteúdo interno.
+        Exemplos de opções:
+          - allow-scripts (permite scripts)
+          - allow-forms (permite formulários)
+          - allow-popups (permite pop-ups)
+        Útil para segurança quando o conteúdo não é confiável.
+
+    • referrerpolicy="policy"
+        Define como o navegador envia dados de referência ao site carregado.
+        Ex.: "no-referrer", "origin", etc.
+
+  Quando usar:
+    - Para incorporar vídeos do YouTube, players externos, mapas Google Maps.
+    - Para embutir aplicações de terceiros.
+    - Para carregar páginas isoladas dentro da sua página.
+
+  Observação:
+    - Evite usar iframe para layout (é prática ultrapassada).
+    - Pode causar impactos de performance dependendo do conteúdo carregado.
+-->

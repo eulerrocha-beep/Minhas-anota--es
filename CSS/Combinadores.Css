@@ -1,0 +1,18 @@
+/* Agrupamento de Seletores 
+
+h1, p, div {
+    color: red;
+}
+ Sempre que eu quero aplicar a mesma alteração para varias coisa eu ultilizo a , 
+ e colocando tudo no mesmo bloco de código
+
+ Combinadores: qual tipo de relação entre 2 seletores.
+ 1. Combinador descendente (espaço)
+ 1. Combinador filho (>)
+ 1. Combinador irmão adjacente (+)
+ 1. Combinador irmão em geral (~)
+
+ [SELETOR] [COMBINADOR] [SELETOR]
+
+ 
+ */

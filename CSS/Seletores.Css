@@ -1,0 +1,15 @@
+/*
+    Seletor de Tag h1 h2
+    Seletor por ID só pode ter um por pagina ele não pode se repetir se chama com #
+    Seletor por Classe Busca elementos atraves do atributo Class e chamado pelo .
+    Ele pode se repetir
+    Seletor Universal Seleciona todos os elementos do HTML * 
+    Seletor de Atributo ([atrib]} Seleciona elementos que possuem um atributo especifico em nosso 
+    documento HTML e conseguimos também buscar atributos com um valor especifico.
+*/
+
+
+/*[title~="Streaming"] Busca ou o texto exato ou dentro do valor do atributo que tenha a palavra separada por espaço
+    | procura ou o texto exato ou esse valor imediatamente seguido por um -
+    *= todo atributo independente se tem espaço ou ifen 
+*/

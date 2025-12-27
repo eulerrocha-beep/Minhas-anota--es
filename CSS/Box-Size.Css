@@ -1,0 +1,10 @@
+/*
+* width = largura + borda + paddng
+   200px + 20px + 20px = 240px
+
+box-sizing content-box se comporta como ta escrito em cima
+
+box-sizing border-box tem a inteligencia de redimensionar o conteudo de forma 
+que somando pad e bordar desse elemento ele tenha uma altura e uma largura que a gente definiu
+
+*/

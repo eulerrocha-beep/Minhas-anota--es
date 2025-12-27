@@ -1,0 +1,65 @@
+/*
+ border-image-outset
+
+ Define o quanto a imagem da borda será “empurrada”
+ para fora da caixa do elemento.
+
+ Ou seja:
+ Controla a distância que a borda-imagem ultrapassa
+ além do limite normal da borda.
+
+ Funciona em conjunto com:
+ - border-image-source
+ - border-image-slice
+ - border-image-width
+ - border-image-repeat
+
+ Valores aceitos:
+
+ 1) Número sem unidade
+    ➜ Interpreta como múltiplo da largura da borda
+    Ex:
+    border-image-outset: 1;   (borda fica alinhada ao limite normal)
+    border-image-outset: 2;   (expande o dobro para fora)
+
+ 2) Pixels (px)
+    ➜ Define um afastamento fixo
+    Ex:
+    border-image-outset: 10px;
+
+ Também pode receber até 4 valores:
+ (semelhante a margin / padding)
+
+ ordem:
+ topo | direita | baixo | esquerda
+
+ Exemplo:
+ border-image-outset: 5px 10px 5px 10px;
+
+ Quando usar?
+
+ - Para criar bordas decorativas que “sobressaem”
+ - Quando a imagem da borda tem sombras ou ornamentos
+ - Para evitar que a imagem seja cortada pelo layout
+
+ Exemplo funcional:
+
+ border: 12px solid transparent;
+ border-image-source: url("frame.png");
+ border-image-slice: 40;
+ border-image-width: 12px;
+ border-image-repeat: round;
+ border-image-outset: 8px;
+
+ Observações importantes:
+
+ - Não afeta o layout interno
+   ➜ apenas projeta a borda para fora do elemento
+
+ - Pode causar sobreposição com outros elementos
+   ➜ use com cuidado em layouts pequenos
+
+ - Quando combinado com imagens grandes
+   ➜ ajuda a preservar detalhes decorativos
+
+*/

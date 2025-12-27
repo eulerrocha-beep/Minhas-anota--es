@@ -1,0 +1,101 @@
+/* 
+  background-clip
+  ---------------
+  Define ATÉ ONDE a imagem de fundo (background-image),
+  cor de fundo (background-color) e gradientes serão exibidos
+  dentro do elemento.
+
+  Enquanto background-origin define onde o fundo começa,
+  background-clip define ONDE ele é recortado.
+
+  VALORES DISPONÍVEIS
+
+  1) border-box (valor padrão)
+     O fundo é exibido até a borda externa do elemento,
+     ocupando área de conteúdo + padding + borda.
+
+     Ex.:
+     background-clip: border-box;
+
+  2) padding-box
+     O fundo é exibido SOMENTE até o padding.
+     A área da borda NÃO recebe cor nem imagem.
+
+     Útil quando você quer borda "transparente".
+
+     Ex.:
+     background-clip: padding-box;
+
+  3) content-box
+     O fundo aparece apenas dentro da área do conteúdo,
+     não ocupa padding nem borda.
+
+     Ex.:
+     background-clip: content-box;
+
+  4) text  (suporte em navegadores modernos)
+     O fundo é recortado DENTRO DAS LETRAS do texto.
+     Muito usado em efeitos de texto com gradiente.
+
+     Requer:
+     - cor do texto transparente
+     - combinações com -webkit-background-clip (fallback)
+
+     Ex.:
+     background-clip: text;
+     -webkit-background-clip: text;
+     color: transparent;
+
+  RESUMO VISUAL DO COMPORTAMENTO
+
+  border-box  → fundo ocupa tudo (conteúdo + padding + borda)
+  padding-box → fundo fica só até o padding
+  content-box → fundo fica SOMENTE no conteúdo
+  text        → fundo visível apenas dentro do texto
+
+  RELAÇÃO COM background-origin
+
+  • background-origin = onde começa
+  • background-clip   = onde termina (recorte)
+
+  Exemplo comum para limitar fundo ao conteúdo:
+
+  background-origin: content-box;
+  background-clip: content-box;
+
+  EXEMPLOS PRÁTICOS
+
+  .ex1 {
+    border: 6px solid #000;
+    background: lightblue;
+    background-clip: border-box; /* padrão — cobre a borda 
+  }
+
+  .ex2 {
+    border: 6px solid #000;
+    background: lightgreen;
+    background-clip: padding-box; /* borda fica sem cor 
+
+  .ex3 {
+    border: 6px solid #000;
+    padding: 20px;
+    background: orange;
+    background-clip: content-box; /* fundo só no conteúdo 
+  }
+
+  /* EFEITO TEXTO COM GRADIENTE 
+
+  .texto-gradiente {
+    background: linear-gradient(90deg, #ff9800, #ff0055);
+    background-clip: text;
+    -webkit-background-clip: text; /* compatibilidade 
+    color: transparent;
+  }
+
+  BOAS PRÁTICAS
+
+  - padding-box → para bordas “vazadas” sem cor de fundo
+  - content-box → para destacar apenas o conteúdo
+  - text → para títulos com efeito de gradiente
+  - combine com background-origin para controle total
+*/

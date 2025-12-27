@@ -1,0 +1,62 @@
+/* 
+  background-repeat
+  ------------------
+  Define como a imagem de fundo (background-image) será repetida dentro
+  da área do elemento. É aplicada quando a imagem não ocupa todo o espaço.
+
+  PRINCÍPIO GERAL
+  - Se a imagem for menor que o elemento, o navegador pode repetir (tiling)
+    a imagem horizontalmente, verticalmente ou em ambas as direções.
+
+  VALORES MAIS UTILIZADOS
+
+  1) repeat (valor padrão)
+     Repete a imagem na horizontal e vertical até preencher toda a área.
+     Ex.: background-repeat: repeat;
+
+  2) no-repeat
+     A imagem é exibida apenas uma vez (sem repetição).
+     Geralmente usado com background-size ou background-position.
+     Ex.: background-repeat: no-repeat;
+
+  3) repeat-x
+     Repete somente no eixo horizontal (linha).
+     Ex.: background-repeat: repeat-x;
+
+  4) repeat-y
+     Repete somente no eixo vertical (coluna).
+     Ex.: background-repeat: repeat-y;
+
+  5) space
+     Repete a imagem sem cortá-la e distribui o espaço restante entre as cópias.
+     Pode gerar espaçamentos visíveis entre as repetições.
+     Ex.: background-repeat: space;
+
+  6) round
+     Ajusta (redimensiona levemente) a imagem para que caiba um número inteiro
+     de repetições, evitando cortes.
+     Ex.: background-repeat: round;
+
+  INTERAÇÃO COM OUTRAS PROPRIEDADES
+
+  - background-size:
+      Afeta a forma como a imagem se repete.
+      Ex.: background-size: cover / contain / 200px;
+
+  - background-position:
+      Define o ponto inicial da primeira imagem repetida.
+
+  - Múltiplas imagens:
+      Cada imagem pode ter seu próprio repeat (separadas por vírgula).
+      Ex.: background-repeat: no-repeat, repeat-x;
+
+  BOA PRÁTICA
+  - Quando usar no-repeat, normalmente combine com:
+      background-position (para alinhar)
+      background-size (para controlar escala)
+
+  EXEMPLOS
+
+  header {
+    background-image: url("texture.png");
+    background-repeat: repeat;        /* textura contínua */

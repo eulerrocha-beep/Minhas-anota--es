@@ -1,0 +1,36 @@
+/* ===============================
+   CORES PRÉ-DEFINIDAS NO CSS
+   ===============================
+
+   O CSS possui cores nomeadas (named colors) que podem ser usadas
+   diretamente, sem precisar de código hexadecimal ou RGB.
+
+   Exemplos de cores básicas:
+   - black   → preto
+   - white   → branco
+   - red     → vermelho
+   - green   → verde
+   - blue    → azul
+   - yellow  → amarelo
+   - gray    → cinza
+   - orange  → laranja
+   - purple  → roxo
+   - pink    → rosa
+   - brown   → marrom
+
+   Exemplos de uso:
+   color: red;              -> cor do texto
+   background-color: blue;  -> cor de fundo
+   border-color: green;     -> cor da borda
+
+   Observações importantes:
+   - As cores NÃO diferenciam maiúsculas de minúsculas (Red = red).
+   - Existem mais de 140 cores nomeadas no CSS.
+   - Para maior controle de tons e transparência,
+     prefira usar HEX (#ff0000), RGB ou HSL.
+
+   Exemplo comparativo:
+   red        -> vermelho padrão
+   #ff0000    -> vermelho em hexadecimal
+   rgb(255,0,0) -> vermelho em RGB
+*/

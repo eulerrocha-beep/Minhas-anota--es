@@ -1,0 +1,70 @@
+/*
+ border-image-repeat
+
+ Define como os segmentos da imagem de borda
+ (gerados pelo border-image-slice)
+ serão distribuídos ao longo das laterais do elemento.
+
+ Funciona em conjunto com:
+ - border-image-source
+ - border-image-slice
+ - border-image-width
+
+ A imagem da borda é dividida em 4 lados.
+ Esta propriedade controla o comportamento de cada lado.
+
+ Valores possíveis:
+
+ 1) stretch (padrão)
+    Estica a imagem para caber no tamanho da borda
+    ➜ Não repete — apenas deforma proporcionalmente
+    Ex:
+    border-image-repeat: stretch;
+
+ 2) repeat
+    Repete a imagem em mosaico ao longo da borda
+    ➜ Pode cortar o final se não encaixar perfeitamente
+    Ex:
+    border-image-repeat: repeat;
+
+ 3) round
+    Ajusta a repetição automaticamente
+    ➜ Redimensiona levemente a imagem para encaixar
+    ➜ Evita cortes
+    Ex:
+    border-image-repeat: round;
+
+ 4) space
+    Repete a imagem e distribui espaços entre as cópias
+    ➜ Sem redimensionar a imagem
+    ➜ Similar ao justify-content: space-between
+    Ex:
+    border-image-repeat: space;
+
+ Também pode receber dois valores:
+ - primeiro = horizontal
+ - segundo = vertical
+
+ Exemplo:
+ border-image-repeat: round stretch;
+
+ Exemplo funcional completo:
+
+ border: 12px solid transparent;
+ border-image-source: url("borda.png");
+ border-image-slice: 40;
+ border-image-width: 12px;
+ border-image-repeat: round;
+
+ Observações importantes:
+
+ - Se usar repeat e o comprimento não for exato
+   a última parte pode ser cortada
+
+ - round é geralmente a opção mais estética
+   pois evita cortes e distorções
+
+ - space é útil em bordas decorativas
+   quando queremos intervalos visíveis
+
+*/

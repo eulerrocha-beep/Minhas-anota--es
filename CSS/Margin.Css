@@ -1,0 +1,16 @@
+/*
+Quando se coloca apenas um valor na propriedade margin ele aplica nos 4 lados
+Quando se coloca dois o primeiro aplica em cima e em baixo e o segundo nas duas laterais
+Quando se coloca três valores ele aplica o ultimo em baixo do nosso elemento
+Quando se coloca quatro valores ele aplica o ultimo no elemento a esquerda
+
+Margin-top
+Margin-bot
+Margin-left
+Margin-right
+
+Margin tambem possui o atributo inherit 
+Margin tem o atributo Margin Auto
+Conseguimos aplicar valores negativos ultilizando Margin
+
+*/

@@ -1,0 +1,40 @@
+/* ===============================
+   RGB e RGBA NO CSS
+   ===============================
+
+   RGB significa:
+   R → Red (Vermelho)
+   G → Green (Verde)
+   B → Blue (Azul)
+
+   No modelo RGB, cada cor recebe um valor de 0 a 255:
+   - 0   → ausência da cor
+   - 255 → intensidade máxima da cor
+
+   Sintaxe:
+   color: rgb(255, 0, 0);   -> vermelho
+   color: rgb(0, 255, 0);   -> verde
+   color: rgb(0, 0, 255);   -> azul
+
+   Exemplos comuns:
+   rgb(0, 0, 0)       -> preto
+   rgb(255, 255, 255) -> branco
+   rgb(128, 128, 128) -> cinza
+
+   --------------------------------
+
+   RGBA funciona como o RGB, porém adiciona o canal Alpha (A),
+   responsável pela transparência do elemento.
+
+   O valor Alpha varia de:
+   - 0   → totalmente transparente
+   - 1   → totalmente opaco
+
+   Sintaxe:
+   background-color: rgba(255, 0, 0, 0.5); -> vermelho com 50% de transparência
+   background-color: rgba(0, 0, 0, 0.8);   -> preto quase opaco
+
+   Observações:
+   - RGBA é muito usado para sombras, overlays e efeitos visuais.
+   - A transparência afeta apenas o elemento, não seus filhos (diferente de opacity).
+*/

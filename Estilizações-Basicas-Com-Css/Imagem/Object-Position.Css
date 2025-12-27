@@ -1,0 +1,23 @@
+/*
+Object-Position; 50% horizontal 50% vertical é possivel ultilizar varias unidades de medidas
+e até combinar unidade de medidas
+é possivel tambem trabalhar com valores negativos - 
+
+Só funciona em elementos substituídos (img, video, iframe)
+Não funciona em background-image
+
+  object-position define a posição da imagem ou vídeo dentro do container.
+  Ele controla o alinhamento horizontal (X) e vertical (Y) do conteúdo,
+  sendo muito usado junto com object-fit (cover, contain, scale-down).
+
+  Exemplos:
+  - center        → centraliza o conteúdo
+  - top           → prioriza o topo da imagem
+  - left top      → posiciona no canto superior esquerdo
+  - 30% 20%       → ajuste fino do foco da imagem
+  - start         → início do fluxo do texto
+  - end           → fim do fluxo do texto
+
+  Observação:
+  Funciona apenas em elementos substituídos como <img> e <video>.
+*/

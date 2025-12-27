@@ -1,0 +1,48 @@
+/*
+ border-image-slice
+
+ A propriedade border-image-slice define como a imagem da borda será fatiada
+ (dividida) antes de ser aplicada ao elemento.
+
+ Funciona em conjunto com:
+ - border-image-source
+ - border-image-width
+ - border-image-repeat
+
+ A imagem da borda é dividida em 9 partes (como uma grade 3x3):
+ - 4 cantos
+ - 4 laterais
+ - 1 área central
+
+ A fatiagem é feita a partir das bordas para dentro.
+ Os valores podem ser definidos em:
+ - pixels (px)
+ - porcentagem (%)
+ - número sem unidade (interpreta como pixels na imagem)
+
+ Exemplos de valores:
+ border-image-slice: 30;      → aplica 30px em todos os lados
+ border-image-slice: 30 40;   → topo/baixo = 30 | lados = 40
+ border-image-slice: 30 40 50 60; → topo, direita, baixo, esquerda
+
+ Uso do parâmetro "fill":
+ - Quando adicionamos "fill", a área interna do elemento
+   também é preenchida com a parte central da imagem.
+
+ Exemplo:
+ border-image-slice: 40 fill;
+
+ Sem "fill" → apenas a borda é desenhada
+ Com "fill" → a imagem também ocupa o interior do elemento
+
+ Observação importante:
+ Para que border-image funcione, o elemento precisa ter:
+ - uma borda declarada (border)
+   mesmo que seja transparente.
+
+ Exemplo mínimo funcional:
+ border: 10px solid transparent;
+ border-image-source: url("borda.png");
+ border-image-slice: 30;
+
+*/

@@ -1,0 +1,56 @@
+/* =====================================================
+   MODELOS DE CORES: HSL e HSLA
+   =====================================================
+
+HSL (Hue, Saturation, Lightness) é um modelo de cores
+mais intuitivo que o RGB, pois separa a cor da
+luminosidade e da saturação.
+
+H (Hue / Matiz):
+- Define a cor no círculo cromático
+- Valores de 0 a 360
+  0   = Vermelho
+  60  = Amarelo
+  120 = Verde
+  180 = Ciano
+  240 = Azul
+  300 = Roxo
+
+S (Saturation / Saturação):
+- Define a intensidade da cor
+- Valores de 0% a 100%
+  0%   = tons de cinza
+  100% = cor pura
+
+L (Lightness / Luminosidade):
+- Define o quão clara ou escura a cor é
+- Valores de 0% a 100%
+  0%   = Preto
+  50%  = Cor equilibrada
+  100% = Branco
+
+Exemplo:
+color: hsl(210, 80%, 50%);
+
+-----------------------------------------------------
+
+HSLA é a variação do HSL com canal Alpha (transparência)
+
+A (Alpha):
+- Define a opacidade do elemento
+- Valores de 0 a 1
+  0   = Totalmente transparente
+  1   = Totalmente opaco
+
+Exemplo:
+background-color: hsla(210, 80%, 50%, 0.6);
+
+-----------------------------------------------------
+
+Vantagens do uso de HSL / HSLA:
+- Facilita ajustes de claro e escuro (temas dark/light)
+- Permite criar variações da mesma cor facilmente
+- Torna o código mais legível e organizado
+- Muito usado em design moderno e UI/UX
+
+===================================================== */

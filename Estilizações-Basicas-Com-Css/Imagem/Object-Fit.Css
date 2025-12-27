@@ -1,0 +1,17 @@
+/*
+Determina como uma imagem ou como um video deve ser redimensionado para caber dentro do nosso container
+essa popriedade vai dizer se ele deve preservar a proporção para caber no container ou distorcer
+
+Object-fit: fill; e o padrão ele faz com que a imagem fique distorcida.
+
+Object-fit: contain; a imagem vai manter a proporção original mais ela vai ser redimensionada para caber 
+no que voce definiu mais ela nao vai ficar distorcida. 
+
+Object-fit: cover; ela vai cortar o espaço da imagem que ultrapassar para cobrir todo o espaco do elemento 
+e não ira distorcer a imagem.
+
+Object-fit: none; a imagem vai ignorar totalmente a altura e a largura do elemento pai e vai manter o seu tamanho original
+
+Object-fit: scale-down; Mantém a proporção da imagem Não corta o conteúdo Evita que imagens pequenas fiquem esticadas
+
+*/

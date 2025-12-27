@@ -1,0 +1,129 @@
+/* 
+  border-style
+  ------------
+  Define o ESTILO visual da borda de um elemento.
+
+  Obs:
+  A borda só aparece se existir:
+  - border-style
+  - e opcionalmente largura (border-width) e cor (border-color)
+
+  PRINCIPAIS VALORES
+
+  none
+    Remove qualquer borda.
+    Ex.: border-style: none;
+
+  solid
+    Linha contínua (a mais usada).
+    Ex.: border-style: solid;
+
+  dashed
+    Linha tracejada com traços curtos.
+    Ex.: border-style: dashed;
+
+  dotted
+    Linha pontilhada.
+    Ex.: border-style: dotted;
+
+  double
+    Duas linhas paralelas (exige largura maior).
+    Ex.: border-style: double;
+
+  groove
+    Borda com efeito de entalhe (depende da cor).
+    Ex.: border-style: groove;
+
+  ridge
+    Efeito inverso de groove.
+    Ex.: border-style: ridge;
+
+  inset
+    Dá aparência de elemento "afundado".
+    Ex.: border-style: inset;
+
+  outset
+    Dá aparência de elemento "elevado".
+    Ex.: border-style: outset;
+
+  -------------------------
+  ESTILO DIFERENTE POR LADO
+  -------------------------
+
+  Ordem segue o relógio:
+  top | right | bottom | left
+
+  Ex.:
+  border-style: solid dashed dotted double;
+
+  top    = solid
+  right  = dashed
+  bottom = dotted
+  left   = double
+
+  • 2 valores
+    border-style: solid dashed;
+    top/bottom  = solid
+    right/left  = dashed
+
+  • 3 valores
+    border-style: solid dashed dotted;
+    top         = solid
+    right/left  = dashed
+    bottom      = dotted
+
+  -------------------------
+  SHORTHAND COMPLETO
+  -------------------------
+
+  border: largura estilo cor;
+
+  Ex.:
+  border: 2px solid #000;
+
+  -------------------------
+  PROPRIEDADES INDIVIDUAIS
+  -------------------------
+
+  border-top-style: solid;
+  border-right-style: dashed;
+  border-bottom-style: dotted;
+  border-left-style: none;
+
+  -------------------------
+  EXEMPLOS PRÁTICOS
+  -------------------------
+
+  .card {
+    border: 2px solid #444; /* borda simples 
+  }
+
+  .alerta {
+    border-width: 3px;
+    border-style: dashed;
+    border-color: red;
+  }
+
+  .decorada {
+    border: 6px double blue;
+  }
+
+  -------------------------
+  BOAS PRÁTICAS
+  -------------------------
+
+  ✔ solid para layouts modernos  
+  ✔ dashed / dotted para destaques sutis  
+  ✔ double para caixas decorativas  
+  ✔ evite groove / ridge em design atual
+
+  Dica:
+  border-style define o "caráter visual" da borda —
+  combine com border-width e border-color para melhor resultado.
+*/
+
+
+
+
+
+

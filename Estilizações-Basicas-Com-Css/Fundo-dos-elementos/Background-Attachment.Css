@@ -1,0 +1,77 @@
+/* 
+  background-attachment
+  ---------------------
+  Define como a imagem de fundo (background-image) se comporta em relação
+  ao deslocamento da página (scroll). Em outras palavras, controla se o
+  fundo se move junto com o conteúdo ou permanece fixo na tela.
+
+  VALORES DISPONÍVEIS
+
+  1) scroll (valor padrão)
+     A imagem de fundo rola junto com a página / elemento.
+     É o comportamento mais comum.
+     Ex.:
+     background-attachment: scroll;
+
+  2) fixed
+     A imagem de fundo fica FIXA em relação à janela de visualização (viewport),
+     mesmo quando a página rola.
+     Muito usado em efeitos “parallax simples”.
+     Ex.:
+     background-attachment: fixed;
+
+     OBS IMPORTANTE:
+     - Funciona melhor quando aplicado diretamente no body
+     - Em alguns mobile browsers, o comportamento pode variar
+
+  3) local
+     A imagem de fundo rola junto com o conteúdo interno
+     da área rolável do elemento (scroll interno).
+     Ex.:
+     background-attachment: local;
+
+     Útil em caixas com overflow: auto/scroll.
+
+  RESUMO DO COMPORTAMENTO
+
+  scroll → fundo acompanha a rolagem da página  
+  fixed  → fundo fica preso à tela (efeito estático)  
+  local  → fundo rola apenas dentro do elemento
+
+  COMBINAÇÃO COM OUTRAS PROPRIEDADES
+
+  • background-size: cover
+    Muito comum ao usar fixed
+
+    Ex.:
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+  • background-repeat: no-repeat
+    Evita múltiplas repetições no efeito parallax.
+
+  EXEMPLOS
+
+  body {
+    background-image: url("wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* fundo fixo na tela 
+  }
+
+  .caixa-scroll {
+    height: 250px;
+    overflow-y: auto;
+    background-image: url("texture.png");
+    background-attachment: local;   /* fundo rola com o conteúdo interno
+    background-repeat: repeat;
+  }
+
+  BOAS PRÁTICAS
+
+  - Use fixed com cuidado (pode aumentar consumo gráfico).
+  - Em mobile, prefira imagens leves.
+  - Para efeitos visuais, combine com background-position.
+*/

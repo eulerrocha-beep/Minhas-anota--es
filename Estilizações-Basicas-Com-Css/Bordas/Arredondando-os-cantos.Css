@@ -1,0 +1,131 @@
+/* 
+  border-radius
+  -------------
+  Define o ARREDONDAMENTO dos cantos de um elemento.
+
+  Pode arredondar:
+  - caixas (div, section, cards, botões)
+  - imagens
+  - inputs
+  - containers
+
+  Quanto maior o valor → mais arredondado o canto.
+
+  --------------------------------
+  FORMAS DE DEFINIR O VALOR
+  --------------------------------
+
+  px  → valor fixo
+  rem → responsivo
+  %  → permite criar formas circulares / elípticas
+
+  Exemplos:
+  border-radius: 6px;
+  border-radius: 12px;
+  border-radius: 1rem;
+
+  --------------------------------
+  CÍRCULOS E AVATARES
+  --------------------------------
+
+  Para formar um círculo perfeito:
+  • o elemento deve ter mesma largura e altura
+  • usar 50%
+
+  Exemplo:
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  --------------------------------
+  CANTOS INDEPENDENTES
+  --------------------------------
+
+  Ordem segue o relógio:
+
+  top-left   (superior esquerdo)
+  top-right  (superior direito)
+  bottom-right (inferior direito)
+  bottom-left  (inferior esquerdo)
+
+  Exemplo:
+
+  border-radius: 10px 20px 30px 40px;
+
+  Resultado:
+  canto superior esquerdo  = 10px
+  canto superior direito   = 20px
+  canto inferior direito   = 30px
+  canto inferior esquerdo  = 40px
+
+  --------------------------------
+  ATALHOS (2 e 3 valores)
+  --------------------------------
+
+  • 2 valores:
+    border-radius: 10px 30px;
+
+    top-left / bottom-right = 10px
+    top-right / bottom-left = 30px
+
+  • 3 valores:
+    border-radius: 10px 30px 50px;
+
+    top-left        = 10px
+    top-right       = 30px
+    bottom-right    = 50px
+    bottom-left     = 30px
+
+  --------------------------------
+  VALORES ELÍPTICOS (FORMAS ORGÂNICAS)
+  --------------------------------
+
+  Podemos usar dois conjuntos separados por "/"
+  para controlar horizontal x vertical
+
+  Exemplo:
+
+  border-radius: 40px 10px / 10px 40px;
+
+  --------------------------------
+  PROPRIEDADES INDIVIDUAIS
+  --------------------------------
+
+  border-top-left-radius: 12px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+
+  --------------------------------
+  EXEMPLOS PRÁTICOS
+  --------------------------------
+
+  .btn {
+    border-radius: 8px; /* botão com cantos suaves 
+  }
+
+  .card {
+    border-radius: 16px;
+  }
+
+  .tag {
+    border-radius: 999px; /* efeito pílula (pill) 
+  }
+
+  --------------------------------
+  BOAS PRÁTICAS
+  --------------------------------
+
+  ✔ 4px a 12px para UI padrão  
+  ✔ 16px+ para cards e containers  
+  ✔ 50% para círculos e avatares  
+  ✔ 999px para chips / badges
+
+  ✘ Evite exageros que distorçam o layout
+
+  Dica:
+  border-radius ajuda a dar suavidade e modernidade ao design.
+*/

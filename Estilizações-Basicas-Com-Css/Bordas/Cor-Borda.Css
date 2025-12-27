@@ -1,0 +1,120 @@
+/* 
+  border-color (cor da borda)
+  ---------------------------
+  Define a COR da borda de um elemento.
+  Funciona junto com:
+  - border-style
+  - border-width
+
+  Obs:
+  A borda só será visível se existir um estilo definido
+  (ex.: solid, dashed, double etc.)
+
+  -------------------------
+  FORMAS DE DEFINIR A COR
+  -------------------------
+
+  Pode usar:
+
+  • nomes de cores
+    border-color: red;
+
+  • valores hexadecimais
+    border-color: #000;
+    border-color: #1e90ff;
+
+  • RGB
+    border-color: rgb(255, 0, 0);
+
+  • RGBA (permite transparência)
+    border-color: rgba(255, 0, 0, 0.5);
+
+  • HSL
+    border-color: hsl(200, 80%, 50%);
+
+  • variáveis CSS
+    border-color: var(--primary-color);
+
+  -------------------------
+  CORES DIFERENTES POR LADO
+  -------------------------
+
+  Ordem segue o relógio:
+  top | right | bottom | left
+
+  Ex.:
+  border-color: red green blue yellow;
+
+  top    = red
+  right  = green
+  bottom = blue
+  left   = yellow
+
+  • 2 valores
+    border-color: red blue;
+
+    top/bottom  = red
+    right/left  = blue
+
+  • 3 valores
+    border-color: red green blue;
+
+    top         = red
+    right/left  = green
+    bottom      = blue
+
+  -------------------------
+  PROPRIEDADES INDIVIDUAIS
+  -------------------------
+
+  border-top-color: red;
+  border-right-color: green;
+  border-bottom-color: blue;
+  border-left-color: orange;
+
+  -------------------------
+  SHORTHAND COMPLETO
+  -------------------------
+
+  border: largura estilo cor;
+
+  Ex.:
+  border: 2px solid #ff6600;
+
+  -------------------------
+  EXEMPLOS PRÁTICOS
+  -------------------------
+
+  .padrao {
+    border: 2px solid #333; /* borda simples 
+  }
+
+  .alerta {
+    border-width: 3px;
+    border-style: solid;
+    border-color: red;      /* destaque de alerta 
+  }
+
+  .transparente {
+    border: 4px solid rgba(0, 0, 0, 0.3); /* borda suave 
+  }
+
+  .multicolorida {
+    border-style: solid;
+    border-width: 4px;
+    border-color: red green blue yellow;
+  }
+
+  -------------------------
+  BOAS PRÁTICAS
+  -------------------------
+
+  ✔ Use cores com bom contraste
+  ✔ Prefira variáveis CSS em sistemas de design
+  ✔ Use rgba para bordas suaves / modernas
+  ✔ Evite muitas cores diferentes no mesmo elemento
+
+  Dica:
+  A cor da borda ajuda a criar hierarquia visual —
+  use bordas sutis para organização e fortes para destaque.
+*/

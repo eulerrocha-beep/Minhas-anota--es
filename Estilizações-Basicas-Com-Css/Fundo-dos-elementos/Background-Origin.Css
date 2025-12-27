@@ -1,0 +1,81 @@
+/* 
+  background-origin
+  -----------------
+  Define a partir de QUAL ÁREA do elemento a imagem de fundo
+  começa a ser posicionada. Ele determina a “origem” de cálculo
+  para background-position.
+
+  Em outras palavras:
+  → controla se o fundo considera a borda, o padding ou apenas o conteúdo.
+
+  FUNCIONA JUNTO COM:
+  - background-position
+  - background-clip
+  - background-image
+
+  VALORES DISPONÍVEIS
+
+  1) padding-box (valor padrão)
+     A imagem de fundo começa a partir da área de PADDING.
+     Ela NÃO ocupa a área da borda.
+
+     Ex.:
+     background-origin: padding-box;
+
+  2) border-box
+     A imagem de fundo inclui a área da BORDA.
+     O cálculo do posicionamento inicia na borda externa.
+
+     Ex.:
+     background-origin: border-box;
+
+  3) content-box
+     A imagem de fundo começa SOMENTE na área do CONTEÚDO,
+     ignorando borda e padding.
+
+     Ex.:
+     background-origin: content-box;
+
+  RELAÇÃO COM background-clip
+
+  - background-origin → onde começa o posicionamento
+  - background-clip   → até onde o fundo é exibido
+
+  Exemplo comum:
+
+  background-origin: content-box;
+  background-clip: content-box;
+
+  RESULTADO:
+  A imagem aparece apenas dentro do conteúdo,
+  sem invadir padding ou borda.
+
+  EXEMPLOS PRÁTICOS
+
+  .caixa1 {
+    border: 6px solid #000;
+    padding: 20px;
+    background-image: url("pattern.png");
+    background-origin: padding-box;   ignora a borda 
+  }
+
+  .caixa2 {
+    border: 6px solid #000;
+    padding: 20px;
+    background-image: url("pattern.png");
+    background-origin: border-box;     fundo inclui a borda 
+  }
+
+  .caixa3 {
+    border: 6px solid #000;
+    padding: 20px;
+    background-image: url("pattern.png");
+    background-origin: content-box;    começa só no conteúdo 
+  }
+
+  BOAS PRÁTICAS
+
+  - Use padding-box para a maioria dos layouts
+  - Use content-box para ícones / marcas-d’água alinhadas ao texto
+  - Combine com background-clip para maior controle visual
+*/

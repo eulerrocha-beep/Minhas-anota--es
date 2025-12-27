@@ -1,0 +1,51 @@
+/* ===============================
+   CORES HEXADECIMAIS (HEX) NO CSS
+   ===============================
+
+   As cores em formato HEX são representadas por um código iniciado
+   com o caractere #, seguido de 6 dígitos hexadecimais.
+
+   Estrutura:
+   #RRGGBB
+
+   RR → intensidade do Vermelho
+   GG → intensidade do Verde
+   BB → intensidade do Azul
+
+   Cada par varia de:
+   00 → intensidade mínima
+   FF → intensidade máxima
+
+   Exemplos:
+   #FF0000 -> vermelho
+   #00FF00 -> verde
+   #0000FF -> azul
+   #000000 -> preto
+   #FFFFFF -> branco
+   #808080 -> cinza
+
+   --------------------------------
+
+   Forma abreviada (quando os pares se repetem):
+   #RGB
+
+   Exemplos:
+   #F00 -> vermelho
+   #0F0 -> verde
+   #00F -> azul
+   #FFF -> branco
+   #000 -> preto
+
+   --------------------------------
+
+   Observações importantes:
+   - O sistema hexadecimal usa números de 0–9 e letras A–F.
+   - Letras maiúsculas ou minúsculas não fazem diferença (#ff0000 = #FF0000).
+   - HEX não possui transparência (para isso use RGBA ou HSLA).
+   - É um dos formatos mais usados em design e desenvolvimento web.
+
+   Exemplo de uso:
+   color: #3498db;
+   background-color: #2ecc71;
+   border-color: #e74c3c;
+*/

@@ -1,0 +1,118 @@
+/* 
+  background (shorthand)
+  ----------------------
+  É uma propriedade abreviada (shorthand) que permite definir,
+  em uma única linha, várias propriedades relacionadas ao fundo:
+
+  Ela pode incluir:
+
+  - background-color
+  - background-image
+  - background-position
+  - background-size
+  - background-repeat
+  - background-origin
+  - background-clip
+  - background-attachment
+
+  A ordem NÃO é totalmente rígida, mas a forma mais comum é:
+
+  background: 
+    background-color
+    background-image
+    background-position / background-size
+    background-repeat
+    background-attachment
+    background-origin
+    background-clip;
+
+  -------------------------
+  EXEMPLO COMPLETO
+  -------------------------
+
+  .banner {
+    background: 
+      #000                          /* cor de fundo 
+      url("hero.jpg")               /* imagem 
+      center / cover                /* posição / tamanho 
+      no-repeat                     /* repetição 
+      fixed                         /* efeito fixo 
+      padding-box                   /* origem 
+      border-box;                   /* recorte 
+  }
+
+  -------------------------
+  ATALHO PRÁTICO (mais comum)
+  -------------------------
+
+  .section {
+    background: 
+      url("texture.png") 
+      center / contain 
+      no-repeat 
+      #f5f5f5;
+  }
+
+
+/*
+  -------------------------
+  OBSERVAÇÕES IMPORTANTES
+  -------------------------
+
+  • Quando background-size é usado no shorthand,
+    ele deve aparecer após background-position
+    separado por uma barra (/)
+
+    Ex.:
+    center / cover
+
+  • Se você omitir alguma parte,
+    o navegador aplica o valor padrão da propriedade correspondente.
+
+  • O shorthand PODE sobrescrever propriedades definidas antes,
+    então use com cuidado quando misturar propriedades individuais.
+
+  -------------------------
+  MULTIPLAS IMAGENS DE FUNDO
+  -------------------------
+
+  Cada camada é separada por vírgula:
+
+  .multi {
+    background:
+      url("patern.png") repeat,
+      url("photo.png") center / cover no-repeat;
+  }
+
+  A primeira imagem fica no topo,
+  as demais ficam atrás.
+
+  -------------------------
+  QUANDO USAR O SHORTHAND?
+  -------------------------
+
+  ✔ Para definir tudo de uma vez  
+  ✔ Para banners, headers e seções visuais  
+  ✔ Para reduzir linhas de código  
+
+  -------------------------
+  QUANDO EVITAR?
+  -------------------------
+
+  ✘ Quando você quer alterar apenas UMA propriedade  
+  (pode acabar resetando as outras sem querer)
+
+  -------------------------
+  DICA FINAL
+  -------------------------
+
+  Use shorthand para layout final
+  e propriedades individuais durante o desenvolvimento:
+
+  background-image:
+  background-position:
+  background-size:
+  …
+
+  Depois agrupe no shorthand para organização.
+*/

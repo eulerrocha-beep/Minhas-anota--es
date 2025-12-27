@@ -1,0 +1,111 @@
+/* 
+  border (shorthand)
+  ------------------
+  A propriedade `border` é um atalho (shorthand) que permite definir
+  em uma única linha:
+
+  - border-width  → tamanho da borda
+  - border-style  → estilo da borda
+  - border-color  → cor da borda
+
+  Sintaxe geral:
+  border: largura estilo cor;
+
+  Exemplo:
+  border: 2px solid #000;
+
+  -------------------------------------------------
+  IMPORTANTE
+  -------------------------------------------------
+  A borda só aparece se `border-style` for definido.
+  Se você definir apenas largura e cor → ela não será exibida.
+
+  -------------------------------------------------
+  EXEMPLOS BÁSICOS
+  -------------------------------------------------
+
+  /* Borda simples 
+  .box1 {
+    border: 1px solid #333;
+  }
+
+  /* Borda grossa 
+  .box2 {
+    border: 6px solid blue;
+  }
+
+  /* Borda tracejada 
+  .box3 {
+    border: 3px dashed red;
+  }
+
+  /* Borda com transparência 
+  .box4 {
+    border: 4px solid rgba(0, 0, 0, 0.4);
+  }
+
+  -------------------------------------------------
+  DEFININDO BORDAS POR LADO
+  -------------------------------------------------
+
+  border-top:    2px solid green;
+  border-right:  3px dashed red;
+  border-bottom: 4px double blue;
+  border-left:   2px solid orange;
+
+  -------------------------------------------------
+  SHORTHAND POR LADO (cada um independente)
+  -------------------------------------------------
+
+  .card {
+    border-top: 4px solid #000;
+    border-bottom: 2px dashed #555;
+  }
+
+  -------------------------------------------------
+  COMBINAÇÃO COM RADIUS (bordas arredondadas)
+  -------------------------------------------------
+
+  .rounded {
+    border: 2px solid #444;
+    border-radius: 12px;
+  }
+
+  -------------------------------------------------
+  VALORES PADRÃO
+  -------------------------------------------------
+
+  border-width  = medium
+  border-style  = none
+  border-color  = currentColor
+
+  Ou seja:
+  → sem `border-style`, nada aparece.
+
+  -------------------------------------------------
+  QUANDO USAR O SHORTHAND?
+  -------------------------------------------------
+
+  ✔ Quando definir borda completa
+  ✔ Em botões, cards, caixas, inputs
+
+  -------------------------------------------------
+  QUANDO EVITAR?
+  -------------------------------------------------
+
+  ✘ Quando alterar apenas largura ou cor
+  (porque o shorthand pode resetar os outros valores)
+
+  -------------------------------------------------
+  DICA FINAL
+  -------------------------------------------------
+
+  Use esta sequência para bordas limpas e modernas:
+
+  border-width:
+  border-style:
+  border-color:
+
+  Depois, quando estiver seguro do resultado,
+  compacte tudo com o shorthand `border`.
+*/

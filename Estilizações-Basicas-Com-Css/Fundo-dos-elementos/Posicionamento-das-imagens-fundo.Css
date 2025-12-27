@@ -1,0 +1,101 @@
+/* 
+  background-position
+  -------------------
+  Define a posição inicial da imagem de fundo (background-image)
+  dentro do elemento. Funciona em conjunto com background-repeat
+  e background-size.
+
+  A posição é calculada a partir da borda superior-esquerda
+  do elemento por padrão, a menos que valores diferentes sejam definidos.
+
+  FORMAS DE DEFINIR A POSIÇÃO
+
+  1) PALAVRAS-CHAVE (mais comuns)
+     Permitem alinhar a imagem em regiões pré-definidas:
+
+     top        → topo
+     bottom     → base
+     left       → esquerda
+     right      → direita
+     center     → centro
+
+     Exemplos:
+     background-position: center;
+     background-position: top center;
+     background-position: bottom right;
+
+  2) VALORES EM PORCENTAGEM
+     A porcentagem é relativa ao tamanho do elemento
+     e também ao tamanho da própria imagem.
+
+     0% 0%     = canto superior esquerdo
+     50% 50%   = centro
+     100% 100% = canto inferior direito
+
+     Ex.:
+     background-position: 50% 20%;
+
+     OBS:
+     - A primeira porcentagem → eixo X (horizontal)
+     - A segunda porcentagem → eixo Y (vertical)
+
+  3) VALORES EM PIXELS / UNIDADES
+     Define deslocamentos a partir do canto superior esquerdo.
+
+     Ex.:
+     background-position: 20px 40px;
+     background-position: 1rem 3rem;
+
+     Útil para posicionamento preciso de ícones e marcas-d’água.
+
+  4) COM UMA ÚNICA UNIDADE
+     Quando apenas um valor é informado:
+     - Ele será aplicado no eixo X
+     - O eixo Y assume "center"
+
+     Ex.:
+     background-position: 30px;   /* 30px no eixo X, Y = center
+
+  INTERAÇÃO COM OUTRAS PROPRIEDADES
+
+  • background-size: cover / contain
+    - Quando cover é usado, a imagem pode ser cortada
+      e background-position define QUAL PARTE fica visível.
+
+    Ex.:
+    background-size: cover;
+    background-position: center top;
+
+  • background-repeat: no-repeat
+    - Muito comum usar juntos em banners e headers.
+
+    Ex.:
+    background-repeat: no-repeat;
+    background-position: center;
+
+  MÚLTIPLAS IMAGENS
+  Cada imagem pode ter sua própria posição:
+
+  background-image: url(a.png), url(b.png);
+  background-position: left top, right bottom;
+
+  BOAS PRÁTICAS
+
+  - Para imagens decorativas → center / cover;
+  - Para ícones → valores em px;
+  - Para layouts responsivos → porcentagens.
+
+  EXEMPLOS
+
+  .banner {
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center top;  /* foco no topo 
+    background-repeat: no-repeat;
+
+  .icone {
+    background-image: url("icon.svg");
+    background-position: 8px 8px;    /* alinhamento preciso 
+    background-repeat: no-repeat;
+  }
+*/

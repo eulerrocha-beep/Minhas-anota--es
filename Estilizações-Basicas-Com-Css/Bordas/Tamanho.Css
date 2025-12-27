@@ -1,0 +1,127 @@
+/* 
+  border (tamanho da borda) — border-width
+  ----------------------------------------
+  Define a ESPESSURA (largura) da borda de um elemento.
+
+  A propriedade pode ser definida de três formas:
+
+  1) border-width
+  2) border (shorthand)
+  3) valores individuais por lado
+
+  -------------------------
+  1) border-width (somente tamanho)
+  -------------------------
+
+  Aceita unidades como:
+  - px
+  - em / rem
+  - %
+
+  Exemplos:
+  border-width: 1px;
+  border-width: 4px;
+
+  Também aceita palavras-chave:
+
+  thin   → borda fina
+  medium → padrão
+  thick  → borda grossa
+
+  Ex.:
+  border-width: thick;
+
+  -------------------------
+  2) Definindo tamanhos diferentes por lado
+  -------------------------
+
+  A ordem segue o sentido do relógio:
+
+  top  (cima)
+  right (direita)
+  bottom (baixo)
+  left (esquerda)
+
+  Ex.:
+  border-width: 2px 4px 6px 8px;
+
+  Interpretação:
+  top    = 2px
+  right  = 4px
+  bottom = 6px
+  left   = 8px
+
+  Atalhos:
+
+  • 2 valores:
+    border-width: 4px 8px;
+
+    top/bottom = 4px  
+    right/left = 8px
+
+  • 3 valores:
+    border-width: 2px 6px 10px;
+
+    top    = 2px
+    right/left = 6px
+    bottom = 10px
+
+  -------------------------
+  3) Shorthand completo com tamanho
+  -------------------------
+
+  A ordem é:
+  border: largura estilo cor;
+
+  Ex.:
+  border: 4px solid #000;
+
+  Outro exemplo:
+  border: 2px dashed red;
+
+  OBS:
+  O tamanho só funciona se houver estilo definido (solid, dashed, etc.)
+
+  -------------------------
+  Tamanhos por lado (propriedades individuais)
+  -------------------------
+
+  border-top-width: 4px;
+  border-right-width: 2px;
+  border-bottom-width: 6px;
+  border-left-width: 3px;
+
+  -------------------------
+  EXEMPLOS PRÁTICOS
+  -------------------------
+
+  .fina {
+    border: 1px solid #333; /* borda fina 
+  }
+
+  .media {
+    border-width: medium;
+    border-style: solid;
+  }
+
+  .grossa {
+    border: 8px solid blue; /* borda grossa 
+  }
+
+  .borda-variada {
+    border-style: solid
+    border-width: 2px 6px 2px 6px; /* larguras diferentes 
+  }
+
+  -------------------------
+  BOAS PRÁTICAS
+  -------------------------
+
+  - Prefira px para precisão
+  - Use rem em layouts responsivos
+  - Sempre defina border-style para bordas visíveis
+  - Evite valores exagerados (quebram o layout)
+
+  Dica:
+  largura da borda = impacto visual e hierarquia no design
+*/

@@ -1,0 +1,107 @@
+/* 
+  Mesclagem no CSS (Blend Modes)
+  ------------------------------
+  Em CSS, "mesclagem" se refere aos modos de mistura entre:
+  - cores
+  - imagens de fundo
+  - elementos sobrepostos
+
+  Ela controla COMO as camadas interagem visualmente, semelhante
+  aos modos de mesclagem de softwares como Photoshop.
+
+  Existem duas propriedades principais:
+
+  1) background-blend-mode
+     Aplica a mesclagem ENTRE:
+     - múltiplas imagens de fundo
+     - gradientes
+     - cor de fundo
+
+     Funciona apenas dentro do mesmo elemento.
+
+     Exemplo:
+     background-image: url("foto.jpg"), linear-gradient(#000, #000);
+     background-blend-mode: multiply;
+
+  2) mix-blend-mode
+     Mescla o elemento com:
+     - o que estiver atrás dele (elementos pais e vizinhos)
+
+     Exemplo:
+     mix-blend-mode: screen;
+
+  ------------------------------
+  PRINCIPAIS MODOS DE MESCLAGEM
+  ------------------------------
+
+  normal
+    Sem mesclagem. Mantém as cores originais.
+
+  multiply
+    Escurece a imagem (multiplicação de tons).
+    Muito usado para criar overlays com contraste.
+
+  screen
+    Clareia a imagem (efeito oposto ao multiply).
+
+  overlay
+    Combina multiply + screen
+    Realça contraste e saturação.
+
+  darken
+    Mantém apenas os pixels mais escuros.
+
+  lighten
+    Mantém apenas os pixels mais claros.
+
+  color-burn
+    Aumenta contraste e intensifica sombras.
+
+  color-dodge
+    Clareia e intensifica áreas iluminadas.
+
+  difference
+    Destaca diferenças entre camadas (efeito negativo suave).
+
+  soft-light
+    Iluminação suave (efeito sutil e natural).
+
+  hard-light
+    Iluminação forte (contraste elevado).
+
+  hue
+    Mantém matiz da camada superior.
+
+  saturation
+    Mantém saturação da camada superior.
+
+  color
+    Mantém cor da camada superior e luminosidade da inferior.
+
+  luminosity
+    Mantém luz da camada superior.
+
+  ------------------------------
+  EXEMPLOS PRÁTICOS
+  ------------------------------
+
+  /* Mesclando imagem + gradiente escuro 
+  .banner {
+    background-image: url("hero.jpg"), linear-gradient(#000, #000);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply; /* efeito de contraste 
+  }
+
+  /* Texto interagindo com o fundo 
+  .titulo {
+    font-size: 3rem;
+    color: white;
+    mix-blend-mode: overlay;
+  }
+
+  /* Efeito artístico com foto 
+  .card {
+    background-image: url("foto.png"), linear-gradient(90deg, #ff0066, #ffaa00);
+    background-blend-mode: screen;
+  }

@@ -1,0 +1,94 @@
+/*
+  background-image define uma ou mais imagens (ou gradientes) como fundo
+  de um elemento HTML. A imagem de fundo não faz parte do conteúdo,
+  sendo usada apenas para fins visuais e de layout.
+
+  Pode receber:
+  - url("imagem.jpg")              → imagem externa
+  - linear-gradient(...)           → gradiente linear
+  - radial-gradient(...)           → gradiente radial
+  - none                           → remove o fundo
+
+  Geralmente é combinada com:
+  - background-size      → controla o tamanho da imagem (cover, contain, auto)
+  - background-position  → define a posição da imagem no elemento
+  - background-repeat    → controla a repetição da imagem
+
+  Observações:
+  - A imagem de fundo não é lida por leitores de tela
+  - Não é indexada para SEO como <img>
+  - Pode aceitar múltiplas imagens em camadas
+
+  Exemplo de uso comum:
+  background-image: url("banner.jpg");
+
+
+    linear-gradient cria um gradiente linear como imagem de fundo,
+  fazendo a transição suave entre duas ou mais cores em linha reta.
+
+  Direção:
+  - to top, to bottom, to left, to right
+  - to top right, to bottom left, etc
+  - Ângulos (0deg, 90deg, 180deg...)
+
+  Cores:
+  - Pode usar duas ou mais cores
+  - Pode definir pontos de parada (% ou px)
+
+  Observações:
+  - É usado como valor de background-image
+  - Não precisa de arquivo de imagem
+  - Escala perfeitamente em qualquer tamanho de tela
+
+  Exemplo:
+  background-image: linear-gradient(to right, #ff0000, #0000ff);
+
+  radial-gradient cria um gradiente radial (em formato circular ou elíptico),
+  onde as cores partem de um ponto central e se expandem para fora.
+
+  Formato:
+  - circle   → formato circular
+  - ellipse  → formato elíptico (padrão)
+
+  Posição:
+  - center (padrão)
+  - top, bottom, left, right
+  - combinações como left top
+  - valores em porcentagem ou px
+
+  Cores:
+  - Duas ou mais cores
+  - Pode definir pontos de parada (% ou px)
+
+  Observações:
+  - Usado como valor de background-image
+  - Não utiliza imagens externas
+  - Adapta-se automaticamente ao tamanho do elemento
+
+  Exemplo:
+  background-image: radial-gradient(circle at center, #ffcc00, #ff6600);
+
+   repeating-gradient cria gradientes que se repetem automaticamente,
+  formando padrões contínuos no fundo do elemento.
+
+  Tipos:
+  - repeating-linear-gradient  → gradiente linear repetido
+  - repeating-radial-gradient  → gradiente radial repetido
+
+  Funcionamento:
+  - As cores são definidas com intervalos (% ou px)
+  - O gradiente se repete indefinidamente após o último ponto
+
+  Usos comuns:
+  - Criação de listras, padrões geométricos e efeitos visuais
+  - Substituição de imagens de fundo repetidas
+
+  Observações:
+  - Usado como valor de background-image
+  - Não precisa de arquivos de imagem
+  - Escala perfeitamente em qualquer resolução
+
+  Exemplos:
+  repeating-linear-gradient(45deg, #000 0 10px, #fff 10px 20px);
+  repeating-radial-gradient(circle, #ccc 0 10px, #333 10px 20px);
+*/

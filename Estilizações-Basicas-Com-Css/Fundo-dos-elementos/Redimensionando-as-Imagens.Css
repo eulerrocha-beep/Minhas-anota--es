@@ -1,0 +1,50 @@
+/*
+  background-size
+
+  Define como a imagem de fundo será redimensionada dentro do elemento.
+
+  ▸ auto (valor padrão)
+    Mantém o tamanho original da imagem.
+    Não redimensiona, apenas exibe como ela realmente é.
+
+      background-size: auto;
+
+  ▸ cover
+    Faz a imagem COBRIR toda a área do elemento.
+    Preenche completamente, mesmo que precise cortar partes da imagem.
+    Muito usado em banners e hero sections.
+
+      background-size: cover;
+
+  ▸ contain
+    Redimensiona a imagem para caber COMPLETA dentro do elemento.
+    Nenhuma parte é cortada, mas pode sobrar espaço nas bordas.
+
+      background-size: contain;
+
+  ▸ valores personalizados
+    Permite definir largura e altura manualmente.
+
+      background-size: 300px 200px;
+
+    Primeiro valor  = largura
+    Segundo valor   = altura
+
+  ▸ usando apenas um valor
+    Ajusta a largura e a altura é calculada automaticamente,
+    mantendo a proporção da imagem.
+
+      background-size: 100%;
+
+  ▸ valores em porcentagem
+    A imagem se adapta ao tamanho do elemento.
+
+      background-size: 100% 100%;
+      (pode distorcer a imagem)
+
+  RESUMO:
+    auto    → tamanho original
+    cover   → cobre toda a área (pode cortar)
+    contain → mostra inteira (pode sobrar espaço)
+    px/%    → redimensiona manualmente mantendo ou não a proporção
+*/

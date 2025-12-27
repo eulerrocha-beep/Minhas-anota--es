@@ -1,0 +1,57 @@
+/*
+ border-image-width
+
+ Define a largura da borda gerada pela imagem utilizada no border-image.
+
+ Ela controla QUANTO da imagem recortada (a partir do border-image-slice)
+ será usada na espessura da borda do elemento.
+
+ Funciona em conjunto com:
+ - border-image-source
+ - border-image-slice
+ - border-image-repeat
+
+ IMPORTANTE:
+ O elemento precisa ter uma borda definida, mesmo que transparente:
+ border: 10px solid transparent;
+
+ Formas de definir o valor:
+
+ 1) Número sem unidade
+    Interpreta como multiplicador da largura da borda
+    border-image-width: 1;   → usa exatamente a largura da borda
+    border-image-width: 2;   → dobra a espessura visual da borda
+
+ 2) Pixels (px)
+    Define o valor diretamente em tamanho fixo
+    border-image-width: 30px;
+
+ 3) Percentual (%)
+    Baseado na largura da imagem usada
+    border-image-width: 50%;
+
+ 4) auto
+    O navegador calcula automaticamente com base na imagem
+
+ Também aceita até quatro valores (como padding/margin):
+ - topo
+ - direita
+ - baixo
+ - esquerda
+
+ Exemplo:
+ border-image-width: 10px 20px 30px 40px;
+
+ Uso comum (exemplo funcional):
+
+ border: 12px solid transparent;
+ border-image-source: url("borda.png");
+ border-image-slice: 30;
+ border-image-width: 12px;
+ border-image-repeat: stretch;
+
+ Observação:
+ Se border-image-width for maior que a borda declarada,
+ a imagem pode ultrapassar o limite visual do elemento.
+
+*/

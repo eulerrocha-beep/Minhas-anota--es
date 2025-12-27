@@ -1,0 +1,105 @@
+/* 
+  border-image-source
+  -------------------
+  Define a IMAGEM que será usada como borda do elemento.
+
+  Essa imagem substitui a borda tradicional (solid, dashed etc.),
+  permitindo criar bordas decorativas, texturizadas ou com padrões.
+
+  Funciona em conjunto com:
+  - border-image-slice
+  - border-image-width
+  - border-image-repeat
+  - border-style (precisa estar definido)
+
+  --------------------------------
+  FORMAS DE DEFINIR O VALOR
+  --------------------------------
+
+  1) Usando uma imagem externa
+     Ex.:
+
+     border-image-source: url("borda.png");
+
+  2) Usando gradiente
+     Ex.:
+
+     border-image-source: linear-gradient(red, blue);
+
+  3) Remover imagem da borda
+     Ex.:
+
+     border-image-source: none;
+
+  --------------------------------
+  IMPORTANTE ⚠
+  --------------------------------
+
+  Para a imagem de borda funcionar,
+  é necessário definir um estilo de borda:
+
+  Ex.:
+
+  border-style: solid; /* obrigatório 
+  border-width: 10px;
+
+  Sem border-style → nada aparece.
+
+  --------------------------------
+  COMO A IMAGEM É APLICADA
+  --------------------------------
+
+  A imagem é dividida em 9 partes:
+
+    ┌───────┬───────┬───────┐
+    │ canto │ borda │ canto │
+    ├───────┼───────┼───────┤
+    │ borda │ centro│ borda │
+    ├───────┼───────┼───────┤
+    │ canto │ borda │ canto │
+    └───────┴───────┴───────┘
+
+  • os cantos ficam nos cantos
+  • as laterais são repetidas / esticadas
+  • o centro pode ser ignorado
+
+  Quem define esse corte é o `border-image-slice`.
+
+  --------------------------------
+  EXEMPLO COMPLETO
+  --------------------------------
+
+  .quadro {
+    border-style: solid;
+    border-width: 12px;
+
+    border-image-source: url("moldura.png");
+    border-image-slice: 30;      /* define os cortes da imagem 
+    border-image-repeat: stretch; /* controla repetição 
+  }
+
+  --------------------------------
+  USANDO GRADIENTE COMO BORDA
+  --------------------------------
+
+  .gradient-box {
+    border: 10px solid transparent;
+    border-image-source: linear-gradient(45deg, #ff6600, #0099ff);
+    border-image-slice: 1;
+  }
+
+  --------------------------------
+  BOAS PRÁTICAS
+  --------------------------------
+
+  ✔ Use imagens com boa resolução  
+  ✔ Prefira PNG / SVG com transparência  
+  ✔ Ajuste o slice para evitar distorções  
+  ✔ Teste em diferentes tamanhos de caixa  
+
+  ✘ Evite imagens muito pesadas (afetam desempenho)
+
+  Dica:
+  `border-image-source` é ótimo para criar molduras,
+  cartões decorativos, boxes temáticos e efeitos personalizados.
+*/

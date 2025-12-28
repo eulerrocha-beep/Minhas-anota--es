@@ -1,0 +1,111 @@
+/*
+  TEXT-OVERFLOW
+  ----------------------------------------------------
+  A propriedade text-overflow controla como o texto
+  é exibido quando ultrapassa a largura do contêiner.
+
+  Ela define o QUE aparece visualmente quando o texto
+  não cabe no espaço disponível.
+
+  ⚠ Importante:
+  Para funcionar corretamente é necessário:
+
+    overflow: hidden;
+    white-space: nowrap;
+
+  pois o texto precisa ficar limitado ao elemento.
+
+  ----------------------------------------------------
+  VALORES PRINCIPAIS
+
+  🔹 clip (valor padrão)
+    - Corta o texto excedente
+    - Não exibe indicação de truncamento
+
+    text-overflow: clip;
+
+  Resultado:
+    "Texto muito longo para o container"
+    → "Texto muito longo para o cont"
+
+  ----------------------------------------------------
+
+  🔹 ellipsis (mais utilizado)
+    - Exibe reticências (...) no final do texto cortado
+
+    text-overflow: ellipsis;
+
+  Resultado:
+    "Texto muito longo para o container"
+    → "Texto muito longo..."
+
+  Muito usado em:
+  - cards
+  - listas
+  - títulos longos
+  - tabelas responsivas
+
+  ----------------------------------------------------
+  EXEMPLO COMPLETO (uso correto)
+
+    .titulo {
+      white-space: nowrap;   /* não quebra linha 
+      overflow: hidden;      /* impede ultrapassar o container 
+      text-overflow: ellipsis; /* adiciona ... 
+    }
+
+  ----------------------------------------------------
+  SUPORTE A MÚLTIPLAS LINHAS (técnica extra)
+
+  text-overflow funciona apenas em uma linha.
+
+  Para múltiplas linhas usamos:
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;      /* quantidade de linhas 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+  Exemplo:
+
+    .descricao {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+  Resultado:
+  → o texto é truncado após 3 linhas
+  → com reticências automáticas
+
+  ----------------------------------------------------
+  QUANDO USAR?
+
+  ✔ títulos longos
+  ✔ cards de produtos
+  ✔ tabelas
+  ✔ notificações
+  ✔ textos dinâmicos
+  ✔ interfaces responsivas
+
+  ----------------------------------------------------
+  DIFERENÇA IMPORTANTE
+
+  overflow: hidden;
+    → corta conteúdo excedente
+
+  text-overflow: ellipsis;
+    → indica que foi cortado (…)
+
+  Ambos trabalham JUNTOS.
+
+  ----------------------------------------------------
+  RESUMO
+
+  clip      → corta o texto sem indicar
+  ellipsis  → corta e adiciona "..."
+
+  Sempre usar junto com:
+  white-space + overflow
+*/

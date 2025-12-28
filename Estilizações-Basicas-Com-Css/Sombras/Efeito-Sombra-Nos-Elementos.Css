@@ -1,0 +1,219 @@
+/*
+  BOX-SHADOW
+  ----------------------------------------------------
+  A propriedade box-shadow adiciona SOMBRAS ao redor
+  de um elemento (caixas, cards, botões, containers, etc).
+
+  Ela pode criar:
+  - sombras externas
+  - sombras internas
+  - efeitos de profundidade
+  - aparência de elevação (material design)
+
+  ----------------------------------------------------
+  SINTAXE GERAL
+
+  box-shadow:
+    deslocamento-x
+    deslocamento-y
+    desfoque
+    espalhamento
+    cor
+    inset (opcional);
+
+  ----------------------------------------------------
+  PARÂMETROS EXPLICADOS
+
+  🔹 deslocamento-x (offset-x)
+    Controla a posição horizontal da sombra
+    valor positivo  → sombra à direita
+    valor negativo  → sombra à esquerda
+
+  🔹 deslocamento-y (offset-y)
+    Controla a posição vertical
+    valor positivo  → sombra para baixo
+    valor negativo  → sombra para cima
+
+  🔹 desfoque (blur-radius)
+    Define o nível de suavidade da sombra
+    quanto maior → mais difusa
+    não aceita valores negativos
+
+  🔹 espalhamento (spread-radius)
+    Expande ou contrai o tamanho da sombra
+    valor positivo  → aumenta a sombra
+    valor negativo  → encolhe a sombra
+
+  🔹 cor
+    Pode ser rgb(), rgba(), hex, hsl etc
+    recomendação → usar rgba para transparência
+
+  🔹 inset (opcional)
+    Transforma a sombra de EXTERNA para INTERNA
+
+  ----------------------------------------------------
+  EXEMPLOS PRÁTICOS
+
+  🔸 Sombra padrão suave
+
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.25);
+
+  🔸 Sombra forte
+
+    box-shadow: 4px 8px 16px rgba(0,0,0,0.4);
+
+  🔸 Sombra interna
+
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.35);
+
+  🔸 Sombra sem desfoque
+
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+
+  🔸 Sombra expandida
+
+    box-shadow: 0 0 10px 4px rgba(0,0,0,0.3);
+
+  ----------------------------------------------------
+  MULTIPLAS SOMBRAS
+
+  É possível aplicar várias sombras separadas por vírgulas:
+
+    box-shadow:
+      2px 2px 6px rgba(0,0,0,0.3),
+      -2px -2px 4px rgba(0,0,0,0.1);
+
+  ----------------------------------------------------
+  USOS COMUNS
+
+  ✔ Botões com efeito elevado  
+  ✔ Cards e containers modernos  
+  ✔ Caixas de destaque  
+  ✔ Simular profundidade e hierarquia visual  
+
+  ----------------------------------------------------
+  BOAS PRÁTICAS
+
+  ✔ Prefira sombras leves e suaves  
+  ✔ Use rgba para transparência  
+  ✔ Evite sombras grandes em textos  
+  ✔ Teste sempre em tema claro e escuro  
+
+  ----------------------------------------------------
+  DICA DE DESIGN (estilo material)
+
+    box-shadow:
+      0 2px 6px rgba(0,0,0,0.15),
+      0 8px 20px rgba(0,0,0,0.1);
+
+  Cria um efeito profissional e moderno.
+*/
+
+/*
+  FILTER: DROP-SHADOW x BOX-SHADOW
+  ----------------------------------------------------
+  Ambos criam sombras, mas funcionam de forma diferente.
+
+  box-shadow  → aplica sombra na CAIXA do elemento
+  drop-shadow → aplica sombra na FORMA VISÍVEL do elemento
+                 (considera transparências)
+
+  ----------------------------------------------------
+  BOX-SHADOW (sombra na caixa do elemento)
+
+  - Sempre segue o formato retangular da box
+  - Não respeita áreas transparentes da imagem
+  - A sombra acompanha a borda do elemento
+
+  Exemplo:
+
+    .card {
+      box-shadow: 4px 6px 12px rgba(0,0,0,.25);
+    }
+
+  Resultado:
+  → sombra no contorno do elemento inteiro
+
+  ----------------------------------------------------
+  FILTER: DROP-SHADOW (sombra na forma real)
+
+  - Considera pixels visíveis
+  - Perfeito para imagens com fundo transparente (PNG / SVG)
+  - Ideal para ícones, logos, figuras recortadas
+
+  Sintaxe:
+
+    filter: drop-shadow(offset-x offset-y blur color);
+
+  Exemplo:
+
+    .logo {
+      filter: drop-shadow(4px 6px 8px rgba(0,0,0,.35));
+    }
+
+  Resultado:
+  → sombra acompanha o formato da imagem
+
+  (não fica um retângulo em volta)
+
+  ----------------------------------------------------
+  DIFERENÇA VISUAL IMPORTANTE
+
+  Em uma imagem PNG com fundo transparente:
+
+  box-shadow
+    → cria sombra no quadrado da imagem
+
+  drop-shadow
+    → cria sombra apenas nos pixels visíveis
+
+  ----------------------------------------------------
+  EXEMPLOS PRÁTICOS
+
+  🔹 Para imagens e ícones recortados
+
+    img {
+      filter: drop-shadow(2px 4px 6px rgba(0,0,0,.4));
+    }
+
+  🔹 Para botões e cards
+
+    .btn {
+      box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    }
+
+  ----------------------------------------------------
+  COMBINAÇÃO AVANÇADA
+
+  Sim, é possível usar ambos juntos:
+
+    .elemento {
+      box-shadow: 0 4px 12px rgba(0,0,0,.2);
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,.25));
+    }
+
+  - box-shadow → cria profundidade da caixa
+  - drop-shadow → reforça contorno do conteúdo
+
+  ----------------------------------------------------
+  QUANDO USAR CADA UM?
+
+  USE BOX-SHADOW PARA:
+  ✔ cards
+  ✔ containers
+  ✔ botões
+  ✔ layouts
+
+  USE DROP-SHADOW PARA:
+  ✔ imagens sem fundo
+  ✔ logos
+  ✔ ícones
+  ✔ svgs e ilustrações
+
+  ----------------------------------------------------
+  RESUMO
+
+  box-shadow  → sombra no elemento (forma retangular)
+  drop-shadow → sombra na forma desenhada (respeita transparência)
+
+*/

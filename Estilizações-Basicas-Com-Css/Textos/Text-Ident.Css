@@ -1,0 +1,71 @@
+/*
+  TEXT-INDENT
+  ----------------------------------------------------
+  A propriedade text-indent define o recuo da
+  PRIMEIRA linha de um parágrafo.
+
+  Ela é muito utilizada para:
+  - formatação de textos longos
+  - estilo editorial
+  - simular parágrafos clássicos de livros e artigos
+
+  ----------------------------------------------------
+  FORMAS DE DEFINIÇÃO
+
+  🔹 Valor em pixels
+    text-indent: 30px;
+    → recua a primeira linha em 30px
+
+  🔹 Valor em porcentagem
+    text-indent: 10%;
+    → recuo proporcional à largura do elemento
+
+  🔹 Valor negativo
+    text-indent: -20px;
+    → faz a primeira linha começar "antes" da margem
+    → usado em listas e efeitos de destaque
+
+  🔹 Valor zero
+    text-indent: 0;
+    → remove o recuo
+
+  ----------------------------------------------------
+  EXEMPLOS DE USO
+
+    p {
+      text-indent: 2em;
+      /* recuo baseado no tamanho da fonte
+    }
+
+    .artigo p {
+      text-indent: 1.5em; 
+      line-height: 1.6;
+    }
+
+    .lista-formatada {
+      text-indent: -10px;   /* efeito de bullet customizado
+    }
+
+  ----------------------------------------------------
+  BOAS PRÁTICAS
+
+  ✔ Em textos longos, prefira valores em:
+    em → acompanha o tamanho da fonte
+    Ex: text-indent: 2em;
+
+  ✔ Não use junto com alinhamento justify
+    sem testes de leitura
+
+  ✔ Evite recuos exagerados
+    prejudicam a legibilidade
+
+  ----------------------------------------------------
+  IMPORTANTE
+
+  - O recuo afeta SOMENTE a primeira linha
+  - Funciona apenas em elementos block ou inline-block
+  - O valor pode ser herdado para elementos filhos
+  - É diferente de margin-left e padding-left
+    (que movem o bloco inteiro)
+
+*/

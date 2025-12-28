@@ -1,0 +1,96 @@
+/*
+  TEXT-DECORATION
+  ----------------------------------------------------
+  A propriedade text-decoration controla a decoração visual
+  aplicada ao texto, como sublinhado, linha acima ou linha cortando.
+
+  Ela é muito utilizada em:
+  - links
+  - botões
+  - títulos
+  - elementos de destaque
+
+  A propriedade pode ser usada na forma abreviada (shorthand)
+  ou separada em subpropriedades.
+
+  Principais valores da forma resumida:
+
+  🔹 underline
+    Cria uma linha abaixo do texto
+    text-decoration: underline;
+
+  🔹 overline
+    Cria uma linha ACIMA do texto
+    text-decoration: overline;
+
+  🔹 line-through
+    Cria uma linha atravessando o texto
+    (muito usada para preços promocionais)
+    text-decoration: line-through;
+
+  🔹 none
+    Remove qualquer decoração existente
+    (comum para remover sublinhado de links)
+    text-decoration: none;
+
+  Exemplo prático:
+    a {
+      text-decoration: none;   → remove sublinhado padrão do link
+    }
+
+  ----------------------------------------------------
+  SUBPROPRIEDADES MAIS MODERNAS
+  ----------------------------------------------------
+
+  🔸 text-decoration-line
+    Define o tipo de linha aplicada
+    Ex:
+      text-decoration-line: underline;
+
+  🔸 text-decoration-style
+    Define o estilo da linha
+    Valores possíveis:
+      solid      → linha contínua
+      dotted     → pontilhada
+      dashed     → tracejada
+      double     → linha dupla
+      wavy       → ondulada
+
+    Ex:
+      text-decoration-style: wavy;
+
+  🔸 text-decoration-color
+    Define a cor da linha
+    Ex:
+      text-decoration-color: red;
+      
+
+  🔸 text-decoration-thickness
+    Define a espessura da linha
+    Ex:
+      text-decoration-thickness: 2px;
+
+  ----------------------------------------------------
+  EXEMPLO COMPLETO (shorthand moderna)
+
+    a {
+      text-decoration: underline wavy blue 2px;
+    }
+
+  Ordem na forma abreviada:
+    text-decoration:
+      line
+      style
+      color
+      thickness;
+
+  ----------------------------------------------------
+  Observações importantes:
+
+  - A decoração afeta apenas a exibição do texto,
+    o conteúdo original não é alterado.
+
+  - Em links, o underline é padrão por questão de acessibilidade.
+    Se remover, é recomendado adicionar outro destaque visual.
+
+*/

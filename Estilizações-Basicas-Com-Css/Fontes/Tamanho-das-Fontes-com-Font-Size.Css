@@ -1,0 +1,119 @@
+/*
+  TAMANHO DAS FONTES COM font-size
+
+  A propriedade font-size define o tamanho da fonte exibida no elemento.
+  Ela influencia diretamente a legibilidade, hierarquia visual e layout do texto.
+
+  Pode ser definida usando diferentes tipos de unidades.
+
+  ── UNIDADES MAIS UTILIZADAS ──
+
+  ▸ px (pixels — tamanho fixo)
+    Exemplo:
+    font-size: 16px;
+    • Não muda com o tamanho da tela
+    • Muito usado para títulos e elementos pequenos
+
+  ▸ rem (relativo ao tamanho base do documento)
+    Exemplo:
+    font-size: 1.2rem;
+    • 1rem = tamanho da fonte do <html>
+    • Melhor para acessibilidade e layouts responsivos
+
+  ▸ em (relativo ao elemento pai)
+    Exemplo:
+    font-size: 1.5em;
+    • Pode acumular tamanho se houver elementos aninhados
+    • Usado com cautela
+
+  ▸ % (porcentagem do elemento pai)
+    Exemplo:
+    font-size: 120%;
+    • Depende do contexto
+    • Comportamento parecido com "em"
+
+  ── BOAS PRÁTICAS ──
+
+  ✓ Use px quando precisar de precisão em pequenos elementos
+  ✓ Prefira rem para textos gerais e responsividade
+  ✓ Evite exagerar no uso de em (pode causar efeito cascata)
+  ✓ Mantenha boa hierarquia de tamanhos entre títulos e parágrafos
+
+  ── EXEMPLOS COMUNS ──
+
+  Corpo do texto:
+    font-size: 16px ou 1rem;
+
+  Subtítulos:
+    font-size: 1.25rem;
+
+  Títulos:
+    font-size: 2rem ou maior;
+
+  ── RESUMO ──
+  font-size controla o tamanho do texto.
+  A escolha da unidade impacta tanto no design quanto na acessibilidade do site.
+
+   PALAVRAS-CHAVE DO font-size
+
+  Além de valores em px, rem, em e %, o font-size também pode
+  ser definido usando palavras-chave pré-definidas pelo navegador.
+
+  Essas palavras representam tamanhos proporcionais
+  baseados no tamanho padrão do navegador (geralmente 16px).
+
+  ── PALAVRAS-CHAVE PRINCIPAIS ──
+
+  ▸ xx-small
+    Muito pequeno — menor tamanho disponível
+
+  ▸ x-small
+    Extra pequeno
+
+  ▸ small
+    Pequeno
+
+  ▸ medium
+    Tamanho padrão do navegador (valor base)
+
+  ▸ large
+    Um pouco maior que o padrão
+
+  ▸ x-large
+    Extra grande
+
+  ▸ xx-large
+    Muito grande — maior tamanho definido pela escala
+
+  Exemplo de uso:
+    font-size: large;
+    font-size: small;
+
+  ── PALAVRAS-CHAVE RELATIVAS ──
+
+  ▸ smaller
+    Diminui o tamanho em relação ao elemento pai
+
+  ▸ larger
+    Aumenta o tamanho em relação ao elemento pai
+
+  Exemplo:
+    font-size: larger;
+    font-size: smaller;
+
+  ── OBSERVAÇÕES IMPORTANTES ──
+
+  • Os valores variam de acordo com o navegador
+  • São úteis para textos que precisam de adaptação automática
+  • Não oferecem a mesma precisão que px, rem ou em
+
+  ── BOAS PRÁTICAS ──
+
+  ✓ Use palavras-chave em textos simples e genéricos
+  ✓ Prefira rem para sistemas tipográficos mais controlados
+  ✓ Evite misturar muitas unidades diferentes no mesmo layout
+
+  Resumo:
+  As palavras-chave do font-size permitem ajustar o texto de forma
+  semântica e proporcional, seguindo a escala tipográfica do navegador.
+*/

@@ -1,0 +1,73 @@
+/*
+  ESTILO TIPOGRÁFICO COM font-variant
+
+  A propriedade font-variant é usada para aplicar variações tipográficas
+  específicas em um texto, sem trocar a família da fonte.
+
+  Ela costuma ser utilizada para:
+  • exibir pequenas capitulares (small caps)
+  • controlar números e ligaduras
+  • aplicar variações tipográficas profissionais
+
+  ── PRINCIPAL VALOR ──
+
+  ▸ small-caps
+    Converte letras minúsculas em versões reduzidas
+    das letras maiúsculas.
+
+    Exemplo:
+    font-variant: small-caps;
+
+    • As letras parecem maiúsculas
+    • Porém as "minúsculas" ficam em tamanho menor
+    • Muito usada em títulos formais, citações e documentos
+
+  ▸ normal
+    Remove qualquer variação aplicada.
+    Exemplo:
+    font-variant: normal;
+
+  ── IMPORTANTE ──
+
+  Para melhor qualidade visual,
+  a fonte deve ter suporte a small caps verdadeiras.
+
+  Caso a fonte não possua small caps,
+  o navegador pode apenas REDUZIR o tamanho da maiúscula,
+  o que não é tipograficamente ideal.
+
+  ── VARIAÇÕES MODERNAS (font-variant-* ) ──
+
+  CSS moderno permite controles mais específicos:
+
+  • font-variant-ligatures
+  • font-variant-numeric
+  • font-variant-east-asian
+  • font-variant-position
+  • font-variant-caps
+
+  Exemplo:
+    font-variant-caps: small-caps;
+
+  Essas versões são usadas em contextos profissionais
+  como diagramação, editorial e tipografia avançada.
+
+  ── QUANDO USAR ──
+
+  ✓ Títulos formais
+  ✓ Nomes científicos
+  ✓ Subtítulos elegantes
+  ✓ Destaques discretos
+  ✓ Textos editoriais
+
+  ── BOAS PRÁTICAS ──
+
+  ✓ Verifique se a fonte tem suporte a small caps reais
+  ✓ Evite usar em textos muito longos
+  ✓ Use para destaques tipográficos e refinamento visual
+
+  ── RESUMO ──
+  font-variant aplica variações tipográficas como small caps
+  e recursos avançados de tipografia, melhorando o acabamento
+  visual do texto sem alterar a fonte principal.
+*/

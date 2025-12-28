@@ -1,0 +1,56 @@
+/*
+  PROPRIEDADE RESUMIDA — FONT (Shorthand Font)
+  ----------------------------------------------------
+  A propriedade abreviada "font" permite definir,
+  em uma única linha, várias propriedades relacionadas
+  à tipografia do texto.
+
+  Ela pode agrupar as seguintes propriedades:
+
+    font-style        → estilo da fonte (normal, italic, oblique)
+    font-variant      → variantes (como small-caps)
+    font-weight       → espessura (100–900, bold, normal)
+    font-stretch      → largura da fonte (condensed, expanded…)
+    font-size         → tamanho da fonte (OBRIGATÓRIO)
+    line-height       → altura da linha (opcional junto ao size)
+    font-family       → família da fonte (OBRIGATÓRIA)
+
+  Ordem correta na abreviação:
+  
+    font: 
+      font-style 
+      font-variant 
+      font-weight 
+      font-stretch 
+      font-size / line-height 
+      font-family;
+
+  Obs:
+  - font-size e font-family são obrigatórios
+  - os demais valores são opcionais
+  - se estiver fora de ordem → o CSS não será aplicado
+
+  Exemplos:
+
+  🔹 Exemplo simples (apenas obrigatórios):
+    font: 16px Arial;
+
+  🔹 Com line-height:
+    font: 16px/1.5 "Open Sans", sans-serif;
+
+  🔹 Com peso + estilo + tamanho + família:
+    font: italic bold 18px Roboto;
+
+  🔹 Exemplo completo:
+    font: italic small-caps 700 condensed 18px/1.6 "Times New Roman";
+
+  Benefícios:
+  - Código mais limpo
+  - Menos linhas de CSS
+  - Melhor organização
+
+  Atenção:
+  Quando usamos a propriedade "font" abreviada,
+  todas as propriedades relacionadas à fonte são redefinidas.
+  Portanto, sempre inclua os valores importantes.
+*/

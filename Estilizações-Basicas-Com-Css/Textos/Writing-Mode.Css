@@ -1,0 +1,110 @@
+/*
+  WRITING-MODE
+  ----------------------------------------------------
+  A propriedade writing-mode define a DIREÇÃO DO FLUXO
+  DE ESCRITA do texto dentro de um elemento.
+
+  Ela determina:
+  - a direção em que o texto é exibido
+  - o sentido das linhas
+  - a orientação do layout de blocos
+
+  Muito usada em:
+  - idiomas asiáticos (vertical)
+  - banners e layouts criativos
+  - títulos decorativos
+  - interfaces impressas e digitais
+
+  ----------------------------------------------------
+  VALORES PRINCIPAIS
+
+  🔹 horizontal-tb (padrão)
+    horizontal (esquerda → direita)
+    linhas de cima para baixo
+
+    writing-mode: horizontal-tb;
+
+    Usado em:
+    - português
+    - inglês
+    - espanhol
+
+  ----------------------------------------------------
+
+  🔹 vertical-rl
+    texto na vertical
+    linhas vão da DIREITA para a ESQUERDA
+
+    writing-mode: vertical-rl;
+
+    Muito usado em:
+    - japonês tradicional
+    - banners verticais
+    - títulos artísticos
+
+  ----------------------------------------------------
+
+  🔹 vertical-lr
+    texto na vertical
+    linhas vão da ESQUERDA para a DIREITA
+
+    writing-mode: vertical-lr;
+
+    Usado em:
+    - layouts modernos
+    - revistas e peças gráficas
+
+  ----------------------------------------------------
+  EXEMPLOS PRÁTICOS
+
+    .titulo-vertical {
+      writing-mode: vertical-rl;
+    }
+
+    .banner {
+      writing-mode: vertical-lr;
+    }
+
+    .texto-padrao {
+      writing-mode: horizontal-tb;
+    }
+
+  ----------------------------------------------------
+  SOBRE O COMPORTAMENTO VISUAL
+
+  Quando writing-mode é vertical:
+  - o texto gira, mas os caracteres NÃO giram
+  - o fluxo passa a ser vertical
+  - padding, margin e borders acompanham o fluxo
+
+  ----------------------------------------------------
+  RELAÇÃO COM TEXT-ORIENTATION
+
+  writing-mode controla:
+  → direção do fluxo do texto
+
+  text-orientation controla:
+  → orientação dos caracteres na vertical
+
+  Exemplo comum:
+
+    .japones {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+
+  ----------------------------------------------------
+  BOAS PRÁTICAS
+
+  ✔ Use em elementos curtos
+  ✔ Ideal para títulos e labels laterais
+  ✔ Evite usar em textos longos
+  ✔ Teste sempre em layouts responsivos
+
+  ----------------------------------------------------
+  RESUMO
+
+  horizontal-tb  → texto normal (padrão)
+  vertical-rl    → vertical, descendo da direita
+  vertical-lr    → vertical, descendo da esquerda
+*/

@@ -1,0 +1,118 @@
+/*
+  🔄 REDEFINIR PROPRIEDADES PADRÕES (CSS Reset)
+
+  Cada navegador aplica estilos padrões automáticos
+  aos elementos HTML (margens, espaçamentos, fontes, etc.).
+
+  Esses estilos variam entre navegadores e podem causar:
+  • diferenças no layout
+  • espaçamentos inesperados
+  • fontes e tamanhos inconsistentes
+
+  Para evitar isso, utilizamos um CSS Reset,
+  que redefine ou neutraliza os estilos padrão.
+
+  ----------------------------------------------------
+  🧹 Reset básico — removendo margens e paddings padrão
+  ----------------------------------------------------
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  Explicação:
+
+  margin: 0;
+    Remove margens padrão (principalmente de body, h1, p)
+
+  padding: 0;
+    Remove preenchimentos automáticos
+
+  box-sizing: border-box;
+    Faz com que width e height incluam:
+      • bordas
+      • padding
+    evitando cálculos complexos de layout
+
+  ----------------------------------------------------
+  📏 Ajustando fontes para comportamento consistente
+  ----------------------------------------------------
+
+  html {
+    font-size: 100%;  → mantém base padrão (16px)
+  }
+
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+  }
+
+  Benefícios:
+  ✔ melhora legibilidade
+  ✔ previne texto muito apertado
+  ✔ mantém padrão responsivo
+
+  ----------------------------------------------------
+  🔗 Remover sublinhado e cor padrão dos links
+  ----------------------------------------------------
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  Explicação:
+  • remove estilo padrão do navegador
+  • herda a cor do elemento pai
+  • facilita personalização do design
+
+  ----------------------------------------------------
+  🟦 Redefinir listas
+  ----------------------------------------------------
+
+  ul, ol {
+    list-style: none;
+  }
+
+  Motivo:
+  • remove marcadores e numeração
+  • permite criar listas personalizadas
+
+  ----------------------------------------------------
+  🔳 Redefinir imagens
+  ----------------------------------------------------
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  Efeito:
+  ✔ evita imagens estourarem containers
+  ✔ remove espaço extra causado por inline-block
+
+  ----------------------------------------------------
+  🎯 Por que o Reset é importante?
+
+  Ele garante:
+
+  ✓ consistência entre navegadores
+  ✓ maior controle do layout
+  ✓ código previsível
+  ✓ base limpa para estilização
+
+  ----------------------------------------------------
+  🧠 Observação Importante
+
+  Reset ≠ Normalize
+
+  Reset:
+    remove completamente estilos padrões
+
+  Normalize:
+    ajusta e uniformiza os estilos sem apagá-los
+
+  Ambos são úteis — depende do objetivo do projeto.
+*/

@@ -1,0 +1,89 @@
+/*
+  LETTER-SPACING e WORD-SPACING
+  ----------------------------------------------------
+  Essas propriedades controlam o espaçamento no texto,
+  porém atuam em níveis diferentes:
+
+  letter-spacing  → controla o espaço ENTRE AS LETRAS
+  word-spacing    → controla o espaço ENTRE AS PALAVRAS
+
+  São muito usadas em:
+  - títulos
+  - logotipos
+  - textos de destaque
+  - interfaces modernas e minimalistas
+
+  ----------------------------------------------------
+  LETTER-SPACING (Espaçamento entre letras)
+
+  Aumenta ou diminui a distância entre os caracteres.
+
+  Exemplos:
+
+    letter-spacing: 2px;
+    → Letras ficam mais afastadas
+
+    letter-spacing: 0;
+    → Espaçamento padrão
+
+    letter-spacing: -1px;
+    → Letras ficam mais próximas
+      (usar com cuidado para não prejudicar a leitura)
+
+  Boa prática:
+  - Em títulos: valores leves (1px a 3px)
+  - Em textos longos: evite grandes espaçamentos
+
+  ----------------------------------------------------
+  WORD-SPACING (Espaçamento entre palavras)
+
+  Controla o espaço horizontal entre palavras.
+
+  Exemplos:
+
+    word-spacing: 10px;
+    → Aumenta o espaço entre palavras
+
+    word-spacing: 0;
+    → Usa o espaçamento padrão
+
+    word-spacing: -2px;
+    → Diminui o espaço entre palavras
+
+  Uso comum em:
+  - ajustes tipográficos
+  - textos justificados
+  - layouts editoriais
+
+  ----------------------------------------------------
+  EXEMPLOS PRÁTICOS
+
+    h1 {
+      letter-spacing: 2px;   /* deixa o título mais elegante 
+    }
+
+    .logo {
+      letter-spacing: 4px;   /* estilo minimalista 
+    }
+
+    p.texto {
+      word-spacing: 3px;     /* melhora a leitura 
+    }
+
+  ----------------------------------------------------
+  OBSERVAÇÕES IMPORTANTES
+
+  ✔ Ambas as propriedades são herdáveis
+  ✔ Exageros podem prejudicar a legibilidade
+  ✔ Use com moderação em textos grandes
+  ✔ Combine com line-height para melhor leitura
+
+  ----------------------------------------------------
+  DICA TIPOGRÁFICA
+
+  Pequenos espaçamentos passam sensação de:
+  - profissionalismo
+  - organização
+  - modernidade no design
+
+*/

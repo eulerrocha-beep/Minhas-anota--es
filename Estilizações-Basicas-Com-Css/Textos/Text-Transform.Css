@@ -1,0 +1,57 @@
+/*
+  TEXT-TRANSFORM
+  ----------------------------------------------------
+  A propriedade text-transform controla a transformação
+  das letras do texto, alterando a forma como ele é exibido,
+  sem modificar o conteúdo original do HTML.
+
+  Ela é usada principalmente para padronização visual
+  de títulos, botões, menus e textos de destaque.
+
+  Principais valores:
+
+  🔹 uppercase
+    Transforma todas as letras em MAIÚSCULAS
+    Ex:
+      text-transform: uppercase;
+      Resultado: "Exemplo de Texto" → "EXEMPLO DE TEXTO"
+
+  🔹 lowercase
+    Converte todas as letras para minúsculas
+    Ex:
+      text-transform: lowercase;
+      Resultado: "ExEmPlO" → "exemplo"
+
+  🔹 capitalize
+    Coloca a primeira letra de cada palavra em maiúscula
+    Ex:
+      text-transform: capitalize;
+      Resultado: "curso de html" → "Curso De Html"
+
+  🔹 none (valor padrão)
+    Não aplica nenhuma transformação
+    Ex:
+      text-transform: none;
+
+  Observações importantes:
+
+  - A transformação ocorre apenas na exibição
+    (o texto original permanece igual no HTML)
+  - Pode melhorar a legibilidade e padronização visual
+  - Deve ser usada com cuidado em textos sensíveis a formato,
+    como nomes próprios, siglas e códigos.
+
+  Exemplos de uso:
+
+    h1 {
+      text-transform: uppercase;   → títulos em caixa alta
+    }
+
+    button {
+      text-transform: capitalize;  → melhora aparência dos botões
+    }
+
+    .email {
+      text-transform: lowercase;   → útil para endereços de email
+    }
+*/

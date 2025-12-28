@@ -1,0 +1,61 @@
+/*
+  ESTILO DE FONTES — font-style
+
+  A propriedade font-style define o estilo de inclinação da fonte.
+  Ela é usada principalmente para aplicar texto em itálico
+  ou simular escrita inclinada.
+
+  ── PRINCIPAIS VALORES ──
+
+  ▸ normal
+    Texto sem inclinação (padrão do navegador)
+    Exemplo:
+    font-style: normal;
+
+  ▸ italic
+    Usa a versão itálica oficial da fonte,
+    quando o arquivo da fonte possui variação itálica.
+
+    Exemplo:
+    font-style: italic;
+
+  ▸ oblique
+    Inclina artificialmente a fonte,
+    simulando o itálico quando a versão itálica não existe.
+
+    Exemplo:
+    font-style: oblique;
+
+  Em algumas fontes a diferença entre italic e oblique
+  pode ser visualmente pequena, mas tecnicamente:
+
+    italic  = versão desenhada pelo tipógrafo
+    oblique = inclinação mecânica da fonte normal
+
+  ── VARIAÇÃO DE ÂNGULO (CSS moderno) ──
+
+  Algumas fontes suportam definir o ângulo de inclinação:
+
+    font-style: oblique 10deg;
+
+  ▸ Inclina o texto em um valor definido
+  ▸ Nem todas as fontes suportam esse recurso
+
+  ── QUANDO USAR ──
+
+  ✓ Destaques em citações
+  ✓ Nomes de obras, livros, filmes etc.
+  ✓ Palavras estrangeiras
+  ✓ Ênfase de trechos específicos
+
+  ── BOAS PRÁTICAS ──
+
+  ✓ Prefira italic quando a fonte possuir variação itálica
+  ✓ Use oblique apenas quando a fonte não tiver versão italic
+  ✓ Evite excesso de itálico em textos longos
+  ✓ Verifique a legibilidade em telas menores
+
+  ── RESUMO ──
+  font-style controla a inclinação da fonte e é usado para aplicar
+  efeitos de itálico ou inclinação artificial no texto.
+*/

@@ -1,0 +1,67 @@
+/*
+  FONTES PERSONALIZADAS COM @font-face
+
+  A regra @font-face permite importar arquivos de fontes que estão
+  dentro do projeto (locais) ou hospedadas em um servidor.
+
+  Ela é usada para aplicar fontes personalizadas mesmo que o usuário
+  não tenha a fonte instalada no computador.
+
+  Estrutura básica:
+
+  @font-face {
+    font-family: "NomeDaFonte";
+    src: url("caminho/arquivo.ttf") format("truetype");
+  }
+
+  ▸ font-family
+    Define o NOME que será usado no CSS para referenciar a fonte.
+    Esse nome é escolhido pelo desenvolvedor.
+
+  ▸ src
+    Indica o caminho do arquivo da fonte e o formato utilizado.
+
+    Formatos comuns:
+      .ttf  = truetype
+      .otf  = opentype
+      .woff = formato otimizado para web
+      .woff2 = formato mais leve e recomendado
+
+    Exemplo de múltiplos formatos:
+    src:
+      url("fonts/minhafonte.woff2") format("woff2"),
+      url("fonts/minhafonte.woff") format("woff");
+
+    Ter mais de um formato aumenta compatibilidade entre navegadores.
+
+  ▸ font-weight e font-style
+    Podem ser definidos quando houver variações de peso/estilo.
+
+    Exemplo:
+    @font-face {
+      font-family: "MinhaFonte";
+      src: url("fonts/minhafonte-bold.woff2") format("woff2");
+      font-weight: 700;   (negrito)
+      font-style: normal;
+    }
+
+  Após declarar a fonte, usamos normalmente no CSS:
+
+    h1 {
+      font-family: "MinhaFonte", sans-serif;
+    }
+
+  --- BOAS PRÁTICAS ---
+
+  ✓ Utilize .woff ou .woff2 sempre que possível (melhor desempenho)
+  ✓ Defina uma fonte de fallback (ex: sans-serif)
+  ✓ Evite carregar muitas fontes para não prejudicar o carregamento
+  ✓ Nomeie as fontes de forma clara (ex: MinhaFonte-Regular, Bold)
+
+  Resumo:
+  @font-face permite criar identidade visual própria no site,
+  garantindo que a fonte seja exibida corretamente em qualquer dispositivo.
+
+  Alem do SRC tem o local() que faz com que o computador faça a busca da fonte no computador e se não ele faz o download.
+  
+*/

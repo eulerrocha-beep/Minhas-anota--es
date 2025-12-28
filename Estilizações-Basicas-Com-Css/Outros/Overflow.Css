@@ -1,0 +1,122 @@
+/*
+  🌊 OVERFLOW — Controle do conteúdo que ultrapassa os limites do elemento
+
+  A propriedade overflow define o que acontece quando o conteúdo
+  é maior que a área visível de um elemento (width / height).
+
+  Sintaxe:
+      overflow: valor;
+
+  Ela afeta:
+  • caixas com tamanho limitado
+  • containers com textos longos
+  • elementos com altura definida
+
+  ----------------------------------------------------
+
+  🔹 overflow: visible (padrão)
+  O conteúdo extrapola a caixa e continua visível.
+
+      overflow: visible;
+
+  Usado quando:
+  • queremos que nada seja cortado
+  • layout não tem limites rígidos
+
+  Risco:
+  • pode quebrar o design
+
+  ----------------------------------------------------
+
+  🔹 overflow: hidden
+  Corta tudo que ultrapassa os limites.
+
+      overflow: hidden;
+
+  Usado para:
+  • mascarar conteúdo extra
+  • criar containers limpos
+  • efeitos com hover
+  • cortar imagens
+
+  Obs:
+  • conteúdo cortado fica inacessível
+
+  ----------------------------------------------------
+
+  🔹 overflow: scroll
+  Sempre exibe barras de rolagem
+  (mesmo que não haja conteúdo extra).
+
+      overflow: scroll;
+
+  Usado em:
+  • áreas fixas de leitura
+  • caixas de código
+  • tabelas com muitos dados
+
+  Pode gerar barras desnecessárias.
+
+  ----------------------------------------------------
+
+  🔹 overflow: auto
+  Mostra barras de rolagem APENAS quando necessário.
+
+      overflow: auto;
+
+  Melhor opção para:
+  ✔ áreas roláveis
+  ✔ layouts responsivos
+  ✔ caixas de texto grandes
+
+  É o valor mais usado.
+
+  ----------------------------------------------------
+
+  🎯 Controles independentes
+
+  Podemos controlar os eixos separadamente:
+
+      overflow-x: auto;   → horizontal
+      overflow-y: hidden; → vertical
+
+  Exemplo comum:
+      tabela com rolagem lateral somente
+
+  ----------------------------------------------------
+
+  💡 Padrão prático para caixas de texto
+
+      .box {
+        width: 300px;
+        height: 200px;
+        overflow-y: auto;
+      }
+
+  Resultado:
+  ✔ conteúdo não quebra layout
+  ✔ rolagem só quando necessário
+
+  ----------------------------------------------------
+
+  ⚠ Atenção
+
+  • overflow só funciona quando há limite definido
+    (width / height / max-height)
+
+  • sem altura definida → nada estoura
+
+  ----------------------------------------------------
+
+  🚀 Dica avançada
+
+  Combinação com text-overflow + white-space
+
+      .title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+  Cria reticências (…) em textos longos 👌
+*/

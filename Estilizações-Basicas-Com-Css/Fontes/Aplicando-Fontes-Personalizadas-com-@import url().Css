@@ -1,0 +1,103 @@
+/*
+  FONTES PERSONALIZADAS COM @import url()
+
+  A diretiva @import é usada para carregar fontes externas no CSS,
+  geralmente do Google Fonts ou outros provedores online.
+
+  Ela importa o arquivo CSS da fonte antes das regras do estilo.
+
+  Exemplo básico:
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+  Após importar, podemos aplicar a fonte normalmente:
+
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+  ── COMO FUNCIONA ──
+
+  ▸ O navegador baixa primeiro o arquivo da fonte
+  ▸ Depois aplica o estilo no restante do CSS
+  ▸ A fonte passa a estar disponível para qualquer seletor
+
+  ── VANTAGENS ──
+
+  ✓ Fácil de usar
+  ✓ Não precisa baixar arquivos de fonte
+  ✓ Mantido e otimizado pelo Google Fonts
+  ✓ Permite carregar variações de peso (300, 400, 600 etc)
+
+  ── DESVANTAGENS ──
+
+  ⚠ Pode ser um pouco mais lento que o <link> no HTML,
+    porque o CSS espera o carregamento do import.
+
+  ⚠ Não é recomendado usar muitos @import em sequência,
+    pois aumenta o número de requisições.
+
+  ── BOAS PRÁTICAS ──
+
+  ✓ Prefira carregar poucas variações de peso
+  ✓ Sempre coloque fonte de fallback (ex: sans-serif)
+  ✓ Evite usar vários @import no mesmo arquivo
+  ✓ Use @import apenas no início do CSS
+
+  ── RESUMO ──
+  O @import url() permite carregar fontes externas direto no CSS,
+  facilitando a personalização tipográfica do site sem precisar
+  armazenar arquivos localmente.
+*/
+
+
+/*
+  FONTES PERSONALIZADAS ATRAVÉS DA TAG <link>
+
+  Outra forma de adicionar fontes externas ao site é utilizando
+  a tag <link> dentro da seção <head> do HTML.
+
+  Diferente do @import, o <link> carrega a fonte diretamente
+  no navegador antes do CSS, sendo mais rápido e recomendado.
+
+  Exemplo no HTML:
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  Depois do carregamento, a fonte pode ser usada normalmente no CSS:
+
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+  ── COMO FUNCIONA ──
+
+  ▸ O navegador acessa o link da fonte
+  ▸ Baixa os arquivos de tipografia
+  ▸ Disponibiliza para o CSS
+  ▸ Aplica no layout do site
+
+  ── VANTAGENS ──
+
+  ✓ Melhor desempenho que @import
+  ✓ Fonte é carregada antes do CSS
+  ✓ Recomendado pelo Google Fonts
+  ✓ Menos atrasos no carregamento da página
+
+  ── QUANDO USAR <link> AO INVÉS DE @import ──
+
+  ✓ Em sites em produção
+  ✓ Quando o desempenho é prioridade
+  ✓ Quando há várias fontes no projeto
+
+  ── BOAS PRÁTICAS ──
+
+  ✓ Colocar o <link> sempre dentro do <head>
+  ✓ Carregar apenas pesos necessários (300 / 400 / 600 etc)
+  ✓ Sempre usar fonte de fallback (ex: sans-serif)
+  ✓ Evitar carregar muitas fontes ao mesmo tempo
+
+  ── RESUMO ──
+  A tag <link> é a forma mais recomendada para importar fontes externas,
+  pois oferece melhor performance e compatibilidade em comparação ao @import.
+*/

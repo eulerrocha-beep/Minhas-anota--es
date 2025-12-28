@@ -1,0 +1,116 @@
+/*
+  WHITE-SPACE
+  ----------------------------------------------------
+  A propriedade white-space controla como o navegador
+  trata espaços em branco, quebras de linha e tabulações
+  dentro do conteúdo textual.
+
+  Ela define se o texto:
+  - pode quebrar automaticamente
+  - deve manter os espaços digitados no HTML
+  - deve respeitar quebras de linha manuais
+
+  ----------------------------------------------------
+  VALORES PRINCIPAIS
+
+  🔹 normal (valor padrão)
+    - Colapsa múltiplos espaços em um único
+    - Ignora quebras de linha no HTML
+    - Permite quebra automática do texto
+
+    white-space: normal;
+
+    Ex:
+    "Texto    com   espaços"
+    → será exibido como:
+    "Texto com espaços"
+
+  ----------------------------------------------------
+
+  🔹 nowrap
+    - Impede quebra automática de linha
+    - Todo o texto fica em uma única linha
+    - Espaços extras continuam colapsando
+
+    white-space: nowrap;
+
+    Muito usado em:
+    - menus
+    - tabelas
+    - botões
+
+  ----------------------------------------------------
+
+  🔹 pre
+    - Preserva espaços em branco
+    - Mantém quebras de linha do HTML
+    - Não faz quebra automática
+
+    white-space: pre;
+
+    Funciona como a tag <pre>
+
+  ----------------------------------------------------
+
+  🔹 pre-line
+    - Remove espaços extras
+    - Mantém quebras de linha manuais
+    - Permite quebra automática quando necessário
+
+    white-space: pre-line;
+
+    Ideal para:
+    - textos copiados de formulários
+    - exibição de blocos com "\n"
+
+  ----------------------------------------------------
+
+  🔹 pre-wrap
+    - Preserva espaços e quebras de linha
+    - Mas permite quebra automática quando necessário
+
+    white-space: pre-wrap;
+
+    Muito usado para:
+    - caixas de comentários
+    - áreas de texto
+    - exibição de código formatado
+
+  ----------------------------------------------------
+  RESUMO DOS COMPORTAMENTOS
+
+                     Espaços   Quebra manual   Quebra automática
+    normal              ❌          ❌               ✔
+    nowrap              ❌          ❌               ❌
+    pre                 ✔           ✔                ❌
+    pre-line            ❌          ✔                ✔
+    pre-wrap            ✔           ✔                ✔
+
+  ----------------------------------------------------
+  EXEMPLOS PRÁTICOS
+
+    .codigo {
+      white-space: pre-wrap;
+    }
+
+    .menu {
+      white-space: nowrap;
+    }
+
+    .texto-formatado {
+      white-space: pre-line;
+    }
+
+  ----------------------------------------------------
+  BOAS PRÁTICAS
+
+  ✔ Use nowrap para evitar quebra em botões e labels
+  ✔ Use pre-wrap para exibir textos digitados pelo usuário
+  ✔ Evite pre em textos muito longos (pode estourar layout)
+
+  ----------------------------------------------------
+
+  IMPORTANTE
+  white-space não muda o conteúdo do texto,
+  apenas controla COMO ele é exibido na tela.
+*/

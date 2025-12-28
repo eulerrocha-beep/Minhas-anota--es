@@ -1,0 +1,83 @@
+/*
+  WORD-WRAP (atualmente overflow-wrap)
+  ----------------------------------------------------
+  A propriedade word-wrap controla como o navegador
+  lida com palavras muito longas que não cabem
+  dentro da largura do elemento.
+
+  Ela define se o texto:
+  - pode ser quebrado no meio da palavra
+  - ou se deve ultrapassar o limite do contêiner
+
+  Hoje o nome mais moderno e recomendado é:
+    overflow-wrap
+  Mas word-wrap continua funcionando por compatibilidade.
+
+  ----------------------------------------------------
+  VALORES PRINCIPAIS
+
+  🔹 normal (valor padrão)
+    - O texto NÃO é quebrado no meio da palavra
+    - Palavras muito grandes podem estourar o layout
+
+    word-wrap: normal;
+
+  ----------------------------------------------------
+
+  🔹 break-word
+    - Permite quebrar palavras grandes
+    - Evita quebra de layout
+    - Usado para textos sem espaços como:
+      URLs, códigos, identificadores, strings longas
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;  (forma recomendada)
+
+  ----------------------------------------------------
+  EXEMPLOS PRÁTICOS
+
+    .conteudo {
+      overflow-wrap: break-word;
+    }
+
+    .descricao {
+      word-wrap: break-word; /* compatibilidade 
+    }
+
+  ----------------------------------------------------
+  QUANDO USAR?
+
+  ✔ Em textos com palavras longas
+  ✔ Em layouts responsivos
+  ✔ Em campos digitados por usuários
+  ✔ Em URLs, hashes, tokens, códigos
+
+  Exemplo típico:
+
+    textoexcessivamentemuitogigantequenaotemespaco
+
+  Sem break-word:
+    → estoura a largura do elemento
+
+  Com break-word:
+    → o navegador divide a palavra automaticamente
+
+  ----------------------------------------------------
+  DIFERENÇA IMPORTANTE
+
+  word-break  → quebra agressiva, até entre caracteres
+  word-wrap / overflow-wrap → quebra somente quando necessário
+
+  ----------------------------------------------------
+  RECOMENDAÇÃO MODERNA
+
+  Use SEMPRE:
+
+    overflow-wrap: break-word;
+
+  E opcionalmente inclua:
+
+    word-wrap: break-word;
+
+  para compatibilidade com navegadores antigos.
+*/

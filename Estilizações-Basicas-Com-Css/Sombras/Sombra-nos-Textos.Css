@@ -1,0 +1,82 @@
+/* 
+  ✨ Sombra nos Textos — Propriedade text-shadow
+
+  A propriedade text-shadow aplica sombras ao texto, criando efeitos visuais 
+  como profundidade, destaque ou brilho.
+
+  Sintaxe geral:
+      text-shadow: offset-x offset-y blur-radius color;
+
+  ▸ offset-x  → Deslocamento horizontal da sombra
+      • Valores positivos movem a sombra para a direita
+      • Valores negativos movem a sombra para a esquerda
+      Ex:
+        2px  → sombra à direita
+       -2px  → sombra à esquerda
+
+  ▸ offset-y  → Deslocamento vertical da sombra
+      • Valores positivos movem a sombra para baixo
+      • Valores negativos movem a sombra para cima
+      Ex:
+        2px  → sombra abaixo do texto
+       -2px  → sombra acima do texto
+
+  ▸ blur-radius (opcional) → Raio de desfoque
+      • Controla o quão suave a sombra será
+      • Quanto maior o valor → mais difusa
+      • Se omitido → sombra com bordas nítidas
+      Ex:
+        0px  → sombra sólida
+        5px  → sombra suave
+
+  ▸ color → Cor da sombra
+      • Pode usar: nome, HEX, RGB, RGBA, HSL
+      • RGBA é útil para transparência
+      Ex:
+        rgba(0, 0, 0, 0.4)
+
+  ---------------------------------------------
+
+  ✔ Exemplo clássico:
+      text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+
+  ✔ Múltiplas sombras (separadas por vírgula):
+      text-shadow:
+        1px 1px 3px black,
+        0 0 8px red;
+
+  ---------------------------------------------
+
+  💡 Usos comuns:
+
+  • Dar profundidade ao texto
+  • Criar efeito de título com destaque
+  • Simular neon / glow
+  • Criar efeito retrô “embossado”
+  • Melhorar contraste em imagens de fundo
+
+  ---------------------------------------------
+
+  ⚠ Boas práticas:
+
+  • Evite sombra muito forte em textos pequenos
+  • Use blur suave para melhor legibilidade
+  • Prefira sombras leves em interfaces corporativas
+  • Em textos longos → use com moderação
+
+  ---------------------------------------------
+
+  ♿ Acessibilidade:
+
+  • Não use sombras que reduzam o contraste
+  • Evite sombras muito claras sobre fundos claros
+  • Teste sempre a leitura do texto
+
+  ---------------------------------------------
+
+  🚀 Dica avançada:
+
+  • text-shadow pode simular contorno no texto
+    (repetindo sombras em várias direções)
+
+*/

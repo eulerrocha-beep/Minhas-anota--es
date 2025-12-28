@@ -1,0 +1,96 @@
+/*
+  WORD-BREAK
+  ----------------------------------------------------
+  A propriedade word-break controla COMO as palavras
+  podem ser quebradas quando chegam ao final da linha.
+
+  Diferente do overflow-wrap (word-wrap),
+  que tenta quebrar APENAS quando necessário,
+  o word-break pode aplicar quebras mais agressivas.
+
+  Ele é muito usado quando:
+  - o texto não tem espaços
+  - há palavras muito longas
+  - é necessário evitar quebra de layout
+
+  ----------------------------------------------------
+  VALORES PRINCIPAIS
+
+  🔹 normal (valor padrão)
+    - Segue as regras normais de quebra de texto
+    - Respeita gramática e idioma
+
+    word-break: normal;
+
+  ----------------------------------------------------
+
+  🔹 break-all
+    - Permite quebrar a palavra em QUALQUER ponto
+    - Quebra até no meio de sílabas e caracteres
+    - Garante que o texto nunca estoure o tamanho do bloco
+
+    word-break: break-all;
+
+    Usado em:
+    - códigos
+    - tabelas com dados longos
+    - colunas estreitas
+
+  ⚠ Desvantagem:
+    pode prejudicar a leitura
+
+  ----------------------------------------------------
+
+  🔹 keep-all
+    - Evita quebra dentro de palavras
+    - Muito usado em idiomas asiáticos (chinês, japonês, coreano)
+
+    word-break: keep-all;
+
+  ----------------------------------------------------
+  EXEMPLOS PRÁTICOS
+
+    .tabela {
+      word-break: break-all;
+    }
+
+    .texto {
+      word-break: normal;
+    }
+
+    .idioma-asiatico {
+      word-break: keep-all;
+    }
+
+  ----------------------------------------------------
+  DIFERENÇAS IMPORTANTES
+
+  overflow-wrap / word-wrap
+    → quebra palavras SOMENTE quando necessário
+
+  word-break: break-all
+    → quebra agressivamente em qualquer ponto
+
+  ----------------------------------------------------
+  RECOMENDAÇÃO GERAL
+
+  Para texto comum:
+    overflow-wrap: break-word;
+
+  Para textos muito longos ou sem espaços:
+    word-break: break-all;
+
+  ----------------------------------------------------
+  BOA PRÁTICA
+
+  Combine para melhor controle:
+
+    .conteudo {
+      overflow-wrap: break-word;
+      word-break: break-all; /* último recurso 
+    }
+
+  Assim:
+  - primeiro tenta quebrar de forma natural
+  - só quebra agressivamente quando não houver opção
+*/

@@ -1,0 +1,65 @@
+/*
+  PERSONALIZANDO FONTES NO SITE — GUIA EXPLICATIVO
+
+  A personalização de fontes no CSS é feita principalmente com a
+  propriedade font-family, onde escolhemos qual fonte será exibida
+  no texto do site.
+
+  ▸ font-family
+    Define a família de fontes usada no elemento.
+    Sempre é recomendado colocar fontes de fallback (alternativas),
+    caso a principal não carregue.
+
+    Exemplo:
+    font-family: "Poppins", Arial, sans-serif;
+
+    • A primeira é a fonte principal
+    • As seguintes são alternativas de segurança (fontes do sistema)
+    • O último valor indica a categoria da fonte:
+      serif   = com serifa
+      sans-serif = sem serifa
+      monospace  = espaçamento fixo
+
+  --- TIPOS DE FONTES ---
+
+  1) Fontes padrão do sistema (seguras)
+     Já existem no computador do usuário.
+     Ex: Arial, Verdana, Georgia, Times, Trebuchet MS.
+
+  2) Fontes externas (Google Fonts)
+     São carregadas pela internet.
+     Normalmente adicionamos um <link> no HTML e usamos no CSS.
+
+  3) Fontes locais com @font-face
+     São arquivos de fonte dentro do projeto (ex: .ttf ou .otf)
+     Podemos importar e atribuir um nome para usar no CSS.
+
+  --- OUTRAS PROPRIEDADES IMPORTANTES ---
+
+  ▸ font-size
+    Define o tamanho da fonte.
+
+  ▸ font-weight
+    Define a espessura (300, 400, 600, bold etc).
+
+  ▸ line-height
+    Define o espaçamento entre linhas, ajudando na leitura.
+
+  ▸ letter-spacing
+    Controla o espaçamento entre letras.
+
+  ▸ text-transform
+    Controla maiúsculas e minúsculas (uppercase, lowercase, capitalize).
+
+  --- BOAS PRÁTICAS ---
+
+  ✓ Use no máximo 2 ou 3 fontes no site
+  ✓ Sempre inclua fontes de fallback
+  ✓ Prefira "rem" para acessibilidade no font-size
+  ✓ Ajuste line-height para evitar textos apertados
+  ✓ Evite fontes muito decorativas em textos longos
+
+  Resumo:
+  A personalização de fontes melhora a estética, leitura e identidade
+  visual do site, devendo ser feita com equilíbrio e consistência.
+*/

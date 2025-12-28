@@ -1,0 +1,69 @@
+/*
+  ESPESSURA DAS FONTES — font-weight
+
+  A propriedade font-weight define a espessura (peso) da fonte,
+  controlando quão fina ou grossa a tipografia será exibida.
+
+  Ela é muito usada para criar hierarquia visual entre títulos,
+  subtítulos e textos comuns.
+
+  ── VALORES PALAVRAS-CHAVE ──
+
+  ▸ normal
+    Peso padrão do texto (equivale geralmente a 400)
+
+  ▸ bold
+    Negrito — mais grosso que o padrão (equivale geralmente a 700)
+
+  ▸ lighter
+    Peso mais fino em relação ao elemento pai
+
+  ▸ bolder
+    Peso mais grosso em relação ao elemento pai
+
+  Exemplo:
+    font-weight: bold;
+    font-weight: lighter;
+
+  ── VALORES NUMÉRICOS ──
+
+  A escala varia normalmente de 100 a 900:
+
+    100  → Thin / Hairline (muito fina)
+    200  → Extra Light
+    300  → Light
+    400  → Regular / Normal
+    500  → Medium
+    600  → Semi Bold
+    700  → Bold (negrito)
+    800  → Extra Bold
+    900  → Black / Heavy (muito grossa)
+
+  Exemplo:
+    font-weight: 300;
+    font-weight: 600;
+    font-weight: 900;
+
+  OBSERVAÇÃO:
+  Nem todas as fontes possuem todas as variações dessa escala.
+  Quando o peso solicitado não existe, o navegador escolhe o mais próximo.
+
+  ── FONTES VARIÁVEIS (VARIABLE FONTS) ──
+
+  Algumas fontes modernas permitem transição contínua de peso:
+
+    font-weight: 350;
+
+  Funciona apenas se a fonte suportar eixo de variação.
+
+  ── BOAS PRÁTICAS ──
+
+  ✓ Use 400 para textos comuns
+  ✓ Use 600 ou 700 para títulos e destaques
+  ✓ Evite usar muito negrito em textos longos
+  ✓ Carregue apenas os pesos necessários para melhorar desempenho
+
+  ── RESUMO ──
+  font-weight controla a espessura da fonte e ajuda a criar contraste
+  visual e organização tipográfica dentro do layout.
+*/

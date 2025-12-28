@@ -1,0 +1,32 @@
+/* 
+  FONT-STRETCH
+  ----------------------------------------
+  A propriedade font-stretch controla a largura visual da fonte,
+  permitindo deixar os caracteres mais condensados (estreitos)
+  ou expandidos (largos), quando a família tipográfica oferece
+  variações dessa característica.
+
+  Ela NÃO aumenta ou diminui o tamanho da fonte, apenas ajusta
+  a proporção horizontal dos caracteres.
+
+  Valores mais comuns:
+    - ultra-condensed   → extremamente condensada
+    - extra-condensed   → muito condensada
+    - condensed         → condensada
+    - semi-condensed    → levemente condensada
+    - normal            → largura padrão (valor default)
+    - semi-expanded     → levemente expandida
+    - expanded          → expandida
+    - extra-expanded    → muito expandida
+    - ultra-expanded    → extremamente expandida
+
+  Exemplos de uso:
+
+    font-stretch: condensed;
+    font-stretch: expanded;
+    font-stretch: normal;
+
+  Observação importante:
+  - Nem todas as fontes possuem variações de largura.
+  - Se a fonte não suportar, o navegador mantém a largura normal.
+*/

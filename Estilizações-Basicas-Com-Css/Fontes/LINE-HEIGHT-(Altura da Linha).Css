@@ -1,0 +1,45 @@
+/*
+  LINE-HEIGHT (Altura da Linha)
+  ----------------------------------------------------
+  A propriedade line-height define a altura da linha
+  ocupada pelo texto, controlando o espaçamento vertical
+  entre as linhas de um parágrafo.
+
+  Ela não altera o tamanho da fonte, mas sim o espaço 
+  acima e abaixo dos caracteres, melhorando a leitura.
+
+  Pode ser definida de várias formas:
+
+  🔹 Valor numérico (recomendado)
+    line-height: 1.5;
+    → Multiplica o tamanho da fonte
+    → Não precisa de unidade
+    → É o mais utilizado em design responsivo
+
+  🔹 Valor em unidades (px, em, rem)
+    line-height: 24px;
+    line-height: 1.2em;
+
+  🔹 Palavra-chave normal
+    line-height: normal; 
+    → Valor padrão do navegador (varia conforme a fonte)
+
+  Boas práticas:
+  - Para textos longos, use entre 1.4 e 1.8 (melhor legibilidade)
+  - Evite valores muito baixos, pois “achatam” o texto
+  - Evite valores muito altos, pois afastam demais as linhas
+
+  Exemplos comuns:
+
+    p {
+      line-height: 1.6;   → Ideal para parágrafos
+    }
+
+    h1 {
+      line-height: 1.2;   → Títulos com menor espaçamento
+    }
+
+  Observação:
+  Se aplicado em elementos inline, o efeito é herdado
+  para o conteúdo interno.
+*/

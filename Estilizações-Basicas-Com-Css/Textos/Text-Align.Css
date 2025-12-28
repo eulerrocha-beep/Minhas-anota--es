@@ -1,0 +1,65 @@
+/*
+  TEXT-ALIGN
+  ----------------------------------------------------
+  A propriedade text-align define o alinhamento
+  horizontal do conteúdo textual dentro de um elemento.
+
+  Ela afeta:
+  - textos
+  - elementos inline
+  - elementos inline-block
+  - conteúdos dentro de blocos (ex: <p>, <div>, <section>)
+
+  ⚠ Não move o elemento em si,
+  apenas o alinhamento do conteúdo interno.
+
+  Principais valores:
+
+  🔹 left (padrão na maioria dos navegadores)
+    Alinha o texto à ESQUERDA
+    text-align: left;
+
+  🔹 right
+    Alinha o texto à DIREITA
+    text-align: right;
+
+  🔹 center
+    Centraliza o texto horizontalmente
+    text-align: center;
+
+  🔹 justify
+    Distribui o texto igualmente entre as margens
+    criando colunas alinhadas
+    text-align: justify;
+
+    Obs:
+    - aumenta o espaçamento entre palavras
+    - é comum em textos longos e artigos
+
+  🔹 start
+    Alinha o texto conforme a direção da escrita
+    (left em LTR / right em RTL)
+    text-align: start;
+
+  🔹 end
+    Oposto do start
+    text-align: end;
+
+  Exemplos de uso:
+
+    p {
+      text-align: justify;   → blocos de texto
+    }
+
+    h1 {
+      text-align: center;    → títulos centralizados
+    }
+
+    .assinatura {
+      text-align: right;     → textos alinhados à direita
+    }
+
+  Importante:
+  - Não centraliza elementos block por si só
+  - Para centralizar blocos use margin: 0 auto;
+*/

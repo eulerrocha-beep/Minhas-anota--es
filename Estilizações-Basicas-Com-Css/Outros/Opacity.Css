@@ -1,0 +1,87 @@
+/* 
+  ✨ Opacity — Controlando a Transparência dos Elementos no CSS
+
+  A propriedade opacity define o nível de transparência de um elemento
+  (incluindo seu conteúdo, bordas, texto e filhos).
+
+  Sintaxe:
+      opacity: valor;
+
+  O valor deve estar entre:
+      0   → totalmente transparente (invisível)
+      1   → totalmente opaco (sem transparência)
+
+  Exemplos:
+      opacity: 1;    → elemento visível
+      opacity: 0.5;  → 50% transparente
+      opacity: 0;    → totalmente invisível
+
+  -----------------------------------------------
+
+  🎯 Importante:
+  A transparência afeta TUDO dentro do elemento:
+  • texto
+  • imagens
+  • bordas
+  • filhos (children)
+
+  Ex:
+      Se um container tem opacity: 0.5
+      todo o conteúdo dele também ficará 50% transparente.
+
+  -----------------------------------------------
+
+  💡 Comparação com rgba() e hsla()
+
+  opacity → afeta o elemento inteiro  
+  rgba()  → afeta SOMENTE a cor aplicada
+
+  Exemplo com rgba() (melhor para fundos):
+      background-color: rgba(0, 0, 0, 0.4);
+
+  Nesse caso:
+      • fundo fica transparente
+      • texto continua 100% visível
+
+  -----------------------------------------------
+
+  ✔ Bons usos do opacity:
+
+  • Criar efeito de desfoque visual
+  • Destaque em hover
+  • Cards com fundo semitransparente
+  • Botões em estado desabilitado
+  • Efeito de imagem apagada
+
+  Exemplo em hover:
+      button:hover {
+        opacity: .8;
+      }
+
+  -----------------------------------------------
+
+  ⚠ Atenção:
+
+  • opacity NÃO altera contraste automaticamente
+  • pode prejudicar acessibilidade se usada em textos
+  • evite valores muito baixos em interfaces de leitura
+
+  Em textos longos → prefira usar rgba no background
+
+  -----------------------------------------------
+
+  🚀 Dica avançada:
+
+  opacity pode ser animada em transições
+
+      .box {
+        opacity: 0.4;
+        transition: opacity .3s ease;
+      }
+
+      .box:hover {
+        opacity: 1;
+      }
+
+  Cria um efeito suave de aparição ✨
+*/

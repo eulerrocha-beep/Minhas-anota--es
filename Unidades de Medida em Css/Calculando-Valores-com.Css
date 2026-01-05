@@ -1,0 +1,116 @@
+/*
+  🧮 Calculando Valores com CSS — Função calc()
+
+  A função calc() permite realizar cálculos matemáticos diretamente no CSS,
+  combinando diferentes unidades de medida.
+
+  Sintaxe:
+      propriedade: calc(expressao);
+
+  Operações permitidas:
+      +  adição
+      -  subtração
+      *  multiplicação
+      /  divisão
+
+  Exemplos simples:
+
+      width: calc(100% - 20px);
+      font-size: calc(1rem + 2px);
+      margin-top: calc(2em - 10px);
+
+  ----------------------------------------------------
+  🔹 Por que calc() é útil?
+
+  Ela permite misturar unidades diferentes como:
+  • px
+  • %
+  • rem / em
+  • vh / vw
+
+  Isso torna layouts:
+  ✔ mais flexíveis
+  ✔ mais responsivos
+  ✔ mais precisos
+
+  ----------------------------------------------------
+  🧱 Exemplo prático — layout com barra lateral
+
+      .conteudo {
+        width: calc(100% - 250px);
+      }
+
+  O conteúdo ocupa:
+  100% da tela − largura do menu lateral
+
+  ----------------------------------------------------
+  📏 Centralização com espaçamento controlado
+
+      .card {
+        padding: calc(1rem + 10px);
+      }
+
+  Combina:
+  • escala responsiva (rem)
+  • ajuste fixo (px)
+
+  ----------------------------------------------------
+  🖥️ Altura dinâmica com cabeçalho fixo
+
+      main {
+        height: calc(100vh - 80px);
+      }
+
+  O main ocupa o espaço restante
+  após descontar a altura do header.
+
+  ----------------------------------------------------
+  ✨ Botões com tamanho proporcional
+
+      button {
+        min-width: calc(8ch + 1rem);
+      }
+
+  Depende:
+  • do tamanho do texto
+  • + espaçamento adicional
+
+  ----------------------------------------------------
+  ⚠ Regras importantes do calc()
+
+  • sempre deixe espaços entre operadores
+
+      correto  → calc(100% - 20px)
+      errado   → calc(100%-20px)
+
+  • pode ser usado em qualquer propriedade numérica:
+    width, height, margin, padding, gap, font-size, etc.
+
+  ----------------------------------------------------
+  🚀 Dica avançada — calc() + variáveis CSS
+
+      :root {
+        --sidebar: 280px;
+      }
+
+      .conteudo {
+        width: calc(100% - var(--sidebar));
+      }
+
+  Resultado:
+  ✔ valores centralizados
+  ✔ fácil manutenção do layout
+
+  ----------------------------------------------------
+  🧠 Resumo
+
+  calc() é ideal para:
+
+  ✓ layouts fluidos
+  ✓ ajustes inteligentes de espaço
+  ✓ combinações de unidades
+  ✓ design responsivo
+
+  Ela resolve muitos casos onde antes
+  seria necessário JavaScript.
+*/

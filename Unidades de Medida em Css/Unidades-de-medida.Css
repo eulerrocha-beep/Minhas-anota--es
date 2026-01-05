@@ -1,0 +1,110 @@
+/*
+
+📏 Tipos de unidades no CSS
+
+As unidades são divididas em absolutas e relativas.
+
+✅ Unidades Absolutas
+
+São fixas — não variam com o tamanho da tela ou fonte.
+
+Unidade	Significado	Uso comum
+px	pixels	Layouts, bordas, ícones
+cm	centímetros	Impressão
+mm	milímetros	Impressão
+in	polegadas	Impressão (1in = 96px)
+pt	pontos tipográficos	PDFs / impressão
+pc	picas	Impressão
+
+📌 Na web, a mais usada é:
+
+font-size: 16px;
+
+♻️ Unidades Relativas
+
+Variam conforme o contexto, como fonte, viewport ou elemento pai.
+
+Essas são preferidas para design responsivo.
+
+🅰️ Baseadas no tamanho da fonte
+em
+
+Relativa ao font-size do elemento pai
+
+font-size: 2em; /* 2x o tamanho da fonte do pai 
+
+
+⚠ Pode acumular valores (efeito cascata)
+
+rem
+
+Relativa ao font-size do elemento raiz (html)
+
+🟢 Mais previsível que em
+
+html { font-size: 16px; }
+
+p { font-size: 1.5rem; } /* 24px 
+
+
+👉 Muito usada em layouts modernos
+
+🌍 Baseadas no tamanho da tela (viewport)
+Unidade	Base
+vw	largura da tela
+vh	altura da tela
+vmin	menor lado
+vmax	maior lado
+
+Exemplo:
+
+section {
+  height: 100vh; /* ocupa a tela inteira 
+
+
+
+Texto responsivo:
+
+h1 {
+  font-size: 5vw;
+}
+
+📐 Outras unidades úteis
+% — relativa ao elemento pai
+div {
+  width: 50%;
+}
+
+ch — largura do caractere "0"
+
+Ótimo para limitar textos:
+
+p {
+  max-width: 60ch;
+}
+
+ex — altura da letra x (raro de usar)
+🧠 Qual unidade usar em cada caso?
+Situação	Melhor unidade
+Tamanho de fonte	rem
+Margens e espaçamentos	rem ou em
+Largura fluida	% ou vw
+Layout full screen	vh
+Elementos fixos (ícones etc.)	px
+Texto com boa leitura	ch
+🎯 Dica prática para projetos modernos
+
+Defina base no HTML:
+
+html {
+  font-size: 16px;
+}
+
+
+Use:
+
+rem para tipografia
+
+px para bordas / linhas finas
+
+vw / vh para layouts responsivos

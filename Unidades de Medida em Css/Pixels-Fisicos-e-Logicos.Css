@@ -1,0 +1,30 @@
+/*
+  PIXELS FÍSICOS x PIXELS LÓGICOS
+
+  Pixels físicos:
+  - São os pontos reais de luz da tela (hardware).
+  - Estão presentes fisicamente no display do dispositivo.
+  - Não mudam de tamanho.
+  - Exemplo: uma tela Full HD possui 1920 x 1080 pixels físicos.
+
+  Pixels lógicos (CSS pixels):
+  - São os pixels utilizados pelo navegador e pelo CSS.
+  - Servem para layout, medidas e responsividade.
+  - Um único pixel lógico pode representar vários pixels físicos
+    dependendo da densidade da tela (DPR — devicePixelRatio).
+
+  Relação comum:
+  - DPR = 1 → 1px lógico = 1px físico (monitores comuns).
+  - DPR = 2 → 1px lógico = 2px físicos (telas retina / celulares).
+  - DPR = 3 ou mais → telas de alta densidade (4K e superiores).
+
+  Importante:
+  - Quando definimos width: 100px no CSS,
+    estamos definindo 100px lógicos,
+    e o navegador converte isso automaticamente
+    para a quantidade necessária de pixels físicos.
+
+  Em resumo:
+  - Pixel físico → pertence ao hardware e controla a exibição real.
+  - Pixel lógico → pertence ao CSS e controla o layout da página.
+*/

@@ -1,0 +1,124 @@
+/*
+====================================
+MEDIA TYPES — TIPOS DE MÍDIA NO CSS
+====================================
+
+Media Types fazem parte das Media Queries
+e definem PARA QUAL TIPO DE DISPOSITIVO
+um conjunto de estilos será aplicado.
+
+Eles indicam o "meio" onde o conteúdo será exibido,
+como:
+✔ tela
+✔ impressão
+✔ leitura em voz alta
+✔ dispositivos antigos
+
+São usados para adaptar o CSS conforme o contexto.
+
+------------------------------------
+SINTAXE GERAL
+------------------------------------
+@media media-type {
+    seletor {
+        propriedade: valor;
+    }
+}
+
+------------------------------------
+TIPOS DE MÍDIA MAIS UTILIZADOS
+------------------------------------
+
+1) screen
+→ usado para telas em geral
+
+Exemplo:
+@media screen {
+    body {
+        background: #f2f2f2;
+    }
+}
+
+Usado em:
+✔ desktop
+✔ celular
+✔ tablet
+✔ tvs
+
+------------------------------------
+
+2) print
+→ aplica estilos quando o usuário imprime a página
+
+Exemplo:
+@media print {
+    nav, footer {
+        display: none;
+    }
+}
+
+Usado para:
+✔ remover menus
+✔ esconder anúncios
+✔ melhorar leitura no papel
+
+------------------------------------
+
+3) speech
+→ utilizado para leitores de tela
+
+Exemplo:
+@media speech {
+    p {
+        speak-as: normal;
+    }
+}
+
+Usado em:
+✔ acessibilidade
+✔ leitura automatizada
+
+------------------------------------
+MEDIA TYPES POUCO USADOS (LEGADO)
+------------------------------------
+Esses existiam no CSS2.1,
+mas praticamente não são mais utilizados:
+
+- handheld  → dispositivos móveis antigos
+- projection → projetores
+- tv        → televisões antigas
+- braille   → displays táteis
+
+Atualmente o padrão é usar:
+✔ screen
+✔ print
+✔ speech
+
+------------------------------------
+COMBINANDO MEDIA TYPE + CONDIÇÕES
+------------------------------------
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+screen
+→ tipo de mídia
+(max-width)
+→ condição de largura
+
+------------------------------------
+RESUMO
+------------------------------------
+MEDIA TYPES servem para definir
+EM QUAL CONTEXTO o CSS será aplicado.
+
+Os principais são:
+✔ screen  → telas
+✔ print   → impressão
+✔ speech  → leitores de tela
+
+São muito usados junto com Media Queries
+no design responsivo.
+*/

@@ -1,0 +1,111 @@
+/*
+  🧩 LAYOUT FLEXÍVEL MULTICOLUNAS (CSS)
+
+  O layout multicolunas é uma técnica para organizar conteúdo
+  em duas ou mais colunas, de forma flexível e responsiva.
+
+  Ele pode ser feito de três maneiras principais:
+  • Flexbox
+  • Grid
+  • CSS Multi-Column Layout (columns)
+
+  ----------------------------------------------------
+  🔹 MULTICOLUNAS COM FLEXBOX (mais usado)
+  ----------------------------------------------------
+
+  O Flexbox organiza os elementos lado a lado
+  e permite que eles se ajustem automaticamente.
+
+      .container {
+        display: flex;
+        gap: 1rem;              /* Espaçamento entre colunas 
+        flex-wrap: wrap;        /* Permite quebrar linha 
+      }
+
+      .coluna {
+        flex: 1 1 300px;        /* Cresce, diminui e define largura mínima 
+      }
+
+  Vantagens:
+  ✔ colunas se adaptam ao espaço
+  ✔ quebra automática no mobile
+  ✔ controle de largura e alinhamento
+
+  ----------------------------------------------------
+  🔹 MULTICOLUNAS COM GRID (ideal para layouts maiores)
+  ----------------------------------------------------
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.2rem;
+      }
+
+  Explicação:
+  • auto-fit → adapta a quantidade de colunas
+  • minmax → define limite mínimo e máximo
+
+  Vantagens:
+  ✔ controle total da estrutura
+  ✔ perfeito para páginas complexas
+  ✔ comporta várias proporções
+
+  ----------------------------------------------------
+  🔹 MULTICOLUMN (columns) — estilo jornal/revista
+  ----------------------------------------------------
+
+      .texto {
+        column-count: 3;     /* número de colunas 
+        column-gap: 20px;    /* espaço entre colunas 
+      }
+
+  Alternativa:
+      column-width: 300px;
+
+  Indicado para:
+  ✔ textos longos
+  ✔ artigos e notícias
+
+  Limitação:
+  ❌ não foi feito para layouts estruturais
+
+  ----------------------------------------------------
+  📱 Responsividade (Mobile First)
+  ----------------------------------------------------
+
+      /* Mobile 
+      @media (max-width: 768px) {
+        .container,
+        .grid,
+        .texto {
+          column-count: 1;
+        }
+      }
+
+  Garantia:
+  ✔ melhor leitura em telas pequenas
+
+  ----------------------------------------------------
+  🧠 Quando usar cada um?
+
+  Flexbox →
+    componentes e seções simples
+
+  Grid →
+    layouts completos e estruturais
+
+  Columns →
+    formatação de textos longos
+
+  ----------------------------------------------------
+  🚀 Boas práticas
+
+  ✓ definir espaços com gap
+  ✓ usar unidades relativas (rem, %)
+  ✓ testar em tamanhos diferentes
+  ✓ evitar colunas muito estreitas
+  ✓ respeitar legibilidade do conteúdo
+
+  Objetivo:
+  Criar colunas flexíveis, adaptáveis e acessíveis.
+*/

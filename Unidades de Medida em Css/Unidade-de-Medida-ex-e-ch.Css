@@ -1,0 +1,109 @@
+/*
+  🔤 Unidades de Medida EX e CH no CSS
+
+  Ambas são unidades relativas vinculadas à TIPOGRAFIA,
+  porém cada uma usa uma referência diferente da fonte.
+
+  ----------------------------------------------------
+  🔹 EX — Altura da letra "x" (x-height)
+  ----------------------------------------------------
+
+  A unidade ex representa a altura da minúscula "x"
+  da fonte aplicada ao elemento.
+
+  Ou seja:
+  1ex = altura média das letras minúsculas
+
+  Ela varia conforme:
+  • família tipográfica
+  • peso da fonte
+  • estilo (normal, italic, condensed)
+
+  Exemplo:
+
+    p {
+      font-size: 16px;
+      line-height: 2ex;
+    }
+
+  Uso comum:
+  ✔ ajustes finos de espaçamento vertical
+  ✔ proporções tipográficas
+
+  Limitação:
+  ❌ pouco previsível entre fontes diferentes
+
+  ----------------------------------------------------
+  🔹 CH — Largura do caractere "0" (zero width)
+  ----------------------------------------------------
+
+  A unidade ch representa a largura do dígito "0"
+  na fonte aplicada ao elemento.
+
+  1ch = largura do caractere zero
+
+  Exemplo prático:
+
+    .codigo {
+      width: 40ch;
+    }
+
+  Isso cria caixas dimensionadas por
+  quantidade aproximada de caracteres.
+
+  Excelente para:
+  ✔ campos de formulário
+  ✔ caixas de código
+  ✔ colunas monoespaçadas
+  ✔ tabelas de dados
+
+  ----------------------------------------------------
+  🧪 Exemplo comparativo
+
+    font-family: monospace;
+
+    width: 20ch;  → largura para ~20 caracteres
+    height: 3ex;  → altura baseada na x-height
+
+  Em fontes monoespaçadas,
+  ch se torna extremamente previsível.
+
+  ----------------------------------------------------
+  🧠 Resumo rápido
+
+  ex →
+    baseado na altura da letra "x"
+    melhor para tipografia vertical
+
+  ch →
+    baseado na largura do número "0"
+    melhor para largura de texto e inputs
+
+  ----------------------------------------------------
+  🎯 Boas práticas
+
+  ✓ Use ch para larguras de texto controladas
+
+      input {
+        width: 30ch;
+      }
+
+  ✓ Use ex para microajustes visuais
+
+      .titulo {
+        margin-bottom: 2ex;
+      }
+
+  ----------------------------------------------------
+  ⚠ Observação importante
+
+  Essas unidades variam conforme a fonte usada,
+  portanto não são ideais para layouts estruturais.
+
+  Preferir:
+  • rem → escala global
+  • em  → escala local
+  • px  → precisão
+
+  ex e ch → ajustes tipográficos avançados ✔
+*/

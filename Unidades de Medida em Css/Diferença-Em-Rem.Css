@@ -1,0 +1,85 @@
+/*
+  ⚖️ Diferença Entre REM e EM no CSS
+
+  Ambas são unidades de medida relativas,
+  porém a referência de cálculo é diferente.
+
+  ----------------------------------------------------
+  🔹 EM — relativo ao elemento PAI (ou ao próprio elemento)
+  ----------------------------------------------------
+
+  O valor em é multiplicado pelo font-size do elemento pai.
+
+  Exemplo:
+
+    body {
+      font-size: 16px;
+    }
+
+    .container {
+      font-size: 2em;   → 2 × 16px = 32px
+    }
+
+  Agora, se um filho usar em:
+
+    .container p {
+      font-size: 1.5em;  → 1.5 × 32px = 48px
+    }
+
+  Resultado:
+  ✔ cresce em efeito cascata
+  ❌ pode gerar tamanhos exagerados sem perceber
+
+  ----------------------------------------------------
+  🔹 REM — relativo ao elemento RAIZ (html)
+  ----------------------------------------------------
+
+  Sempre usa como base o font-size do html.
+
+    html {
+      font-size: 16px;
+    }
+
+    .box {
+      font-size: 2rem;   → 2 × 16px = 32px
+    }
+
+  Mesmo que o pai mude de tamanho,
+  o valor continua o mesmo.
+
+  ✔ previsível
+  ✔ consistente
+  ✔ mais usado em layouts modernos
+
+  ----------------------------------------------------
+  🧠 Resumo rápido
+
+  em
+    • depende do elemento pai
+    • escala em cascata
+    • útil para componentes internos
+
+  rem
+    • depende do html
+    • tamanho previsível
+    • ideal para tipografia global
+
+  ----------------------------------------------------
+  🎯 Boas práticas
+
+  Use rem para:
+  ✓ textos base
+  ✓ espaçamentos gerais
+  ✓ layout responsivo
+
+  Use em para:
+  ✓ elementos dentro de componentes
+  ✓ ícones proporcionais
+  ✓ botões e menus
+
+  ----------------------------------------------------
+  📝 Regra de ouro
+
+  rem = consistência do projeto  
+  em  = escala local controlada
+*/

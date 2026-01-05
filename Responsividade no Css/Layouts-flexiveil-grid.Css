@@ -1,0 +1,91 @@
+/*
+===============================
+LAYOUTS FLEXÍVEIS — CSS GRID
+===============================
+
+O CSS Grid é um sistema de layout bidimensional,
+ou seja, trabalha com LINHAS e COLUNAS ao mesmo tempo.
+
+Ele é ideal para:
+- páginas completas
+- seções de sites
+- galerias de imagens
+- dashboards
+- grids de cards
+
+------------------------------
+ATIVANDO O GRID
+------------------------------
+display: grid;
+→ transforma o elemento em um container de grid
+
+------------------------------
+CRIANDO COLUNAS
+------------------------------
+grid-template-columns: 1fr 1fr 1fr;
+→ cria 3 colunas do mesmo tamanho
+
+1fr = fração do espaço disponível
+
+Também pode usar valores fixos:
+grid-template-columns: 200px 300px 1fr;
+
+------------------------------
+CRIANDO LINHAS
+------------------------------
+grid-template-rows: auto auto;
+→ altura automática conforme o conteúdo
+
+------------------------------
+ESPAÇAMENTO ENTRE OS ITENS
+------------------------------
+gap: 20px;
+→ adiciona espaço entre linhas e colunas
+
+(Substitui margin entre itens)
+
+------------------------------
+GRID RESPONSIVO AUTOMÁTICO
+------------------------------
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+→ colunas se adaptam ao tamanho da tela
+→ muito usado em cards e galerias
+
+------------------------------
+POSICIONANDO ITENS NO GRID
+------------------------------
+grid-column: 1 / 3;
+→ o item ocupa da coluna 1 até antes da 3
+
+grid-row: 1 / 2;
+→ define em qual linha o item fica
+
+------------------------------
+ALINHAMENTO NO GRID
+------------------------------
+place-items: center;
+→ centraliza conteúdo no eixo vertical e horizontal
+
+------------------------------
+QUANDO USAR GRID?
+------------------------------
+Use GRID quando precisar de:
+✔ organização estrutural
+✔ linhas + colunas
+✔ layout de página
+✔ controle total do espaço
+
+Flexbox é melhor quando:
+✔ trabalha em 1 direção (linha OU coluna)
+✔ menus, botões, barras, componentes
+
+GRID = layout de estrutura
+FLEXBOX = alinhamento de elementos
+*/
+
+
+
+
+
+

@@ -1,0 +1,168 @@
+/*
+  📦 LAYOUT FLEXÍVEL COM FLEXBOX
+
+  O Flexbox é um modelo de layout do CSS criado para organizar
+  elementos em linha ou coluna de forma flexível, responsiva e
+  com melhor controle de alinhamento e distribuição de espaço.
+
+  Ele é ideal para:
+  ✔ menus
+  ✔ cards
+  ✔ grids simples
+  ✔ cabeçalhos e rodapés
+  ✔ componentes alinhados
+
+  ----------------------------------------------------
+  🔹 Ativando o Flexbox
+  ----------------------------------------------------
+
+      .container {
+        display: flex;
+      }
+
+  O elemento vira um "container flex"
+  e seus filhos se tornam "itens flex".
+
+  ----------------------------------------------------
+  🔹 Direção dos elementos — flex-direction
+  ----------------------------------------------------
+
+  Define o eixo principal do layout:
+
+      row          → elementos lado a lado (padrão)
+      column       → elementos em coluna
+      row-reverse
+      column-reverse
+
+      .container {
+        flex-direction: row;
+      }
+
+  ----------------------------------------------------
+  🔹 Quebra de linha — flex-wrap
+  ----------------------------------------------------
+
+      nowrap   → tudo na mesma linha (padrão)
+      wrap     → quebra linha quando necessário
+      wrap-reverse
+
+      .container {
+        flex-wrap: wrap;
+      }
+
+  Muito usado em layouts responsivos.
+
+  ----------------------------------------------------
+  🔹 Atalho — flex-flow
+  ----------------------------------------------------
+
+      .container {
+        flex-flow: row wrap;
+      }
+
+  (combina direction + wrap)
+
+  ----------------------------------------------------
+  🎯 Alinhamento no eixo principal — justify-content
+  ----------------------------------------------------
+
+      .container {
+        justify-content: flex-start;  /* padrão 
+        /* opções:
+           flex-end
+           center
+           space-between
+           space-around
+           space-evenly
+        
+      }
+
+  Controla espaçamento horizontal (ou vertical,
+  se o flex estiver em coluna).
+
+  ----------------------------------------------------
+  🎯 Alinhamento no eixo cruzado — align-items
+  ----------------------------------------------------
+
+      .container {
+        align-items: stretch;  /* padrão 
+        /* opções:
+           flex-start
+           flex-end
+           center
+           baseline
+        
+      }
+
+  Controla o alinhamento dos itens entre si.
+
+  ----------------------------------------------------
+  🎯 Alinhar linhas múltiplas — align-content
+  ----------------------------------------------------
+
+  Funciona quando há quebra de linha (wrap):
+
+      .container {
+        align-content: center;
+      }
+
+  ----------------------------------------------------
+  ⚙ Controle individual nos itens — flex
+  ----------------------------------------------------
+
+  A propriedade flex controla:
+
+      grow   → crescimento
+      shrink → redução
+      basis  → tamanho inicial
+
+      .item {
+        flex: 1 1 200px;
+      }
+
+  Tradução:
+  • cresce quando há espaço
+  • diminui quando necessário
+  • começa com largura base de 200px
+
+  ----------------------------------------------------
+  🔹 Centralização perfeita com Flexbox
+  ----------------------------------------------------
+
+      .box {
+        display: flex;
+        justify-content: center; /* eixo principal 
+        align-items: center;     /* eixo cruzado 
+      }
+
+  ✔ centraliza qualquer conteúdo
+  ✔ sem hacks
+  ✔ sem margin tricks
+
+  ----------------------------------------------------
+  📱 Flexbox + responsividade
+
+      .card {
+        flex: 1 1 300px;
+      }
+
+  Resultado:
+  • cresce no desktop
+  • quebra no mobile
+  • mantém proporção
+
+  ----------------------------------------------------
+  🧠 Quando usar Flexbox?
+
+  Use Flexbox quando precisar:
+
+  ✓ alinhar elementos
+  ✓ distribuir espaço
+  ✓ organizar conteúdos em linha/coluna
+  ✓ criar layouts pequenos e componentes
+
+  Para estruturas grandes de página,
+  prefira CSS Grid.
+
+  Flexbox = alinhamento e distribuição inteligente ✔
+*/

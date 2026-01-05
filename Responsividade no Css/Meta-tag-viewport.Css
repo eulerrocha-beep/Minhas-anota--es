@@ -1,0 +1,52 @@
+/*
+======================================
+META TAG VIEWPORT — DESIGN RESPONSIVO
+======================================
+
+A meta viewport controla como a página será exibida
+em dispositivos móveis e telas menores.
+
+Por padrão, sem ela:
+- o navegador "simula" uma tela grande
+- o site fica muito pequeno
+- o usuário precisa dar zoom
+
+--------------------------------------
+CÓDIGO PADRÃO RECOMENDADO
+--------------------------------------
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Explicando os parâmetros:
+
+width=device-width
+→ ajusta a largura do site para a largura real da tela
+→ evita zoom automático em celulares
+
+initial-scale=1.0
+→ define o nível inicial de zoom como 100%
+
+--------------------------------------
+OUTROS PARÂMETROS OPCIONAIS
+--------------------------------------
+
+maximum-scale=1.0
+→ impede o usuário de dar zoom (não recomendado em acessibilidade)
+
+user-scalable=no
+→ desativa zoom manual (também não recomendado)
+
+--------------------------------------
+POR QUE A VIEWPORT É IMPORTANTE?
+--------------------------------------
+✔ ativa o layout responsivo no CSS
+✔ evita site minúsculo em mobile
+✔ melhora leitura e usabilidade
+✔ funciona junto com unidades relativas (%, rem, vw, etc.)
+✔ essencial para Media Queries
+
+--------------------------------------
+RESUMO
+--------------------------------------
+Sem viewport = site pequeno e com zoom automático
+Com viewport = layout ajustado à tela do dispositivo
+*/

@@ -1,0 +1,98 @@
+/*
+=====================================
+OPERADORES EM MEDIA QUERIES
+=====================================
+
+Os operadores são usados para combinar,
+limitar ou negar condições dentro das
+Media Queries.
+
+Eles definem COMO as regras serão testadas.
+
+Principais operadores:
+✔ and
+✔ not
+✔ or  (ou palavra-chave: ,  — vírgula)
+
+-------------------------------------
+1) Operador AND
+-------------------------------------
+Usado para COMBINAR condições.
+
+Exemplo:
+@media (min-width: 768px) and (orientation: landscape) {
+    body { background: lightblue; }
+}
+
+A regra só será aplicada se:
+→ largura for >= 768px
+E
+→ estiver em modo horizontal
+
+Serve para criar condições mais específicas.
+
+-------------------------------------
+2) Operador OR (vírgula)
+-------------------------------------
+Representa alternativa de condições.
+
+Funciona como "ou".
+
+Exemplo:
+@media (max-width: 600px), (orientation: portrait) {
+    body { font-size: 14px; }
+}
+
+Será aplicado se:
+✔ a tela for até 600px
+OU
+✔ estiver no modo vertical
+
+A vírgula separa múltiplas queries.
+
+-------------------------------------
+3) Operador NOT
+-------------------------------------
+Usado para NEGAR uma condição.
+
+Exemplo:
+@media not screen and (max-width: 768px) {
+    body { background: gray; }
+}
+
+Significa:
+→ aplica para tudo que NÃO for tela
+ou NÃO estiver dentro daquela condição
+
+É pouco usado hoje
+pois pode gerar confusão.
+
+-------------------------------------
+COMBINANDO OPERADORES
+-------------------------------------
+@media screen and (min-width: 1024px),
+       print and (min-width: 800px) {
+
+    body { line-height: 1.6; }
+}
+
+Interpretação:
+
+✔ regra vale para telas maiores que 1024px
+OU
+✔ impressão maior que 800px
+
+-------------------------------------
+RESUMO
+-------------------------------------
+Operadores controlam o comportamento das Media Queries:
+
+and  → combina condições
+,    → funciona como "ou"
+not  → nega condições
+
+Eles permitem criar layouts:
+✔ mais precisos
+✔ adaptáveis
+✔ inteligentes
+*/

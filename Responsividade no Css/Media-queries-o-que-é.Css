@@ -1,0 +1,77 @@
+/*
+====================================
+MEDIA QUERIES — O QUE SÃO E PARA QUE SERVEM
+====================================
+
+Media Queries são regras do CSS usadas para aplicar
+estilos diferentes dependendo do tamanho da tela
+ou do dispositivo.
+
+Elas permitem criar:
+✔ design responsivo
+✔ layouts adaptáveis
+✔ melhor experiência no mobile
+
+São muito usadas para:
+- celular
+- tablet
+- desktop
+- telas grandes
+
+------------------------------------
+SINTAXE BÁSICA
+------------------------------------
+@media (condição) {
+    seletor {
+        propriedade: valor;
+    }
+}
+
+------------------------------------
+EXEMPLO — ESTILO PARA CELULARES
+------------------------------------
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+(max-width)
+→ aplica o estilo quando a tela for MENOR OU IGUAL ao valor
+
+------------------------------------
+EXEMPLO — ESTILO PARA TELAS MAIORES
+------------------------------------
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+(min-width)
+→ aplica o estilo quando a tela for MAIOR OU IGUAL ao valor
+
+------------------------------------
+OUTROS TIPOS DE CONDIÇÃO
+------------------------------------
+
+ORIENTAÇÃO DA TELA
+@media (orientation: landscape)
+
+RESOLUÇÃO
+@media (min-resolution: 300dpi)
+
+TIPO DE DISPOSITIVO
+@media screen
+@media print
+
+------------------------------------
+RESUMO
+------------------------------------
+Media Queries servem para:
+✔ adaptar o layout a diferentes telas
+✔ reorganizar elementos conforme o espaço
+✔ melhorar acessibilidade e leitura
+
+São a base do DESIGN RESPONSIVO
+*/

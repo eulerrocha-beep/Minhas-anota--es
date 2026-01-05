@@ -1,0 +1,40 @@
+/*
+  UNIDADE DE MEDIDA: em
+
+  A unidade "em" é uma unidade RELATIVA
+  baseada no tamanho da fonte do elemento pai.
+
+  1em = 100% do font-size do elemento pai.
+
+  Exemplos:
+  - Se o elemento pai possui font-size: 16px
+    então 1em = 16px
+    2em = 32px
+
+  Importante:
+  - A unidade em sofre efeito de acumulação (cascata).
+  - Se um elemento filho usa em sobre um pai que também usa em,
+    os valores podem aumentar progressivamente.
+
+  Exemplo de cascata:
+    body { font-size: 16px; }
+    div  { font-size: 2em; }  -> 32px
+    p    { font-size: 2em; }  -> 64px (2em de 32px)
+
+  Por isso, em é usada quando queremos
+  que os tamanhos cresçam proporcionalmente
+  ao elemento pai.
+
+  Uso comum:
+  - espaçamentos
+  - botões
+  - componentes que dependem do contexto
+
+  Observação:
+  - Para evitar acumulação em tipografia,
+    muitos projetos preferem usar "rem".
+
+  Resumo:
+  - em é relativo ao font-size do elemento pai.
+  - Pode aumentar em cascata conforme a hierarquia.
+*/

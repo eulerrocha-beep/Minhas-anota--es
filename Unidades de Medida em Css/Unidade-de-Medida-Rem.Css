@@ -1,0 +1,101 @@
+/*
+  📏 Unidade de Medida REM — Escala baseada na raiz do documento
+
+  A unidade rem (root em) é relativa ao tamanho da fonte
+  definido no elemento raiz do documento (html).
+
+  1rem = font-size do <html>
+
+  ----------------------------------------------------
+  🔹 Valor padrão do navegador
+  ----------------------------------------------------
+
+  Por padrão:
+    html { font-size: 16px; }
+
+  Logo:
+    1rem = 16px
+    2rem = 32px
+    0.5rem = 8px
+
+  Exemplo:
+    font-size: 1.5rem;  → 24px
+    padding: 2rem;      → 32px
+
+  ----------------------------------------------------
+  🎯 Principais vantagens do rem
+  ----------------------------------------------------
+
+  ✔ Responsivo e acessível  
+  ✔ Escala proporcional em todo o site  
+  ✔ Facilita o zoom do usuário  
+  ✔ Mantém consistência entre elementos  
+
+  Diferente de px, que é fixo e não escala.
+
+  ----------------------------------------------------
+  💡 Dica prática — Ajustar escala do projeto
+  ----------------------------------------------------
+
+  Podemos alterar o tamanho base no html:
+
+    html {
+      font-size: 62.5%;
+    }
+
+  Cálculo:
+    62.5% de 16px = 10px
+
+  Resultado:
+    1rem = 10px (conta mais fácil)
+    1.6rem = 16px
+    2.4rem = 24px
+
+  Muito usado em layouts modernos.
+
+  ----------------------------------------------------
+  🔎 Diferença entre em e rem
+  ----------------------------------------------------
+
+  em  → relativo ao elemento pai  
+  rem → relativo ao elemento raiz
+
+  Exemplo:
+
+    html { font-size: 16px; }
+
+    .box {
+      font-size: 2em;   → depende do pai
+    }
+
+    .title {
+      font-size: 2rem;  → sempre 32px
+    }
+
+  rem evita efeito “bola de neve” de herança.
+
+  ----------------------------------------------------
+  ⚠ Quando evitar rem
+
+  Não é ideal para:
+  • bordas muito finas
+  • pixels precisos de ícones
+  • layouts que exigem alinhamento exato
+
+  Nestes casos use px.
+
+  ----------------------------------------------------
+  🚀 Uso comum no dia a dia
+
+    h1 { font-size: 2.4rem; }
+    p  { font-size: 1.6rem; }
+    button {
+      padding: 1rem 2rem;
+    }
+
+  Resultado:
+  ✔ escala consistente
+  ✔ melhor legibilidade
+  ✔ design flexível
+
+*/

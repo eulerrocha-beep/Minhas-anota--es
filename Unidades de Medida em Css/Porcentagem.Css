@@ -1,0 +1,39 @@
+/*
+  PORCENTAGEM (%) NO CSS
+
+  A unidade de porcentagem é relativa a um valor de referência,
+  que geralmente depende do contexto e da propriedade utilizada.
+
+  Principais comportamentos:
+
+  1) width e height
+     - A porcentagem é baseada nas dimensões do elemento pai.
+     Exemplo:
+       width: 50%;
+       → ocupa metade da largura do container.
+
+  2) padding e margin
+     - A porcentagem é calculada em relação à largura do elemento pai,
+       mesmo quando aplicada na vertical.
+     Exemplo:
+       padding-top: 20%;
+       → 20% da largura do container.
+
+  3) position (top, left, right, bottom)
+     - A porcentagem é baseada no tamanho do elemento pai posicionado.
+
+  4) font-size
+     - A porcentagem é relativa ao tamanho da fonte do elemento pai.
+     Exemplo:
+       font-size: 120%;
+       → 20% maior que a fonte do pai.
+
+  Uso comum:
+  - Criação de layouts fluidos e responsivos.
+  - Ajuste proporcional de elementos.
+  - Containers que precisam acompanhar o tamanho do pai.
+
+  Em resumo:
+  - Porcentagem é uma unidade RELATIVA.
+  - Seu valor depende do elemento pai e do contexto da propriedade.
+*/

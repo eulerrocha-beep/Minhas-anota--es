@@ -1,0 +1,104 @@
+/*
+  🖥️ VIEWPORTS — Medidas baseadas na área visível da tela
+
+  A viewport é a área visível do navegador onde o site é exibido.
+  Diferente do tamanho total da página, ela pode mudar quando:
+  • o usuário rola a página
+  • a janela é redimensionada
+  • o dispositivo é rotacionado (mobile)
+
+  Para trabalhar com essa área, o CSS utiliza unidades relativas
+  chamadas unidades de viewport.
+
+  ----------------------------------------------------
+  🔹 vh — Viewport Height (altura da tela)
+  ----------------------------------------------------
+  1vh = 1% da altura visível da janela
+
+  Exemplos:
+      height: 100vh;   → ocupa 100% da altura da tela
+      height: 50vh;    → metade da altura visível
+
+  Muito usado em:
+  ✔ telas de abertura (hero)
+  ✔ seções fullscreen
+
+  ----------------------------------------------------
+  🔹 vw — Viewport Width (largura da tela)
+  ----------------------------------------------------
+  1vw = 1% da largura da janela
+
+  Exemplos:
+      width: 100vw;   → largura total da tela
+      font-size: 3vw; → fonte que cresce com a tela
+
+  Usos comuns:
+  ✔ layouts fluidos
+  ✔ textos responsivos
+  ✔ seções horizontais
+
+  ----------------------------------------------------
+  🔹 vmin e vmax
+  ----------------------------------------------------
+  vmin → usa o MENOR lado da viewport  
+  vmax → usa o MAIOR lado da viewport
+
+  Exemplos:
+      width: 50vmin; → se adapta entre retrato e paisagem
+      font-size: 4vmax;
+
+  Úteis para:
+  ✔ objetos que precisam manter proporção
+  ✔ elementos centralizados e escaláveis
+
+  ----------------------------------------------------
+  📱 Questão importante no mobile
+
+  Em celulares, a altura da viewport pode mudar
+  quando a barra de navegação aparece/desaparece.
+
+  Para corrigir esse comportamento existem novas unidades:
+
+  • svh → altura estável
+  • lvh → altura grande (com UI visível)
+  • dvh → altura dinâmica (reage às barras do sistema)
+
+  Exemplo recomendado:
+
+      section {
+        min-height: 100dvh;
+      }
+
+  Garante melhor comportamento no mobile moderno.
+
+  ----------------------------------------------------
+  🎯 Quando usar viewport units
+
+  ✔ telas de apresentação (landing / hero)
+  ✔ layouts fullscreen
+  ✔ containers que precisam ocupar a tela inteira
+  ✔ fontes fluidas e responsivas
+
+  ----------------------------------------------------
+  ⚠ Quando evitar
+
+  ❌ em textos longos (pode ficar ilegível)
+  ❌ quando exigir precisão fixa
+  ❌ em elementos internos de layout
+
+  Nesses casos prefira:
+  • rem / em → tipografia e espaçamento
+  • px → detalhes precisos
+
+  ----------------------------------------------------
+  🧠 Resumo rápido
+
+  vh  → altura da viewport  
+  vw  → largura da viewport  
+  vmin → menor lado da tela  
+  vmax → maior lado da tela  
+  dvh / lvh / svh → unidades modernas para mobile
+
+  Viewports ajudam a criar layouts
+  totalmente fluidos e dimensionados à tela.
+*/

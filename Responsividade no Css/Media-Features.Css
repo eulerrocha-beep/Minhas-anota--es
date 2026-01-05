@@ -1,0 +1,160 @@
+
+/*
+=====================================
+MEDIA FEATURES — O QUE SÃO
+=====================================
+
+Media Features fazem parte das Media Queries
+e servem para testar características do dispositivo
+ou da viewport.
+
+Enquanto o *Media Type* define o TIPO de mídia
+(screen, print, speech…),
+
+As Media Features definem as CONDIÇÕES do ambiente.
+
+Elas permitem adaptar o layout conforme:
+✔ largura da tela
+✔ altura
+✔ orientação
+✔ resolução
+✔ cor
+✔ nível de zoom
+
+São a base do Design Responsivo.
+
+-------------------------------------
+SINTAXE GERAL
+-------------------------------------
+@media (media-feature: valor) {
+    seletor {
+        propriedade: valor;
+    }
+}
+
+-------------------------------------
+FEATURES MAIS UTILIZADAS
+-------------------------------------
+
+1) width / height
+→ largura e altura exatas da viewport
+
+@media (width: 1024px)
+
+→ pouco usado sozinho, mais comum com min/max
+
+-------------------------------------
+
+2) min-width / max-width
+→ mais usadas no responsivo
+
+@media (max-width: 768px) {
+    body {
+        background: lightgray;
+    }
+}
+
+max-width
+→ aplica quando a tela for MENOR OU IGUAL
+
+@media (min-width: 1024px) {
+    body {
+        background: blue;
+    }
+}
+
+min-width
+→ aplica quando for MAIOR OU IGUAL
+
+-------------------------------------
+
+3) orientation
+→ detecta orientação da tela
+
+@media (orientation: portrait) {
+    /* Modo vertical 
+}
+
+@media (orientation: landscape) {
+    /* Modo horizontal 
+}
+
+Muito usado em tablets e celulares.
+
+-------------------------------------
+
+4) aspect-ratio
+→ proporção largura / altura
+
+@media (aspect-ratio: 16/9)
+
+Também existem:
+min-aspect-ratio
+max-aspect-ratio
+
+-------------------------------------
+
+5) resolution
+→ usada para telas de alta densidade (retina)
+
+@media (min-resolution: 300dpi)
+
+Ou em pixel ratio:
+
+@media (min-resolution: 2dppx)
+
+-------------------------------------
+
+6) color
+→ detecta suporte a cores
+
+@media (color)
+
+Ou dispositivos monocromáticos:
+
+@media (monochrome)
+
+-------------------------------------
+
+7) prefers-color-scheme
+→ detecta modo claro/escuro do sistema
+
+@media (prefers-color-scheme: dark) {
+    body { background: #111; color: #fff; }
+}
+
+@media (prefers-color-scheme: light)
+
+-------------------------------------
+
+8) prefers-reduced-motion
+→ acessibilidade para animações
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none; transition: none; }
+}
+
+-------------------------------------
+COMBINANDO FEATURES
+-------------------------------------
+@media (min-width: 768px) and (orientation: landscape)
+
+É possível combinar múltiplas condições.
+
+-------------------------------------
+RESUMO
+-------------------------------------
+MEDIA FEATURES servem para detectar:
+
+✔ largura e altura (min/max-width)
+✔ orientação da tela
+✔ densidade de pixels
+✔ proporção
+✔ preferências do usuário
+✔ acessibilidade
+
+Elas tornam o layout:
+✔ mais inteligente
+✔ adaptável
+✔ responsivo
+*/

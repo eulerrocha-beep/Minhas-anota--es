@@ -1,0 +1,41 @@
+/* ==========================================
+   PROPRIEDADE: FLEX-DIRECTION
+   ========================================== */
+
+/* A propriedade flex-direction define
+   a direção do eixo principal (main axis)
+   e a ordem dos flex items */
+
+/* row → itens em linha (padrão)
+   eixo principal: horizontal (esquerda → direita) */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* row-reverse → itens em linha invertida
+   eixo principal: horizontal (direita → esquerda) */
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* column → itens em coluna
+   eixo principal: vertical (cima → baixo) */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* column-reverse → itens em coluna invertida
+   eixo principal: vertical (baixo → cima) */
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+
+
+
+

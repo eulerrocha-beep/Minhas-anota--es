@@ -1,0 +1,48 @@
+/* ==================================================
+   EIXO PRINCIPAL COM JUSTIFY-CONTENT
+   ================================================== */
+
+/* A propriedade justify-content controla
+   o alinhamento dos flex items
+   ao longo do eixo principal (main axis) */
+
+/* Alinha os itens no início do eixo principal */
+.container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Centraliza os itens no eixo principal */
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Alinha os itens no final do eixo principal */
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Distribui os itens com espaço entre eles */
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Distribui os itens com espaço ao redor */
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Distribui os itens com espaço igual entre eles */
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Observação:
+   O eixo principal depende do flex-direction:
+   row → horizontal
+   column → vertical */

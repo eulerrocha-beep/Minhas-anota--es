@@ -1,0 +1,37 @@
+/* ==================================================
+   PROPRIEDADE ALIGN-SELF
+   ================================================== */
+
+/* A propriedade align-self permite
+   alterar o alinhamento de UM item específico
+   no eixo transversal (cross axis) */
+
+/* Valor padrão (herda do align-items do container) */
+.item {
+  align-self: auto;
+}
+
+/* Alinha o item no início do eixo transversal */
+.item {
+  align-self: flex-start;
+}
+
+/* Centraliza o item no eixo transversal */
+.item {
+  align-self: center;
+}
+
+/* Alinha o item no final do eixo transversal */
+.item {
+  align-self: flex-end;
+}
+
+/* Estica o item no eixo transversal */
+.item {
+  align-self: stretch;
+}
+
+/* Observações:
+   - Sobrescreve align-items
+   - Atua apenas no eixo transversal
+   - Útil para ajustes individuais */

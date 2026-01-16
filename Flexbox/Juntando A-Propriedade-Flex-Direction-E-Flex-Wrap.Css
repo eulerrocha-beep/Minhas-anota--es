@@ -1,0 +1,34 @@
+/* ==================================================
+   JUNTANDO FLEX-DIRECTION E FLEX-WRAP
+   PROPRIEDADE: FLEX-FLOW
+   ================================================== */
+
+/* A propriedade flex-flow é um atalho
+   que combina flex-direction e flex-wrap */
+
+/* Sintaxe:
+   flex-flow: <flex-direction> <flex-wrap>; */
+
+/* Itens em linha com quebra automática */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* Itens em linha sem quebra */
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* Itens em coluna com quebra */
+.container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* Itens em coluna invertida sem quebra */
+.container {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+}

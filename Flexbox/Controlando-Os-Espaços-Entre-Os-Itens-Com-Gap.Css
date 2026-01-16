@@ -1,0 +1,31 @@
+/* ==================================================
+   CONTROLANDO OS ESPAÇOS ENTRE OS ITENS COM GAP
+   ================================================== */
+
+/* A propriedade gap define o espaço
+   ENTRE os itens dentro de um container flex
+   sem a necessidade de usar margin */
+
+/* Define espaçamento igual entre linhas e colunas */
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Define espaçamento apenas entre linhas */
+.container {
+  display: flex;
+  row-gap: 20px;
+}
+
+/* Define espaçamento apenas entre colunas */
+.container {
+  display: flex;
+  column-gap: 15px;
+}
+
+/* Observações importantes:
+   - gap funciona com Flexbox e Grid
+   - Não cria espaço nas bordas externas do container
+   - Facilita layouts responsivos
+   - Substitui o uso excessivo de margin */

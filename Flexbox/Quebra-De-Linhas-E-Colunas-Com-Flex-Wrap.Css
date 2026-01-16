@@ -1,0 +1,39 @@
+/* ==========================================
+   QUEBRA DE LINHAS E COLUNAS COM FLEX-WRAP
+   ========================================== */
+
+/* A propriedade flex-wrap controla
+   se os itens flexíveis devem ou não
+   quebrar para uma nova linha ou coluna */
+
+/* nowrap → NÃO permite quebra de linha
+   (valor padrão do Flexbox) */
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* wrap → permite que os itens quebrem
+   para a próxima linha (ou coluna) */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* wrap-reverse → permite quebra,
+   porém inverte a ordem das linhas */
+.container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+/* Observação:
+   Quando flex-direction for column,
+   a quebra acontece em colunas,
+   e não em linhas */
+
+
+
+
+
+

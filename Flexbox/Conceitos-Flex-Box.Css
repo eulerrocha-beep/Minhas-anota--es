@@ -1,0 +1,68 @@
+/* ===============================
+   CONCEITOS DO FLEXBOX
+   =============================== */
+
+/* Define um container flexível.
+   Todos os filhos diretos se tornam flex items */
+.container {
+  display: flex;
+}
+
+/* Define a direção do eixo principal
+   row → linha (padrão)
+   column → coluna
+   row-reverse / column-reverse → ordem invertida */
+.container {
+  flex-direction: row;
+}
+
+/* Controla se os itens quebram linha
+   nowrap → não quebra (padrão)
+   wrap → quebra para próxima linha */
+.container {
+  flex-wrap: wrap;
+}
+
+/* Alinhamento dos itens no eixo principal (main axis) */
+.container {
+  justify-content: center; /* start | end | space-between | space-around | space-evenly */
+}
+
+/* Alinhamento dos itens no eixo cruzado (cross axis) */
+.container {
+  align-items: center; /* stretch | start | end | baseline */
+}
+
+/* Alinha múltiplas linhas quando há quebra */
+.container {
+  align-content: space-between;
+}
+
+/* ===============================
+   PROPRIEDADES DOS FLEX ITEMS
+   =============================== */
+
+/* Define o quanto o item cresce */
+.item {
+  flex-grow: 1;
+}
+
+/* Define o quanto o item encolhe */
+.item {
+  flex-shrink: 1;
+}
+
+/* Define o tamanho inicial do item */
+.item {
+  flex-basis: 200px;
+}
+
+/* Atalho para grow, shrink e basis */
+.item {
+  flex: 1 1 200px;
+}
+
+/* Alinhamento individual de um item */
+.item {
+  align-self: center;
+}

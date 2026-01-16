@@ -1,0 +1,43 @@
+/* ==================================================
+   EIXO TRANSVERSAL (CROSS AXIS) COM ALIGN-ITEMS
+   ================================================== */
+
+/* A propriedade align-items controla
+   o alinhamento dos flex items
+   ao longo do eixo transversal (cross axis) */
+
+/* stretch → estica os itens para ocupar
+   todo o espaço do eixo transversal (padrão) */
+.container {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Alinha os itens no início do eixo transversal */
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Centraliza os itens no eixo transversal */
+.container {
+  display: flex;
+  align-items: center;
+}
+
+/* Alinha os itens no final do eixo transversal */
+.container {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Alinha os itens pela linha do texto */
+.container {
+  display: flex;
+  align-items: baseline;
+}
+
+/* Observação:
+   O eixo transversal depende do flex-direction:
+   row → eixo transversal é vertical
+   column → eixo transversal é horizontal */

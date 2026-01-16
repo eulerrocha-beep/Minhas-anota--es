@@ -1,0 +1,38 @@
+/* ==================================================
+   SHORTHAND FLEX
+   ================================================== */
+
+/* A propriedade flex é um atalho
+   que reúne três propriedades:
+   flex-grow | flex-shrink | flex-basis */
+
+/* Sintaxe:
+   flex: <grow> <shrink> <basis>; */
+
+/* Valor padrão */
+.item {
+  flex: 0 1 auto;
+}
+
+/* Item cresce igualmente e pode encolher */
+.item {
+  flex: 1;
+}
+
+/* Equivale a:
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 0; */
+.item {
+  flex: 1 1 0;
+}
+
+/* Tamanho inicial fixo */
+.item {
+  flex: 0 0 200px;
+}
+
+/* Observações:
+   - Facilita a escrita do código
+   - Muito usada em layouts responsivos
+   - Controla comportamento no eixo principal */

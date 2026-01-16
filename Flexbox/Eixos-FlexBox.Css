@@ -1,0 +1,39 @@
+/* ===============================
+   EIXOS DO FLEXBOX
+   =============================== */
+
+/* O Flexbox trabalha com dois eixos:
+   1️⃣ Main Axis (Eixo Principal)
+   2️⃣ Cross Axis (Eixo Cruzado) */
+
+/* Quando flex-direction é ROW (padrão):
+   ➜ Main Axis: horizontal (esquerda → direita)
+   ➜ Cross Axis: vertical (cima → baixo) */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Quando flex-direction é COLUMN:
+   ➜ Main Axis: vertical (cima → baixo)
+   ➜ Cross Axis: horizontal (esquerda → direita) */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* justify-content atua SEMPRE no eixo principal (main axis) */
+.container {
+  justify-content: center;
+}
+
+/* align-items atua SEMPRE no eixo cruzado (cross axis) */
+.container {
+  align-items: center;
+}
+
+/* align-self permite alterar o alinhamento
+   de um item específico no eixo cruzado */
+.item {
+  align-self: flex-end;
+}

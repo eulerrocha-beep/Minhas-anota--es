@@ -1,0 +1,40 @@
+/* ==================================================
+   PROPRIEDADE FLEX-GROW
+   ================================================== */
+
+/* A propriedade flex-grow define
+   o quanto um flex item pode CRESCER
+   em relação aos outros itens
+   quando há espaço disponível */
+
+/* Valor padrão */
+.item {
+  flex-grow: 0; /* não cresce */
+}
+
+/* Item cresce proporcionalmente */
+.item {
+  flex-grow: 1;
+}
+
+/* Exemplo com proporção:
+   item-1 ocupa 1 parte do espaço
+   item-2 ocupa 2 partes do espaço */
+.item-1 {
+  flex-grow: 1;
+}
+
+.item-2 {
+  flex-grow: 2;
+}
+
+/* Observação:
+   - Funciona no eixo principal
+   - O crescimento depende do espaço livre
+   - Valores maiores = mais espaço ocupado */
+
+
+
+
+
+

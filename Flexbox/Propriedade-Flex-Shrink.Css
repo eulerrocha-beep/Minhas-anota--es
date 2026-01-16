@@ -1,0 +1,33 @@
+/* ==================================================
+   PROPRIEDADE FLEX-SHRINK
+   ================================================== */
+
+/* A propriedade flex-shrink define
+   o quanto um flex item pode ENCOLHER
+   quando o espaço no container é insuficiente */
+
+/* Valor padrão */
+.item {
+  flex-shrink: 1; /* pode encolher */
+}
+
+/* Item NÃO encolhe */
+.item-fixo {
+  flex-shrink: 0;
+}
+
+/* Exemplo de proporção:
+   item-1 encolhe normalmente
+   item-2 encolhe o dobro */
+.item-1 {
+  flex-shrink: 1;
+}
+
+.item-2 {
+  flex-shrink: 2;
+}
+
+/* Observação:
+   - Atua no eixo principal
+   - Útil para controlar responsividade
+   - Evita quebra indesejada de layout */

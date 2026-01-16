@@ -1,0 +1,32 @@
+/* ==================================================
+   ORDENANDO OS ITENS COM A PROPRIEDADE ORDER
+   ================================================== */
+
+/* A propriedade order define
+   a ordem de exibição dos flex items
+   dentro do container */
+
+/* Valor padrão de todos os itens */
+.item {
+  order: 0;
+}
+
+/* Quanto MENOR o valor,
+   mais cedo o item aparece */
+.item-1 {
+  order: 1;
+}
+
+.item-2 {
+  order: 2;
+}
+
+/* Valores negativos fazem
+   o item aparecer antes dos outros */
+.item-destaque {
+  order: -1;
+}
+
+/* Observação importante:
+   order altera apenas a ordem visual,
+   não muda a ordem no HTML */

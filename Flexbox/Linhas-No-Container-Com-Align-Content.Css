@@ -1,0 +1,63 @@
+/* ==================================================
+   LINHAS NO CONTAINER COM ALIGN-CONTENT
+   ================================================== */
+
+/* A propriedade align-content controla
+   o alinhamento das LINHAS de itens flex
+   no eixo transversal (cross axis) */
+
+/* IMPORTANTE:
+   align-content só funciona quando:
+   - há múltiplas linhas
+   - flex-wrap: wrap está ativo */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch; /* padrão */
+}
+
+/* Alinha as linhas no início do eixo transversal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* Centraliza as linhas no eixo transversal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+/* Alinha as linhas no final do eixo transversal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+/* Distribui as linhas com espaço entre elas */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+/* Distribui as linhas com espaço ao redor */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+/* Distribui as linhas com espaço igual */
+.container {
+  display: flex;
+  align-content: space-evenly;
+}
+
+/* Diferença importante:
+   align-items → alinha ITENS
+   align-content → alinha LINHAS */

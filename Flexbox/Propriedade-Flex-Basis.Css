@@ -1,0 +1,33 @@
+/* ==================================================
+   PROPRIEDADE FLEX-BASIS
+   ================================================== */
+
+/* A propriedade flex-basis define
+   o TAMANHO INICIAL de um flex item
+   antes da aplicação do flex-grow e flex-shrink */
+
+/* Valor padrão */
+.item {
+  flex-basis: auto;
+}
+
+/* Define um tamanho fixo inicial */
+.item {
+  flex-basis: 200px;
+}
+
+/* Pode usar porcentagem */
+.item {
+  flex-basis: 30%;
+}
+
+/* Em flex-direction: row → controla a largura
+   Em flex-direction: column → controla a altura */
+.item {
+  flex-basis: 150px;
+}
+
+/* Observação:
+   - flex-basis tem prioridade sobre width/height
+   - Trabalha no eixo principal
+   - Muito usado em layouts responsivos */

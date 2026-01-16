@@ -1,0 +1,15 @@
+/* 
+text-align;
+
+Define o alinhamento horizontal do texto dentro de um elemento.
+
+Valores mais usados:
+text-align: left;    /* texto alinhado à esquerda (padrão) 
+text-align: right;   /* texto alinhado à direita 
+text-align: center;  /* texto centralizado 
+text-align: justify; /* texto justificado, alinhado dos dois lados 
+
+Observação:
+- Atua apenas sobre conteúdo de texto e elementos inline
+- Não centraliza elementos block (para isso usa margin ou flex)
+*/

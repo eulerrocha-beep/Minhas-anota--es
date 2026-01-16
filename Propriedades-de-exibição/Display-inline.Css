@@ -1,0 +1,12 @@
+/* 
+display: inline;
+
+Faz com que o elemento:
+- Ocupe apenas o espaço do seu conteúdo
+- Não quebre linha (fica na mesma linha de outros elementos)
+- Ignore width e height
+- Permita apenas margin e padding horizontais (left e right)
+
+Exemplos comuns de elementos inline:
+span, a, strong, em, label
+*/

@@ -1,0 +1,13 @@
+/* 
+position: relative;
+
+Comportamento:
+- O elemento continua no fluxo normal da página
+- Pode ser deslocado usando top, right, bottom e left
+- O espaço original do elemento é mantido no layout
+- Serve como referência para elementos com position: absolute dentro dele
+
+Muito usado para:
+- Pequenos ajustes de posição
+- Criar contexto de posicionamento para filhos absolute
+*/

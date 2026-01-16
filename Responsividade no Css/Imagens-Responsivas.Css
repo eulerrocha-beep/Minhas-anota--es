@@ -1,0 +1,196 @@
+/*
+=========================================
+IMAGENS RESPONSIVAS — O QUE SÃO
+=========================================
+
+Imagens responsivas são imagens que se adaptam
+automaticamente ao tamanho da tela, evitando:
+
+✔ imagens cortadas
+✔ distorção
+✔ barras de rolagem
+✔ zoom no mobile
+
+O objetivo é:
+→ manter a proporção da imagem
+→ ajustar largura de forma fluida
+→ economizar espaço e dados no celular
+*/
+css
+Copiar código
+/*
+-----------------------------------------
+REGRA BÁSICA PARA TORNAR IMAGEM RESPONSIVA
+-----------------------------------------
+*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+max-width: 100%;
+→ impede que a imagem ultrapasse o elemento pai
+
+height: auto;
+→ mantém a proporção original da imagem
+
+Resultado:
+✔ imagem reduz no mobile
+✔ aumenta até o limite do container
+✔ sem distorcer
+*/
+css
+Copiar código
+/*
+-----------------------------------------
+IMAGEM OCUPANDO O ESPAÇO DO ELEMENTO
+-----------------------------------------
+Muito usada em banners e cards
+*/
+img.cover {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/*
+object-fit: cover;
+→ preenche o espaço sem deformar
+→ pode cortar bordas para manter proporção
+
+Ideal para:
+✔ thumbnails
+✔ cabeçalhos
+✔ carrosséis
+*/
+css
+Copiar código
+/*
+-----------------------------------------
+IMAGEM COMPLETA SEM CORTES
+-----------------------------------------
+*/
+img.contain {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+/*
+object-fit: contain;
+→ exibe a imagem inteira
+→ pode deixar bordas vazias
+
+Ideal para:
+✔ logos
+✔ ícones
+✔ imagens com informação importante
+*/
+css
+Copiar código
+/*
+-----------------------------------------
+IMAGENS RESPONSIVAS COM FIGURE
+-----------------------------------------
+*/
+html
+Copiar código
+<figure>
+  <img src="imagem.jpg" alt="Descrição da imagem">
+  <figcaption>Legenda da imagem</figcaption>
+</figure>
+
+<!--
+Vantagens:
+✔ acessibilidade
+✔ SEO
+✔ semântica correta
+-->
+css
+Copiar código
+/*
+-----------------------------------------
+IMAGENS RESPONSIVAS NO MOBILE FIRST
+-----------------------------------------
+*/
+img {
+    max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+    img {
+        max-width: 800px;
+    }
+}
+
+/*
+No mobile → ocupa a largura total
+No desktop → limita o tamanho
+*/
+css
+Copiar código
+/*
+-----------------------------------------
+QUANDO USAR <picture> E srcset?
+-----------------------------------------
+
+Usamos quando:
+✔ queremos carregar imagens menores no mobile
+✔ trocar formato (webp / jpg / png)
+✔ otimizar desempenho
+
+Exemplo prático:
+*/
+html
+Copiar código
+<picture>
+  <source srcset="img-grande.webp" media="(min-width: 1024px)">
+  <source srcset="img-media.webp" media="(min-width: 600px)">
+  <img src="img-pequena.webp" alt="Imagem responsiva">
+</picture>
+css
+Copiar código
+/*
+O navegador escolhe:
+✔ a melhor imagem
+✔ no melhor tamanho
+✔ economizando dados
+
+Excelente para performance
+*/
+css
+Copiar código
+/*
+-----------------------------------------
+BOAS PRÁTICAS DE IMAGENS RESPONSIVAS
+-----------------------------------------
+
+✔ sempre usar max-width: 100%
+✔ nunca definir largura fixa em px
+✔ usar formatos otimizados (webp quando possível)
+✔ manter proporção visual
+✔ testar em diferentes telas
+*/
+css
+Copiar código
+/*
+-----------------------------------------
+RESUMO
+-----------------------------------------
+
+Imagens responsivas servem para:
+
+✔ adaptar ao tamanho da tela
+✔ evitar cortes e distorção
+✔ melhorar leitura no mobile
+✔ economizar banda e memória
+✔ melhorar UX e SEO
+
+Ferramentas principais:
+
+max-width: 100%;
+height: auto;
+object-fit: cover / contain;
+picture + srcset;
+*/

@@ -1,0 +1,15 @@
+/* 
+position: static;
+
+É o valor padrão de todos os elementos HTML.
+
+Comportamento:
+- O elemento segue o fluxo normal da página
+- Não é afetado por top, right, bottom ou left
+- Não cria contexto de posicionamento
+- Não permite sobreposição controlada
+
+Observação:
+Para usar top, left, right ou bottom, é necessário
+usar position: relative, absolute, fixed ou sticky.
+*/

@@ -1,0 +1,12 @@
+/* 
+display: inline-block;
+
+Faz com que o elemento:
+- Fique na mesma linha que outros elementos (como inline)
+- Ocupe apenas o espaço do conteúdo
+- Permita definir width e height (como block)
+- Aceite margin e padding em todas as direções
+- Não quebre linha automaticamente
+
+É muito usado para botões, cards e imagens alinhadas lado a lado.
+*/

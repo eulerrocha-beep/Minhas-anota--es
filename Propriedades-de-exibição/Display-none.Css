@@ -1,0 +1,12 @@
+/* 
+display: none;
+
+Faz com que o elemento:
+- Não seja exibido na tela
+- Não ocupe espaço no layout
+- Seja removido do fluxo da página
+- Não possa receber interação do usuário
+
+Diferença para visibility: hidden;
+- visibility: hidden; esconde o elemento, mas mantém o espaço ocupado
+*/

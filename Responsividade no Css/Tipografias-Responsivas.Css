@@ -1,0 +1,177 @@
+/*
+===========================================
+TIPOGRAFIAS RESPONSIVAS — O QUE SÃO
+===========================================
+
+Tipografia responsiva é a prática de ajustar o tamanho
+do texto automaticamente conforme:
+
+✔ tamanho da tela
+✔ resolução do dispositivo
+✔ espaço disponível no layout
+
+Objetivo:
+→ manter boa leitura em qualquer dispositivo
+→ evitar textos muito pequenos no mobile
+→ evitar textos gigantes no desktop
+
+Em vez de usar tamanhos fixos (px),
+preferimos unidades relativas e fluídas.
+*/
+css
+Copiar código
+/*
+===========================================
+1) FONTES RESPONSIVAS COM UNIDADES RELATIVAS
+===========================================
+
+As mais usadas:
+✔ rem  → relativa ao root (HTML)
+✔ em   → relativa ao elemento pai
+✔ %    → proporcional
+
+Exemplo recomendado:
+*/
+html {
+    font-size: 16px;
+}
+
+p {
+    font-size: 1rem; /* 16px */
+}
+
+/*
+Vantagens:
+✔ escala proporcional
+✔ respeita acessibilidade
+✔ usuário pode aumentar zoom
+*/
+css
+Copiar código
+/*
+===========================================
+2) EVITAR PX EM TIPOGRAFIA PRINCIPAL
+===========================================
+
+px é fixo → não adapta ao usuário
+
+❌ Pode causar:
+- texto pequeno demais no mobile
+- problemas de acessibilidade
+*/
+css
+Copiar código
+/*
+===========================================
+3) TIPOGRAFIA RESPONSIVA COM VIEWPORT (VW)
+===========================================
+
+Fonte cresce conforme largura da tela
+*/
+h1 {
+    font-size: 4vw;
+}
+
+/*
+Funciona bem para:
+✔ títulos
+✔ banners
+
+Mas pode ficar pequena demais em telas pequenas
+*/
+css
+Copiar código
+/*
+===========================================
+4) TIPOGRAFIA FLUÍDA COM clamp()
+===========================================
+
+Forma moderna e ideal de tipografia responsiva
+
+clamp(
+    valor mínimo,
+    valor fluído,
+    valor máximo
+)
+*/
+h1 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+/*
+Interpretação:
+
+1.5rem  → nunca será menor que isso
+3vw     → cresce de forma fluída
+3rem    → nunca passa desse limite
+
+Vantagens:
+✔ texto confortável no mobile
+✔ fluído no tablet
+✔ controlado no desktop
+*/
+css
+Copiar código
+/*
+===========================================
+5) TIPOGRAFIA MOBILE FIRST
+===========================================
+
+Primeiro definimos o texto para celular
+e ajustamos para telas maiores
+*/
+p {
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    p {
+        font-size: 1.25rem;
+    }
+}
+
+/*
+Resultado:
+✔ leitura agradável em todas as telas
+*/
+css
+Copiar código
+/*
+===========================================
+6) BOAS PRÁTICAS DE TIPOGRAFIA RESPONSIVA
+===========================================
+
+✔ prefira rem em textos
+✔ use clamp() para títulos
+✔ evite px sempre que possível
+✔ mantenha contraste adequado
+✔ respeite acessibilidade
+✔ teste em vários dispositivos
+*/
+css
+Copiar código
+/*
+===========================================
+RESUMO
+===========================================
+
+Tipografia responsiva:
+
+✔ adapta automaticamente o texto
+✔ melhora leitura no mobile
+✔ evita exagero no desktop
+✔ aumenta acessibilidade
+
+Ferramentas principais:
+
+rem / em / %
+vw (com cuidado)
+clamp() → melhor solução moderna
+media queries quando necessário
+*/

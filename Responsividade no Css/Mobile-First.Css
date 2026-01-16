@@ -1,0 +1,145 @@
+/*
+=========================================
+MOBILE FIRST — O QUE É
+=========================================
+
+Mobile First é uma abordagem de desenvolvimento
+onde o layout do site é criado PRIMEIRO para:
+
+✔ celulares
+✔ telas pequenas
+✔ dispositivos com menos espaço
+
+Depois o design é ampliado para telas maiores:
+
+→ tablets
+→ notebooks
+→ desktops
+
+Ou seja:
+O layout cresce conforme a tela aumenta.
+
+É o oposto do Desktop First.
+*/
+css
+Copiar código
+/*
+=========================================
+IDEIA PRINCIPAL DO MOBILE FIRST
+=========================================
+
+1) Criar layout simples e fluído no mobile
+2) Garantir leitura e usabilidade primeiro
+3) Depois adicionar melhorias para telas maiores
+
+Prioriza:
+
+✔ performance
+✔ acessibilidade
+✔ experiência do usuário
+✔ economia de dados
+*/
+css
+Copiar código
+/*
+=========================================
+COMO É IMPLEMENTADO NO CSS?
+=========================================
+
+No Mobile First usamos:
+→ estilos base para celular
+→ Media Queries com min-width (subindo)
+*/
+css
+Copiar código
+/* Estilo padrão = mobile */
+.card {
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* Tablet e acima */
+@media (min-width: 768px) {
+    .card {
+        width: 70%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .card {
+        width: 50%;
+    }
+}
+
+/*
+A tela cresce → o layout melhora
+*/
+css
+Copiar código
+/*
+=========================================
+POR QUE O MOBILE FIRST É RECOMENDADO?
+=========================================
+
+✔ mais rápido em conexões lentas
+✔ menos CSS sobrescrito
+✔ código mais organizado
+✔ melhora SEO (Google prioriza mobile)
+✔ experiência melhor para maioria dos usuários
+
+Hoje a maior parte do tráfego é mobile.
+*/
+css
+Copiar código
+/*
+=========================================
+COMPARAÇÃO RÁPIDA
+=========================================
+
+DESKTOP FIRST
+→ cria primeiro para telas grandes
+→ depois tenta reduzir para celular
+→ geralmente causa:
+   ✘ layout quebrado
+   ✘ excesso de media queries
+   ✘ código mais pesado
+
+MOBILE FIRST
+→ começa simples
+→ cresce de forma natural
+→ código mais limpo e eficiente
+*/
+css
+Copiar código
+/*
+=========================================
+BOAS PRÁTICAS
+=========================================
+
+✔ projeto deve funcionar sem media queries
+✔ tornar layout fluído primeiro
+✔ usar unidades relativas (%, rem, vw)
+✔ ir adicionando melhorias progressivamente
+*/
+css
+Copiar código
+/*
+=========================================
+RESUMO
+=========================================
+
+Mobile First significa:
+
+✔ projetar primeiro para celular
+✔ ampliar o layout para telas maiores
+✔ usar media queries com min-width
+
+Benefícios:
+
+✔ melhor performance
+✔ maior acessibilidade
+✔ melhor usabilidade
+✔ código mais simples
+✔ recomendado pelo Google
+*/

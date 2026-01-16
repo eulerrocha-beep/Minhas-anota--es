@@ -1,0 +1,33 @@
+/* 
+FLEXBOX vs GRID LAYOUT
+
+FLEXBOX (display: flex)
+- Layout unidimensional (1 direção por vez)
+- Trabalha em linha OU coluna
+- Ideal para alinhamento de itens
+- Ótimo para componentes pequenos
+
+Exemplos de uso:
+- Menu de navegação
+- Botões
+- Cards em uma única linha
+- Centralização de elementos
+
+-----------------------------------
+
+GRID (display: grid)
+- Layout bidimensional (linhas E colunas)
+- Controle total do layout da página
+- Ideal para estruturas grandes
+- Permite posicionar itens com precisão
+
+Exemplos de uso:
+- Layout principal do site
+- Galerias
+- Dashboards
+- Páginas completas
+
+Resumo rápido:
+- Flexbox → alinhar conteúdo
+- Grid → estruturar layout
+*/

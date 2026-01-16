@@ -1,0 +1,119 @@
+/*
+==========================================
+MANEIRAS DE USAR AS MEDIA QUERIES NO CSS
+==========================================
+
+As Media Queries podem ser aplicadas em 3 formas principais:
+
+✔ no arquivo CSS externo
+✔ dentro do próprio CSS do projeto
+✔ diretamente nas folhas de estilo importadas
+
+São usadas para criar layouts responsivos
+e adaptar o design a diferentes telas.
+
+------------------------------------------
+1) MEDIA QUERIES NO FINAL DO ARQUIVO CSS
+------------------------------------------
+
+É a forma mais comum e recomendada.
+
+Exemplo:
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+Vantagens:
+✔ organizado
+✔ fácil manutenção
+✔ ideal para projetos maiores
+
+------------------------------------------
+2) MEDIA QUERIES AGRUPADAS POR COMPONENTE
+------------------------------------------
+
+Neste formato, a media query fica perto do elemento.
+
+Exemplo:
+
+.card {
+    width: 400px;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+}
+
+Vantagens:
+✔ facilita leitura por componente
+✔ muito usado em design systems
+
+------------------------------------------
+3) MEDIA QUERIES NO @IMPORT
+------------------------------------------
+
+Permite importar um CSS específico para cada tela.
+
+Exemplo:
+
+@import url("mobile.css") screen and (max-width: 600px);
+@import url("desktop.css") screen and (min-width: 1024px);
+
+Usado quando:
+✔ separa estilos em múltiplos arquivos
+
+Desvantagem:
+✘ pode aumentar o tempo de carregamento
+
+------------------------------------------
+4) MEDIA QUERIES INLINE NO HTML (EVITAR)
+------------------------------------------
+
+Exemplo:
+
+<link rel="stylesheet" media="(max-width: 768px)" href="mobile.css">
+
+Funciona, mas é menos usado.
+
+Motivo:
+✔ dificulta manutenção
+
+------------------------------------------
+MOBILE FIRST x DESKTOP FIRST
+------------------------------------------
+
+MOBILE FIRST
+→ começa com telas pequenas
+→ usa min-width
+
+@media (min-width: 768px)
+
+DESKTOP FIRST
+→ começa com telas grandes
+→ usa max-width
+
+@media (max-width: 768px)
+
+Hoje, o padrão recomendado é:
+✔ Mobile First
+
+------------------------------------------
+RESUMO
+------------------------------------------
+Principais formas de usar Media Queries:
+
+✔ no CSS principal (mais comum)
+✔ agrupadas por componente
+✔ via @import
+✔ no link do HTML (menos usado)
+
+Com elas é possível criar layouts:
+✔ responsivos
+✔ adaptáveis
+✔ acessíveis
+*/

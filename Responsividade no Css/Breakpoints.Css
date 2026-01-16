@@ -1,0 +1,135 @@
+/*
+=====================================
+BREAKPOINTS — O QUE SÃO
+=====================================
+
+Breakpoints são pontos de corte de layout
+usados no design responsivo.
+
+Eles definem em que momento o layout deve:
+✔ mudar o tamanho dos elementos
+✔ reorganizar colunas
+✔ ajustar fontes e espaçamentos
+
+Ou seja:
+→ quando a largura da tela muda
+→ o layout se adapta
+
+São aplicados com Media Queries.
+
+-------------------------------------
+EXEMPLO SIMPLES DE BREAKPOINT
+-------------------------------------
+
+Layout padrão (desktop):
+.container {
+    width: 1200px;
+}
+
+Quando a tela ficar menor que 768px:
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+Aqui, 768px é um breakpoint.
+
+-------------------------------------
+TIPOS DE BREAKPOINTS
+-------------------------------------
+
+1) Breakpoints fixos (por dispositivo)
+-------------------------------------
+São baseados em larguras comuns:
+
+@media (max-width: 480px)   → celular pequeno
+@media (max-width: 768px)   → tablet
+@media (max-width: 1024px)  → notebook
+@media (max-width: 1280px)  → desktop grande
+
+São os mais usados.
+
+-------------------------------------
+2) Breakpoints fluídos
+-------------------------------------
+
+São definidos conforme o design quebra.
+
+Exemplo:
+você ajusta o layout até perceber que
+em 930px algo começa a deformar…
+
+Então cria:
+
+@media (max-width: 930px)
+
+Esses breakpoints são baseados
+no COMPORTAMENTO do layout.
+
+-------------------------------------
+PADRÃO MOBILE FIRST (RECOMENDADO)
+-------------------------------------
+
+Começa no menor tamanho
+e expande usando min-width:
+
+@media (min-width: 480px)
+@media (min-width: 768px)
+@media (min-width: 1024px)
+
+Vantagens:
+✔ melhor performance
+✔ mais acessível
+✔ menos sobrescrita de CSS
+
+-------------------------------------
+EXEMPLO COMPLETO
+-------------------------------------
+
+/* Estilo base (mobile) 
+.card {
+    width: 100%;
+}
+
+/* Tablet 
+@media (min-width: 768px) {
+    .card {
+        width: 50%;
+    }
+}
+
+/* Desktop 
+@media (min-width: 1024px) {
+    .card {
+        width: 25%;
+    }
+}
+
+-------------------------------------
+BOAS PRÁTICAS
+-------------------------------------
+
+✔ crie breakpoints quando o layout quebrar
+✔ evite breakpoints desnecessários
+✔ prefira mobile first
+✔ use unidades relativas (rem, %, vw)
+
+-------------------------------------
+RESUMO
+-------------------------------------
+
+Breakpoints são pontos de ajuste do layout
+definidos com Media Queries.
+
+Eles permitem que a interface:
+✔ seja responsiva
+✔ se reorganize automaticamente
+✔ funcione em qualquer tela
+*/
+
+
+
+
+
+

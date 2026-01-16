@@ -1,0 +1,95 @@
+/*
+=================================================
+DEVEMOS SEMPRE USAR MEDIA QUERIES?
+=================================================
+
+Resposta:
+NÃO é obrigatório usar media queries em todo layout.
+
+Media Queries são uma ferramenta importante,
+mas não são a ÚNICA forma de fazer um site responsivo.
+
+-------------------------------------------------
+MUITOS LAYOUTS FUNCIONAM SEM MEDIA QUERIES
+-------------------------------------------------
+
+Hoje existem várias propriedades que já são
+naturalmente responsivas, por exemplo:
+
+width: 100%;
+max-width;
+flexbox;
+grid;
+gap;
+fr (no grid);
+auto-fit / auto-fill;
+clamp();
+vh / vw;
+rem / %
+
+Quando usamos essas propriedades corretamente,
+o layout se adapta sozinho em muitos casos.
+
+Ou seja:
+✔ às vezes o layout já é fluido
+✔ só usa media queries quando necessário
+
+-------------------------------------------------
+QUANDO AS MEDIA QUERIES SÃO REALMENTE ÚTEIS?
+-------------------------------------------------
+
+✔ quando o layout quebra em certo tamanho
+✔ quando precisamos mudar a quantidade de colunas
+✔ quando fontes precisam reduzir
+✔ quando botões ficam muito apertados
+✔ quando o menu precisa virar um menu mobile
+
+Exemplo clássico:
+layout de 3 colunas → vira 1 coluna no celular
+
+-------------------------------------------------
+BOA PRÁTICA IMPORTANTE
+-------------------------------------------------
+
+Regra de ouro:
+
+NÃO crie media queries por costume
+Crie quando houver necessidade
+
+ou seja:
+
+❌ "a cada 200px coloco um breakpoint"
+✔ "coloco quando o layout começa a quebrar"
+
+-------------------------------------------------
+ABORDAGEM MODERNA
+-------------------------------------------------
+
+1️⃣ Primeiro: crie layout fluido
+2️⃣ Depois: veja onde ele quebra
+3️⃣ Só então: adicione media queries
+
+Isso evita:
+✔ CSS repetido
+✔ código difícil de manter
+✔ ajustes desnecessários
+
+-------------------------------------------------
+RESUMO
+-------------------------------------------------
+
+Não precisamos SEMPRE usar media queries.
+
+Elas devem ser usadas quando:
+✔ houver mudança real de layout
+✔ algo deixar de ser legível
+✔ o design precisar se adaptar
+
+Use media queries com propósito.
+*/
+
+
+
+
+
+

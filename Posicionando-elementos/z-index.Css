@@ -1,0 +1,20 @@
+/* 
+z-index;
+
+Controla a ordem de empilhamento (profundidade) dos elementos na tela.
+
+Comportamento:
+- Valores maiores ficam na frente
+- Valores menores ficam atrás
+- Só funciona em elementos posicionados:
+  position: relative | absolute | fixed | sticky
+- Pode usar valores positivos, negativos ou zero
+
+Exemplo:
+z-index: 10;  /* fica acima 
+z-index: 1;   /* intermediário 
+z-index: -1;  /* fica atrás 
+
+Observação:
+- O z-index funciona dentro do contexto de empilhamento do elemento pai
+*/

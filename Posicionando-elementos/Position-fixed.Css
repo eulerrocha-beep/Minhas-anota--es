@@ -1,0 +1,16 @@
+/* 
+position: fixed;
+
+Comportamento:
+- O elemento sai do fluxo normal da página
+- Fica fixo em relação à janela do navegador (viewport)
+- Não se move ao rolar a página
+- Pode ser posicionado com top, right, bottom e left
+- Não ocupa espaço no layout
+
+Muito usado para:
+- Menus fixos
+- Botões flutuantes
+- Barras de navegação
+- Ícones de ação (ex: WhatsApp)
+*/

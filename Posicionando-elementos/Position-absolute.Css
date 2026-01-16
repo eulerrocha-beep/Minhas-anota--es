@@ -1,0 +1,14 @@
+/* 
+position: absolute;
+
+Comportamento:
+- O elemento sai do fluxo normal da página
+- Pode ser posicionado usando top, right, bottom e left
+- É posicionado em relação ao ancestral mais próximo com position diferente de static
+- Se não houver ancestral posicionado, usa o body (viewport) como referência
+- Não ocupa espaço no layout
+
+Muito usado para:
+- Sobreposição de elementos
+- Ícones, badges, modais e elementos flutuantes
+*/

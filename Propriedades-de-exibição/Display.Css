@@ -1,0 +1,17 @@
+/* 
+A propriedade display define como um elemento HTML é exibido na página
+e como ele se comporta no layout.
+
+Ela controla:
+- Se o elemento ocupa linha inteira ou apenas o espaço do conteúdo
+- Se permite largura/altura
+- Se participa de layouts como Flexbox ou Grid
+
+Exemplos comuns:
+display: block;        /* ocupa toda a largura e quebra linha 
+display: inline;       /* ocupa apenas o conteúdo, não quebra linha 
+display: inline-block; /* ocupa apenas o conteúdo, permite width e height 
+display: none;         /* remove o elemento da tela e do fluxo do layout 
+display: flex;         /* ativa layout flexível para alinhamento de itens 
+display: grid;         /* ativa layout em grade (linhas e colunas) 
+*/

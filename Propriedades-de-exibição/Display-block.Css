@@ -1,0 +1,12 @@
+/* 
+display: block;
+
+Faz com que o elemento:
+- Ocupe toda a largura disponível do elemento pai
+- Sempre comece em uma nova linha (quebra de linha automática)
+- Permita definir width, height, margin e padding
+- Empurre outros elementos para baixo
+
+Exemplos comuns de elementos block:
+div, p, h1 até h6, section, article, header, footer
+*/

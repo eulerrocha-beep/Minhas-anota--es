@@ -36,3 +36,19 @@
    - Facilita a escrita do código
    - Muito usada em layouts responsivos
    - Controla comportamento no eixo principal */
+
+.item {
+   flex: initial; /* flex 0 1 auto*/
+}
+
+.item {
+   flex: auto; /* flex 1 1 auto*/
+}
+
+.item {
+   flex: none; /* Nao e legal de usar pois deixa o flex inflexivel oque nao e o ideal*/
+}
+
+.item {
+   flex: 1; /* flex 1 1 0 */
+}

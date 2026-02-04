@@ -1,0 +1,36 @@
+/* ==================================================
+   DEFININDO O TAMANHO MÍNIMO E MÁXIMO DAS FAIXAS
+   CSS GRID — FUNÇÃO minmax()
+   ================================================== */
+
+/* A função minmax() permite definir
+   o tamanho mínimo e máximo
+   de uma faixa (linha ou coluna) do grid */
+
+/* Sintaxe:
+   minmax(valor-minimo, valor-maximo) */
+
+/* Exemplo em colunas */
+.container {
+  display: grid;
+  grid-template-columns: minmax(150px, 300px) 1fr;
+}
+
+/* Exemplo em linhas */
+.container {
+  display: grid;
+  grid-template-rows: minmax(100px, auto);
+}
+
+/* Exemplo responsivo (mais usado na prática) */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Observações importantes:
+   - O valor mínimo impede que a faixa encolha demais
+   - O valor máximo limita o crescimento
+   - auto permite adaptação ao conteúdo
+   - Muito usado em layouts responsivos */

@@ -1,0 +1,40 @@
+/* ==================================================
+   PLACE-CONTENT (CSS GRID)
+   ================================================== */
+
+/* A propriedade place-content é um SHORTHAND
+   para alinhar o CONTEÚDO do grid
+   dentro do container */
+
+/* Ela combina:
+   align-content + justify-content */
+
+/* Sintaxe:
+   place-content: <align-content> <justify-content>; */
+
+/* Centraliza o grid vertical e horizontalmente */
+.container {
+  display: grid;
+  place-content: center;
+}
+
+/* Alinha no topo e no centro horizontal */
+.container {
+  place-content: start center;
+}
+
+/* Distribui o conteúdo com espaçamento */
+.container {
+  place-content: space-between center;
+}
+
+/* Valor padrão */
+.container {
+  place-content: stretch stretch;
+}
+
+/* Observações importantes:
+   - Move o GRID inteiro, não os itens
+   - Só funciona quando o grid
+     não ocupa todo o container tem que ser em auto
+   - Shorthand de align-content + justify-content */

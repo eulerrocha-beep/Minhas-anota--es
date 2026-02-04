@@ -1,0 +1,36 @@
+/* ==================================================
+   DEFININDO ESPAÇAMENTOS DOS ELEMENTOS DO GRID
+   ================================================== */
+
+/* O espaçamento no CSS Grid é definido
+   principalmente pela propriedade gap */
+
+/* Espaçamento igual entre linhas e colunas */
+.container {
+  display: grid;
+  gap: 20px;
+}
+
+/* Espaçamento apenas entre linhas */
+.container {
+  display: grid;
+  row-gap: 15px;
+}
+
+/* Espaçamento apenas entre colunas */
+.container {
+  display: grid;
+  column-gap: 25px;
+}
+
+/* Forma abreviada (linha / coluna) */
+.container {
+  display: grid;
+  gap: 10px 30px;
+}
+
+/* Observações importantes:
+   - gap NÃO cria espaço externo ao grid
+   - Funciona tanto no Grid quanto no Flexbox
+   - Substitui o uso de margin entre itens
+   - Facilita layouts responsivos */

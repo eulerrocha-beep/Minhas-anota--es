@@ -1,0 +1,40 @@
+/* ==================================================
+   GRID EXPLÍCITO E GRID IMPLÍCITO
+   ================================================== */
+
+/* GRID EXPLÍCITO
+   É a grade definida manualmente
+   pelo desenvolvedor */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 200px;
+}
+
+/* Nesse exemplo:
+   - 3 colunas explícitas
+   - 2 linhas explícitas */
+
+/* GRID IMPLÍCITO
+   É criado automaticamente pelo navegador
+   quando há mais itens do que o grid explícito comporta */
+
+/* Controla o tamanho das linhas implícitas */
+.container {
+  grid-auto-rows: 150px;
+}
+
+/* Controla o tamanho das colunas implícitas */
+.container {
+  grid-auto-columns: 100px;
+}
+
+/* Controla a direção de preenchimento */
+.container {
+  grid-auto-flow: row; /* ou column */
+}
+
+/* Observações importantes:
+   - grid-template-* → grid explícito
+   - grid-auto-* → grid implícito
+   - Itens extras sempre entram no grid implícito */

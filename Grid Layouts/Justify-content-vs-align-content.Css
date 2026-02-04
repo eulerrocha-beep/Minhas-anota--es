@@ -1,0 +1,75 @@
+/* ==================================================
+   JUSTIFY-CONTENT E ALIGN-CONTENT (CSS GRID)
+   ================================================== */
+
+/* Essas propriedades alinham o CONTEÚDO do grid
+   (toda a grade) dentro do container */
+
+/* ----------------------------------
+   JUSTIFY-CONTENT
+   ---------------------------------- */
+/* Alinha o grid no eixo HORIZONTAL */
+
+.container {
+  display: grid;
+  justify-content: start;   /* esquerda */
+}
+
+.container {
+  justify-content: center;  /* centro */
+}
+
+.container {
+  justify-content: end;     /* direita */
+}
+
+.container {
+  justify-content: space-between;
+}
+
+.container {
+  justify-content: space-around;
+}
+
+.container {
+  justify-content: space-evenly;
+}
+
+/* ----------------------------------
+   ALIGN-CONTENT
+   ---------------------------------- */
+/* Alinha o grid no eixo VERTICAL */
+
+.container {
+  display: grid;
+  align-content: start;   /* topo */
+}
+
+.container {
+  align-content: center;  /* centro */
+}
+
+.container {
+  align-content: end;     /* base */
+}
+
+.container {
+  align-content: space-between;
+}
+
+.container {
+  align-content: space-around;
+}
+
+.container {
+  align-content: space-evenly;
+}
+
+/* ----------------------------------
+   DIFERENÇA IMPORTANTE
+   ---------------------------------- */
+/* justify-content → move o GRID inteiro
+   align-content   → move o GRID inteiro
+
+   justify-items / align-items → alinham ITENS
+*/

@@ -1,0 +1,41 @@
+/* ==================================================
+   PLACE-ITEMS (CSS GRID)
+   ================================================== */
+
+/* A propriedade place-items é um SHORTHAND
+   para alinhar os itens dentro das células
+   do Grid */
+
+/* Ela combina:
+   align-items + justify-items */
+
+/* Sintaxe:
+   place-items: <align-items> <justify-items>; */
+
+/* Centraliza os itens (vertical e horizontal) */
+.container {
+  display: grid;
+  place-items: center;
+}
+
+/* Alinha verticalmente ao topo
+   e horizontalmente ao centro */
+.container {
+  place-items: start center;
+}
+
+/* Estica verticalmente
+   e centraliza horizontalmente */
+.container {
+  place-items: stretch center;
+}
+
+/* Valor padrão */
+.container {
+  place-items: stretch stretch;
+}
+
+/* Observações importantes:
+   - Funciona no CSS Grid
+   - Deixa o código mais limpo
+   - Muito útil para centralização rápida */

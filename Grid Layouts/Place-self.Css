@@ -1,0 +1,41 @@
+/* ==================================================
+   PLACE-SELF (CSS GRID)
+   ================================================== */
+
+/* A propriedade place-self é um SHORTHAND
+   para alinhar UM ITEM específico
+   dentro da sua célula no Grid */
+
+/* Ela combina:
+   align-self + justify-self */
+
+/* Sintaxe:
+   place-self: <align-self> <justify-self>; */
+
+/* Centraliza o item (vertical e horizontal) */
+.item {
+  place-self: center;
+}
+
+/* Alinha verticalmente no topo
+   e horizontalmente no centro */
+.item {
+  place-self: start center;
+}
+
+/* Estica verticalmente
+   e alinha horizontalmente à direita */
+.item {
+  place-self: stretch end;
+}
+
+/* Valor padrão */
+.item {
+  place-self: stretch stretch;
+}
+
+/* Observações importantes:
+   - Atua em um item individual
+   - Sobrescreve align-items e justify-items
+   - Funciona apenas no CSS Grid
+   - Facilita alinhamentos pontuais */

@@ -1,0 +1,58 @@
+/* ==================================================
+   JUSTIFY-SELF E ALIGN-SELF (CSS GRID)
+   ================================================== */
+
+/* Essas propriedades alinham UM ITEM específico
+   dentro da sua própria célula do Grid */
+
+/* ----------------------------------
+   JUSTIFY-SELF
+   ---------------------------------- */
+/* Alinhamento no eixo HORIZONTAL */
+
+.item {
+  justify-self: stretch; /* padrão */
+}
+
+.item {
+  justify-self: start;   /* esquerda */
+}
+
+.item {
+  justify-self: center;  /* centro */
+}
+
+.item {
+  justify-self: end;     /* direita */
+}
+
+/* ----------------------------------
+   ALIGN-SELF
+   ---------------------------------- */
+/* Alinhamento no eixo VERTICAL */
+
+.item {
+  align-self: stretch; /* padrão */
+}
+
+.item {
+  align-self: start;   /* topo */
+}
+
+.item {
+  align-self: center;  /* centro */
+}
+
+.item {
+  align-self: end;     /* base */
+}
+
+/* ----------------------------------
+   RESUMO
+   ---------------------------------- */
+/* justify-self → eixo horizontal
+   align-self   → eixo vertical
+
+   Sobrescrevem:
+   justify-items e align-items
+*/

@@ -1,0 +1,59 @@
+/* ==================================================
+   ÁREAS DO GRID (GRID-TEMPLATE-AREAS)
+   ================================================== */
+
+/* As áreas do Grid permitem nomear
+   regiões do layout, facilitando
+   a organização e leitura do código */
+
+/* Definição das áreas no container */
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 80px 1fr 60px;
+
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+/* Associação dos itens às áreas */
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* Observações importantes:
+   - Cada linha representa uma linha do grid
+   - O nome deve formar um retângulo
+   - Use ponto (.) para áreas vazias
+   - Facilita layouts complexos e responsivos */
+
+   /* -------------------------------
+   2️⃣ Forma abreviada por linhas
+   ------------------------------- */
+
+/* Sintaxe:
+   grid-area: row-start / column-start / row-end / column-end; */
+
+.item {
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+/* Observações importantes:
+   - Facilita a organização do layout
+   - Torna o código mais legível
+   - Evita uso excessivo de grid-row e grid-column
+   - Muito usado em layouts complexos */

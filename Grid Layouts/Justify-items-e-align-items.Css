@@ -1,0 +1,63 @@
+/* ==================================================
+   JUSTIFY-ITEMS E ALIGN-ITEMS (CSS GRID)
+   ================================================== */
+
+/* Essas propriedades controlam
+   o alinhamento dos ITENS dentro
+   de suas próprias células do grid */
+
+/* ----------------------------------
+   JUSTIFY-ITEMS
+   ---------------------------------- */
+/* Alinha os itens no eixo HORIZONTAL
+   dentro da célula do grid */
+
+.container {
+  display: grid;
+  justify-items: stretch; /* padrão */
+}
+
+.container {
+  justify-items: start;   /* esquerda */
+}
+
+.container {
+  justify-items: center;  /* centralizado */
+}
+
+.container {
+  justify-items: end;     /* direita */
+}
+
+/* ----------------------------------
+   ALIGN-ITEMS
+   ---------------------------------- */
+/* Alinha os itens no eixo VERTICAL
+   dentro da célula do grid */
+
+.container {
+  display: grid;
+  align-items: stretch; /* padrão */
+}
+
+.container {
+  align-items: start;   /* topo */
+}
+
+.container {
+  align-items: center;  /* centro */
+}
+
+.container {
+  align-items: end;     /* base */
+}
+
+/* ----------------------------------
+   RESUMO RÁPIDO
+   ---------------------------------- */
+/* justify-items → eixo horizontal
+   align-items   → eixo vertical
+
+   Funcionam no GRID
+   Para Flexbox, usa-se justify-content e align-items
+*/

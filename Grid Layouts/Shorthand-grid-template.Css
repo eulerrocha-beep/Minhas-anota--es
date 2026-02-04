@@ -1,0 +1,40 @@
+/* ==================================================
+   SHORTHAND GRID-TEMPLATE
+   ================================================== */
+
+/* A propriedade grid-template é um atalho
+   para definir:
+   - grid-template-rows
+   - grid-template-columns
+   - grid-template-areas */
+
+/* Sintaxe geral:
+   grid-template:
+     "areas" linhas
+     / colunas; */
+
+/* Exemplo completo */
+.container {
+  display: grid;
+  grid-template:
+    "header header" 80px
+    "sidebar main"  1fr
+    "footer footer" 60px
+    / 200px 1fr;
+}
+
+/* Equivale a:
+   grid-template-areas:
+     "header header"
+     "sidebar main"
+     "footer footer";
+
+   grid-template-rows: 80px 1fr 60px;
+   grid-template-columns: 200px 1fr;
+*/
+
+/* Observações importantes:
+   - As áreas vêm antes do /
+   - As colunas vêm após o /
+   - Cada linha pode ter sua altura definida
+   - Melhora a legibilidade do layout */

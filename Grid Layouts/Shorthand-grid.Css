@@ -1,0 +1,42 @@
+/* ==================================================
+   SHORTHAND GRID
+   ================================================== */
+
+/* A propriedade grid é o atalho mais completo
+   do CSS Grid, reunindo várias configurações
+   em uma única linha */
+
+/* Sintaxe mais comum (explícito + implícito) */
+.container {
+  display: grid;
+  grid: 
+    auto 1fr auto
+    / 200px 1fr;
+}
+
+/* Equivale a:
+   grid-template-rows: auto 1fr auto;
+   grid-template-columns: 200px 1fr;
+*/
+
+/* Exemplo com áreas */
+.container {
+  display: grid;
+  grid:
+    "header header" 80px
+    "sidebar main"  1fr
+    "footer footer" 60px
+    / 200px 1fr;
+}
+
+/* Também pode definir grid implícito */
+.container {
+  display: grid;
+  grid: auto-flow / repeat(3, 1fr);
+}
+
+/* Observações importantes:
+   - Pouco usada, mas poderosa
+   - Pode substituir grid-template + grid-auto
+   - Exige atenção à sintaxe
+   - Útil em layouts mais avançados */

@@ -1,0 +1,69 @@
+/* ==================================================
+   NOMENCLATURA DO CSS GRID
+   ================================================== */
+
+/* GRID CONTAINER
+   Elemento pai que ativa o Grid Layout */
+.container {
+  display: grid;
+}
+
+/* GRID ITEM
+   Elementos filhos diretos do grid container */
+.item {
+  /* grid item */
+}
+
+/* LINHAS (ROWS)
+   Divisões horizontais do grid */
+.container {
+  grid-template-rows: 100px 200px auto;
+}
+
+/* COLUNAS (COLUMNS)
+   Divisões verticais do grid */
+.container {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+/* GRID LINES
+   Linhas que separam linhas e colunas
+   Podem ser numeradas ou nomeadas */
+.container {
+  grid-template-columns: [inicio] 1fr [meio] 2fr [fim];
+}
+
+/* GRID CELLS
+   Menor unidade do grid (uma célula) */
+
+/* GRID AREA
+   Conjunto de células formando uma área */
+.container {
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+/* GRID GAP
+   Espaço entre linhas e colunas */
+.container {
+  gap: 20px;
+}
+
+/* GRID TRACK
+   Uma linha ou coluna individual do grid */
+
+/* GRID AUTO FLOW
+   Controla o fluxo automático dos itens */
+.container {
+  grid-auto-flow: row;
+}
+
+/* GRID IMPLICIT GRID
+   Grade criada automaticamente
+   quando itens excedem a grade definida */
+
+/* GRID EXPLICIT GRID
+   Grade definida manualmente
+   com grid-template-rows/columns */

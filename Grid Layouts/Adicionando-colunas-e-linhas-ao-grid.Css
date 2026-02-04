@@ -1,0 +1,115 @@
+/* ==================================================
+   ADICIONANDO COLUNAS E LINHAS AO GRID
+   ================================================== */
+
+/* Define um container grid */
+.container {
+  display: grid;
+}
+
+/* ADICIONANDO COLUNAS
+   grid-template-columns define
+   quantas colunas o grid terá
+   e seus tamanhos */
+.container {
+  grid-template-columns: 200px 1fr 2fr;
+}
+
+/* Usando repeat para facilitar */
+.container {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ADICIONANDO LINHAS
+   grid-template-rows define
+   quantas linhas o grid terá
+   e seus tamanhos */
+.container {
+  grid-template-rows: 100px 200px auto;
+}
+
+/* Exemplo combinando linhas e colunas */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 80px 1fr 80px;
+}
+
+/* Observações:
+   - fr divide o espaço disponível
+   - auto se ajusta ao conteúdo
+   - px define tamanho fixo
+   - % funciona relativo ao container 
+Trabalhando com uma planilha Experimente o Plus para;
+
+/* ==================================================
+   AUTO-FILL NO CSS GRID
+   ================================================== */
+
+/* auto-fill é usado com repeat()
+   para criar automaticamente
+   quantas colunas couberem no container */
+
+/* Exemplo básico */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 20px;
+}
+
+/* Exemplo responsivo com fr */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Como funciona:
+   - auto-fill cria o maior número possível
+     de colunas baseado no tamanho disponível
+   - Mesmo colunas vazias continuam existindo */
+
+/* Diferença importante:
+   auto-fill → mantém colunas vazias
+   auto-fit  → colapsa colunas vazias */
+
+/* Uso comum:
+   layouts responsivos sem media queries */
+
+   /* ==================================================
+   AUTO-FIT NO CSS GRID
+   ================================================== */
+
+/* auto-fit é usado com repeat()
+   para criar automaticamente
+   colunas que se ajustam ao container */
+
+/* Exemplo básico */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  gap: 20px;
+}
+
+/* Exemplo responsivo recomendado */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Como funciona:
+   - auto-fit cria o maior número possível
+     de colunas que CABEM no container
+   - Colunas vazias são colapsadas
+     e o espaço é redistribuído */
+
+/* Diferença principal:
+   auto-fit  → colunas se expandem
+   auto-fill → colunas vazias permanecem */
+
+/* Uso comum:
+   grids responsivos
+   sem necessidade de media queries */
+
+   

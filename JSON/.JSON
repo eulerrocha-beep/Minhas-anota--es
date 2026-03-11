@@ -1,0 +1,33 @@
+let invoice = {
+    "name": "Felipe",
+    "age": 28,
+    "products": [
+        {
+            "product": products[0],
+            "value": productsValues[0]
+        },
+        {
+            "product": products[1],
+            "value": productsValues[1]
+        },
+        {
+            "product": products[2],
+            "value": productsValues[2]
+        }
+    ]
+};
+
+generateInvoice(invoice);
+    
+function generateInvoice(invoice) {
+    console.log("O comprador é: " + invoice.name);
+    console.log("A idade do comprador é: " + invoice.age);
+    console.log("---------");
+
+    for(let  i in invoice.products) {
+        let [product, value] = invoice.products[i];
+        console.log("Produto: " + product + " - Valor: R$ " + value);
+    };
+
+}
+

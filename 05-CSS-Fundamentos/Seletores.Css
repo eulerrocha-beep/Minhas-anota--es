@@ -1,0 +1,351 @@
+/**
+ * AULA: Seletores CSS
+ * 
+ * Seletores são padrões CSS que permitem você selecionar elementos HTML
+ * para aplicar estilos.
+ * 
+ * É fundamental dominar seletores para escrever CSS eficiente!
+ */
+
+/* ==========================================
+   TIPO 1: SELETOR DE TAG/ELEMENTO
+   ========================================== 
+   
+   Seleciona TODOS os elementos dessa tag
+   Sintaxe: nomeDaTag
+   
+   Exemplos: h1, h2, p, div, span, button, etc
+*/
+
+h1 {
+  color: #333;
+  font-size: 32px;
+}
+
+h2 {
+  color: #666;
+  font-size: 24px;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Todos os <p> receberão os estilos acima */
+
+
+/* ==========================================
+   TIPO 2: SELETOR DE CLASSE
+   ========================================== 
+   
+   Seleciona elementos com uma CLASS específica
+   Sintaxe: .nomeClass
+   
+   Pode ser reutilizado em VÁRIOS elementos
+   Um elemento pode ter VÁRIAS classes
+   
+   Classe é o seletor mais usado em CSS moderno!
+*/
+
+.destacado {
+  background-color: #ffeb3b;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.texto-grande {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cor-primaria {
+  color: #3498db;
+}
+
+/* HTML:
+   <p class="destacado">Parágrafo com destaque</p>
+   <h2 class="texto-grande cor-primaria">Título grande azul</h2>
+*/
+
+
+/* ==========================================
+   TIPO 3: SELETOR DE ID
+   ========================================== 
+   
+   Seleciona UM ÚNICO elemento com um ID específico
+   Sintaxe: #nomeId
+   
+   IMPORTANTE: ID deve ser ÚNICO na página!
+   NÃO pode repetir o mesmo ID em vários elementos
+   
+   Use ID com moderação (menos que classes)
+*/
+
+#cabecalho {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+#rodape {
+  background-color: #34495e;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px;
+}
+
+#menu-principal {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* HTML:
+   <header id="cabecalho">...</header>
+   <footer id="rodape">...</footer>
+   <nav id="menu-principal">...</nav>
+*/
+
+
+/* ==========================================
+   TIPO 4: SELETOR UNIVERSAL
+   ========================================== 
+   
+   Seleciona TODOS os elementos da página
+   Sintaxe: *
+   
+   Use com cuidado (pode impactar performance)
+   Geralmente usado para reset de estilos
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML:
+   Todos os elementos terão margin e padding zerados
+*/
+
+
+/* ==========================================
+   TIPO 5: SELETOR DE ATRIBUTO
+   ========================================== 
+   
+   Seleciona elementos com um atributo específico
+   Sintaxe: [atributo]
+   
+   Variações:
+   [attr] → tem o atributo
+   [attr="valor"] → atributo com valor exato
+   [attr~="valor"] → atributo com a palavra (separada por espaço)
+   [attr|="valor"] → atributo começando com valor (seguido de -)
+   [attr*="valor"] → atributo contendo o valor em qualquer lugar
+   [attr^="valor"] → atributo começando com valor
+   [attr$="valor"] → atributo terminando com valor
+*/
+
+/* Seletor de atributo simples */
+[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Seletor com valor exato */
+[type="email"] {
+  padding: 10px;
+  border: 1px solid #bbb;
+}
+
+/* Atributo contendo uma palavra (separada por espaço) */
+[title~="Streaming"] {
+  border: 2px solid #e74c3c;
+}
+/* Seleciona: title="Filme Streaming", title="Streaming Online", etc */
+
+/* Atributo começando com valor específico (seguido de -)*/
+[lang|="pt"] {
+  font-family: 'Segoe UI', sans-serif;
+}
+/* Seleciona: lang="pt", lang="pt-BR", lang="pt-PT" */
+
+/* Atributo começando com valor */
+[href^="https"] {
+  color: green;
+}
+/* Seleciona todos os links HTTPS */
+
+/* Atributo terminando com valor */
+[href$=".pdf"] {
+  background-image: url('pdf-icon.png');
+  padding-left: 20px;
+}
+/* Seleciona todos os links para PDF */
+
+/* Atributo contendo valor em qualquer lugar */
+[class*="texto"] {
+  font-family: Arial, sans-serif;
+}
+/* Seleciona: class="meu-texto", class="texto-grande", etc */
+
+
+/* ==========================================
+   COMBINAÇÃO DE SELETORES
+   ========================================== */
+
+/* Múltiplos seletores (aplicar o mesmo estilo) */
+h1, h2, h3 {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Seletor descendente (elementos dentro de outros) */
+.container p {
+  color: #666;
+}
+/* Seleciona <p> dentro de qualquer .container */
+
+/* Seletor filho direto */
+.lista > li {
+  margin-bottom: 10px;
+}
+/* Seleciona <li> que é filho direto de .lista */
+
+/* Seletor de irmão adjacente */
+h2 + p {
+  font-weight: bold;
+}
+/* Seleciona <p> que vem imediatamente após <h2> */
+
+/* Seletor de irmão geral */
+h2 ~ p {
+  color: #999;
+}
+/* Seleciona todos <p> que são irmãos de <h2> */
+
+
+/* ==========================================
+   PSEUDO-CLASSES
+   ========================================== 
+   
+   Pseudo-classes selecionam estados especiais
+   Sintaxe: seletor:pseudo-classe
+*/
+
+/* Estados de link */
+a:link {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #9b59b6;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}
+
+a:active {
+  color: #e74c3c;
+}
+
+/* Estados de formulário */
+input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+button:hover {
+  background-color: #2980b9;
+  cursor: pointer;
+}
+
+input:disabled {
+  background-color: #ecf0f1;
+  cursor: not-allowed;
+}
+
+/* Pseudo-classes de posição */
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li:nth-child(2) {
+  background-color: #f5f5f5;
+}
+
+
+/* ==========================================
+   ESPECIFICIDADE (Cascata CSS)
+   ========================================== 
+   
+   Alguns seletores têm mais "poder" que outros:
+   
+   1. !important (Não recomendado)
+   2. ID (#id) - Especificidade: 100
+   3. Classe (.class), Atributo, Pseudo-classe - Especificidade: 10
+   4. Elemento (tag) - Especificidade: 1
+   
+   Exemplo:
+   - h1 { } → Especificidade: 1
+   - .titulo { } → Especificidade: 10
+   - #principal { } → Especificidade: 100
+   
+   Se você tem:
+   h1 { color: blue; }
+   .titulo { color: red; }
+   
+   O .titulo vencerá porque tem maior especificidade (10 > 1)
+*/
+
+h1 {
+  color: blue;        /* Especificidade: 1 */
+}
+
+.titulo {
+  color: red;         /* Especificidade: 10 - Vence! */
+}
+
+#principal {
+  color: green;       /* Especificidade: 100 - Vence tudo! */
+}
+
+
+/**
+ * RESUMO FINAL:
+ * 
+ * SELETORES BÁSICOS:
+ * - tag: seleciona por elemento HTML
+ * - .classe: seleciona por classe (RECOMENDADO!)
+ * - #id: seleciona por ID (use com moderação)
+ * - *: seleciona tudo (cuidado com performance)
+ * - [atributo]: seleciona por atributo
+ * 
+ * COMBINADORES:
+ * - espaço: descendente (qualquer nível)
+ * - >: filho direto (apenas nível 1)
+ * - +: irmão adjacente (próximo elemento)
+ * - ~: irmão geral (qualquer irmão após)
+ * 
+ * BOAS PRÁTICAS:
+ * ✅ Use classes (máxima flexibilidade)
+ * ✅ Use ID quando precisa de um elemento único
+ * ✅ Use seletores simples (performance)
+ * ✅ Evite seletores muito específicos (difíceis de reutilizar)
+ * ✅ Organize bem a especificidade
+ * 
+ * EVITE:
+ * ❌ Seletores muito longos (main > div > section > article > p)
+ * ❌ Muitas classes por elemento
+ * ❌ !important (quebra cascata)
+ * ❌ IDs em excesso (muito específico)
+ * ❌ Seletores de elemento em estilos globais
+ */

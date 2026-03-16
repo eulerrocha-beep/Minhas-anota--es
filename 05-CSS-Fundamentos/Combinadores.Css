@@ -1,0 +1,405 @@
+/**
+ * AULA: Combinadores CSS
+ * 
+ * Combinadores definem a RELAÇÃO entre dois seletores.
+ * Permitem selecionar elementos baseado em sua posição no DOM.
+ * 
+ * Sintaxe: [SELETOR] [COMBINADOR] [SELETOR]
+ * 
+ * Exemplo: div p { ... }
+ * Significa: Seleciona <p> que está DENTRO de <div>
+ */
+
+/* ==========================================
+   AGRUPAMENTO DE SELETORES (Vírgula)
+   ========================================== 
+   
+   Não é um combinador, mas tópico relacionado
+   Aplica o MESMO estilo a múltiplos seletores
+   Sintaxe: seletor1, seletor2, seletor3 { ... }
+*/
+
+/* Sem agrupamento (repetitivo) */
+h1 {
+  color: red;
+  font-size: 32px;
+}
+
+p {
+  color: red;
+  font-size: 32px;
+}
+
+div {
+  color: red;
+  font-size: 32px;
+}
+
+/* Com agrupamento (melhor!) */
+h1, p, div {
+  color: red;
+  font-size: 32px;
+}
+
+/* Sempre que você quer aplicar a mesma alteração para vários elementos,
+   use a vírgula e coloque tudo no mesmo bloco de código.
+   
+   Vantagens:
+   ✓ Menos repetição de código
+   ✓ Mais fácil de manter
+   ✓ Mais legível
+*/
+
+
+/* ==========================================
+   COMBINADOR 1: DESCENDENTE (espaço)
+   ========================================== 
+   
+   Seleciona elemento que é DESCENDENTE de outro
+   Funciona em QUALQUER nível de profundidade
+   
+   Sintaxe: ancestral descendente
+*/
+
+/* Seleciona TODOS <p> que estão dentro de <div> (em qualquer nível) */
+div p {
+  color: blue;
+  line-height: 1.6;
+}
+
+/* Exemplo HTML:
+   <div>
+     <p>Parágrafo 1 (será selecionado)</p>
+     <section>
+       <p>Parágrafo 2 (também será selecionado!)</p>
+     </section>
+   </div>
+*/
+
+.container p {
+  font-size: 16px;
+}
+
+/* Seleciona TODOS <p> dentro de .container, não importa como está aninhado */
+
+header p {
+  color: white;
+}
+
+/* Exemplo de estrutura complexa que funciona */
+article section div p {
+  margin-bottom: 10px;
+}
+
+/* Seleciona <p> dentro de <div> dentro de <section> dentro de <article>
+   Independente se há outros elementos no meio */
+
+
+/* ==========================================
+   COMBINADOR 2: FILHO DIRETO (>)
+   ========================================== 
+   
+   Seleciona elemento que é FILHO DIRETO de outro
+   Funciona APENAS no nível imediatamente abaixo
+   Mais específico que descendente
+   
+   Sintaxe: pai > filho
+*/
+
+/* Seleciona APENAS <p> que é filho direto de <div>
+   NÃO seleciona <p> que está dentro de outro elemento dentro de <div> */
+div > p {
+  color: green;
+  font-weight: bold;
+}
+
+/* Exemplo HTML:
+   <div>
+     <p>Parágrafo 1 (SERÁ selecionado - filho direto)</p>
+     <section>
+       <p>Parágrafo 2 (NÃO será selecionado - neto, não filho)</p>
+     </section>
+   </div>
+*/
+
+.lista > li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Seleciona apenas <li> que é filho direto de .lista
+   Se <li> estiver dentro de <ul> dentro de .lista, NÃO será selecionado */
+
+.navbar > a {
+  color: white;
+  padding: 10px;
+}
+
+
+/* ==========================================
+   DIFERENÇA: Descendente vs Filho Direto
+   ========================================== */
+
+/* HTML Exemplo:
+   <div class="container">
+     <p>Parágrafo 1 (filho direto)</p>
+     <section>
+       <p>Parágrafo 2 (descendente, neto)</p>
+     </section>
+   </div>
+*/
+
+/* Com descendente (espaço): Seleciona AMBOS os <p> */
+.container p {
+  color: blue;
+}
+
+/* Com filho direto: Seleciona APENAS o primeiro <p> */
+.container > p {
+  color: red;
+}
+
+/* Recomendação:
+   ✓ Use > quando quer ser específico
+   ✓ Use espaço quando quer alcançar todos os descendentes
+*/
+
+
+/* ==========================================
+   COMBINADOR 3: IRMÃO ADJACENTE (+)
+   ========================================== 
+   
+   Seleciona elemento que é IRMÃO IMEDIATAMENTE APÓS outro
+   Seleciona o próximo elemento que tem o mesmo pai
+   
+   Sintaxe: elemento1 + elemento2
+*/
+
+/* Seleciona <p> que vem IMEDIATAMENTE APÓS <h2> */
+h2 + p {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+/* Exemplo HTML:
+   <h2>Título</h2>
+   <p>Parágrafo após título (SERÁ selecionado)</p>
+   <p>Outro parágrafo (NÃO será selecionado - não é adjacente)</p>
+*/
+
+input + label {
+  margin-left: 10px;
+}
+
+/* Seleciona <label> que vem logo após <input> */
+
+li + li {
+  margin-top: 5px;
+  border-top: 1px solid #ddd;
+}
+
+/* Seleciona <li> que tem outro <li> imediatamente antes */
+
+
+/* ==========================================
+   COMBINADOR 4: IRMÃO GERAL (~)
+   ========================================== 
+   
+   Seleciona TODOS os elementos irmãos após outro
+   Não precisa ser imediatamente adjacente
+   
+   Sintaxe: elemento1 ~ elemento2
+*/
+
+/* Seleciona TODOS <p> que vêm APÓS <h2> (não importa quantos elementos no meio) */
+h2 ~ p {
+  color: #666;
+}
+
+/* Exemplo HTML:
+   <h2>Título</h2>
+   <p>Parágrafo 1 (SERÁ selecionado)</p>
+   <div>Algum conteúdo</div>
+   <p>Parágrafo 2 (SERÁ selecionado - também é irmão de h2)</p>
+   <p class="nota">Parágrafo 3 (SERÁ selecionado)</p>
+*/
+
+.ativo ~ .item {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Todos .item após .ativo serão desativados */
+
+input:checked ~ span {
+  color: green;
+}
+
+/* Toda <span> após input:checked mudará para verde */
+
+
+/* ==========================================
+   DIFERENÇA: Adjacente (+) vs Geral (~)
+   ========================================== */
+
+/* HTML Exemplo:
+   <h2>Título</h2>
+   <p>Parágrafo 1</p>
+   <div>Divisor</div>
+   <p>Parágrafo 2</p>
+   <p>Parágrafo 3</p>
+*/
+
+/* Com adjacente (+): Seleciona APENAS primeiro <p> */
+h2 + p {
+  font-weight: bold;
+}
+
+/* Com geral (~): Seleciona TODOS os <p> após <h2> */
+h2 ~ p {
+  color: blue;
+}
+
+
+/* ==========================================
+   EXEMPLOS PRÁTICOS COMPLETOS
+   ========================================== */
+
+/* Exemplo 1: Estilo de artigos */
+article h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+article > p {
+  line-height: 1.8;
+  margin: 15px 0;
+}
+
+/* Exemplo 2: Navegação com ícone */
+.navbar a + a {
+  margin-left: 15px;
+  border-left: 1px solid rgba(255,255,255,0.3);
+  padding-left: 15px;
+}
+
+/* Exemplo 3: Lista aninhada */
+ul ul {
+  margin-left: 20px;
+  list-style-type: circle;
+}
+
+ul > li > ul {
+  margin-top: 10px;
+}
+
+/* Exemplo 4: Formulário */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+label + input,
+label + select,
+label + textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #bbb;
+}
+
+/* Exemplo 5: Temas alternados (zebra striping) */
+table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Exemplo 6: Primeiro parágrafo em destaque */
+article > p:first-of-type {
+  font-weight: bold;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+
+/* ==========================================
+   COMBINADORES COMBINADOS
+   ========================================== 
+   
+   Você pode combinar múltiplos combinadores!
+*/
+
+/* Seleciona <p> dentro de <div> que é filho de .container */
+.container > div p {
+  color: purple;
+}
+
+/* Seleciona <a> dentro de <nav> que é descendente de <header> */
+header nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Seleciona <strong> dentro de <p> que vem após <h3> */
+h3 + p strong {
+  color: red;
+  font-size: 16px;
+}
+
+
+/**
+ * TABELA COMPARATIVA:
+ * 
+ * ┌──────────────┬────────────┬──────────────────────────────────┐
+ * │ Combinador   │  Símbolo   │  Seleção                         │
+ * ├──────────────┼────────────┼──────────────────────────────────┤
+ * │ Descendente  │   espaço   │ Qualquer nível abaixo            │
+ * │ Filho        │     >      │ Apenas nível imediato            │
+ * │ Adjacente    │     +      │ Próximo elemento (irmão)         │
+ * │ Geral        │     ~      │ Todos após (irmãos)              │
+ * └──────────────┴────────────┴──────────────────────────────────┘
+ */
+
+/**
+ * RESUMO FINAL:
+ * 
+ * AGRUPAMENTO (vírgula):
+ * ✓ h1, p, div { } → Aplica mesmo estilo a múltiplos elementos
+ * ✓ Economiza código
+ * 
+ * DESCENDENTE (espaço):
+ * ✓ div p { } → Qualquer <p> dentro de <div>
+ * ✓ Funciona em qualquer profundidade
+ * ✓ Mais flexível, menos específico
+ * 
+ * FILHO (>):
+ * ✓ div > p { } → APENAS <p> filho direto de <div>
+ * ✓ Mais específico que descendente
+ * ✓ Mais previsível
+ * 
+ * ADJACENTE (+):
+ * ✓ h2 + p { } → <p> imediatamente após <h2>
+ * ✓ Para styling do elemento seguinte
+ * ✓ Muito útil em formulários
+ * 
+ * GERAL (~):
+ * ✓ h2 ~ p { } → TODOS <p> após <h2>
+ * ✓ Para afetar múltiplos irmãos
+ * ✓ Para seletores de checkbox, radio
+ * 
+ * BOAS PRÁTICAS:
+ * ✅ Use combinadores para CSS mais DRY
+ * ✅ Prefira > para ser mais específico
+ * ✅ Use espaço quando quer flexibilidade
+ * ✅ Combine com classes para mais controle
+ * 
+ * ❌ EVITE:
+ * ❌ Seletores muito longos (div > section > article > p)
+ * ❌ Sobrespecificidade
+ * ❌ Confundir adjacente com geral
+ */

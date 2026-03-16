@@ -1,0 +1,147 @@
+/**
+ * AULA: Propriedade MARGIN
+ * 
+ * Margin é o espaço FORA do elemento (externo).
+ * Cria distância entre este elemento e outros ao seu redor.
+ * 
+ * Diferente de Padding que é interno (dentro do box do elemento).
+ * 
+ * SINTAXE SHORTHAND:
+ * - 1 valor:  margin: 20px;                (aplica nos 4 lados)
+ * - 2 valores: margin: 10px 20px;          (cima/baixo | esquerda/direita)
+ * - 3 valores: margin: 10px 20px 30px;     (cima | esquerda/direita | baixo)
+ * - 4 valores: margin: 10px 20px 30px 40px;(cima | direita | baixo | esquerda)
+ */
+
+/*
+DETALHAMENTO DO SHORTHAND:
+
+Quando se coloca apenas um valor na propriedade margin:
+→ Ele aplica em TODOS os 4 lados
+Exemplo: margin: 20px;
+Resultado: topo=20px, direita=20px, baixo=20px, esquerda=20px
+
+Quando se coloca dois valores:
+→ Primeiro = cima e baixo (vertical)
+→ Segundo = esquerda e direita (horizontal)
+Exemplo: margin: 10px 20px;
+Resultado: topo=10px, direita=20px, baixo=10px, esquerda=20px
+
+Quando se coloca três valores:
+→ Primeiro = cima
+→ Segundo = esquerda e direita (horizontal)
+→ Terceiro = baixo
+Exemplo: margin: 10px 20px 30px;
+Resultado: topo=10px, direita=20px, baixo=30px, esquerda=20px
+
+Quando se coloca quatro valores (Regra do RELÓGIO):
+→ Sentido: cima → direita → baixo → esquerda
+Exemplo: margin: 10px 20px 30px 40px;
+Resultado: topo=10px, direita=20px, baixo=30px, esquerda=40px
+*/
+
+/* PROPRIEDADES INDIVIDUAIS */
+
+/* margin-top: aplica margem apenas na PARTE SUPERIOR */
+.elemento-topo {
+  margin-top: 20px;
+}
+
+/* margin-right: aplica margem apenas no LADO DIREITO */
+.elemento-direita {
+  margin-right: 20px;
+}
+
+/* margin-bottom: aplica margem apenas na PARTE INFERIOR */
+.elemento-baixo {
+  margin-bottom: 20px;
+}
+
+/* margin-left: aplica margem apenas no LADO ESQUERDO */
+.elemento-esquerda {
+  margin-left: 20px;
+}
+
+/* VALORES ESPECIAIS */
+
+/* margin: inherit
+   Herda o valor de margin do elemento pai */
+.herdada {
+  margin: inherit;
+}
+
+/* margin: auto
+   Centraliza o elemento horizontalmente (requer width definida)
+   Muito usado para centralizar divs/containers */
+.centralizado {
+  width: 300px;
+  margin: 0 auto; /* margem 0 em cima/baixo, auto nas laterais */
+}
+
+/* VALORES NEGATIVOS
+   Margin aceita valores negativos!
+   Isso faz o elemento se SOBREPOR a outros elementos */
+.sobreposto {
+  margin: -10px;  /* Move o elemento para cima e para os lados */
+}
+
+/* EXEMPLOS PRÁTICOS */
+
+/* Exemplo 1: Espaçamento entre elementos */
+.container {
+  margin: 20px;  /* 20px em todos os lados */
+}
+
+/* Exemplo 2: Elemento centrado na página */
+.caixa-central {
+  width: 500px;
+  margin: 50px auto;  /* 50px em cima/baixo, auto (centralizado) nas laterais */
+}
+
+/* Exemplo 3: Apenas margem no topo (separação) */
+.titulo {
+  margin: 0 0 30px 0;  /* Sem margem, exceto 30px na base */
+}
+
+/* Exemplo 4: Overlapping (sobreposição) com valores negativos */
+.card {
+  margin: 10px;
+  position: relative;
+  top: -20px;  /* Move para cima */
+}
+
+/* MARGING COLLAPSE (Colapso de Margens)
+   Quando dois elementos estão um após o outro (vertical),
+   a maior margem é usada, não a soma!
+   
+   Exemplo:
+   - elemento A: margin-bottom: 30px
+   - elemento B: margin-top: 20px
+   Resultado: Espaço entre eles será 30px (não 50px)
+   
+   Isso NÃO acontece com:
+   - Elementos flutuantes (float)
+   - Elementos posicionados (position: absolute)
+   - Flexbox ou Grid
+*/
+
+/**
+ * COMPARAÇÃO: MARGIN vs PADDING
+ * 
+ * MARGIN (Externo):
+ * ✓ Espaço FORA da borda do elemento
+ * ✓ Não faz parte da cor/fundo do elemento
+ * ✓ Afeta espaçamento entre elementos
+ * ✓ Pode ser negativo
+ * ✓ Sofre margin collapse
+ * 
+ * PADDING (Interno):
+ * ✓ Espaço DENTRO da borda do elemento
+ * ✓ Faz parte da cor/fundo do elemento
+ * ✓ Afeta distância do conteúdo da borda
+ * ✓ Não pode ser negativo
+ * ✓ Não sofre margin collapse
+ * 
+ * Regra do BOX MODEL:
+ * Conteúdo → PADDING → BORDER → MARGIN
+ */

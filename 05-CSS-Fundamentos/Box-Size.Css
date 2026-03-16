@@ -1,0 +1,244 @@
+/**
+ * AULA: Propriedade box-sizing
+ * 
+ * box-sizing controla como o navegador calcula o tamanho TOTAL de um elemento.
+ * Define se width e height incluem ou não padding e border.
+ * 
+ * Essa é uma das propriedades mais importantes do CSS para layout!
+ */
+
+/* ==========================================
+   OPÇÃO 1: content-box (PADRÃO)
+   ========================================== 
+   
+   O width e height aplicam APENAS ao conteúdo.
+   Padding e border são ADICIONADOS ao tamanho.
+   
+   Tamanho total = width + padding + border
+*/
+
+.caixa-content-box {
+  box-sizing: content-box;  /* Padrão do navegador */
+  width: 200px;
+  padding: 20px;
+  border: 10px solid #333;
+  
+  /* Cálculo do TAMANHO TOTAL:
+     Conteúdo: 200px
+     + Padding: 20px (esquerda) + 20px (direita) = 40px
+     + Border: 10px (esquerda) + 10px (direita) = 20px
+     ────────────────────────────────────────────
+     TOTAL: 200px + 40px + 20px = 260px de largura REAL
+  */
+}
+
+/* Exemplo visual:
+   ┌─ 10px border ─┐
+   │ ┌─ 20px pad ─┐│
+   │ │ 200px cont ││
+   │ └─────────────┘│
+   └────────────────┘
+   Largura REAL: 260px
+*/
+
+
+/* ==========================================
+   OPÇÃO 2: border-box (RECOMENDADO!)
+   ========================================== 
+   
+   O width e height incluem conteúdo, padding E border.
+   Você especifica o tamanho FINAL total.
+   
+   Tamanho final = width (já incluindo tudo)
+   Tamanho conteúdo = width - padding - border
+*/
+
+.caixa-border-box {
+  box-sizing: border-box;  /* ✅ Use SEMPRE isto! */
+  width: 200px;
+  padding: 20px;
+  border: 10px solid #333;
+  
+  /* Cálculo:
+     Tamanho TOTAL desejado: 200px
+     - Border: 10px (esquerda) + 10px (direita) = 20px
+     - Padding: 20px (esquerda) + 20px (direita) = 40px
+     ────────────────────────────────────────────
+     Conteúdo real: 200px - 20px - 40px = 140px
+     
+     Resultado: O elemento inteiro tem 200px (como esperado!)
+  */
+}
+
+/* Exemplo visual:
+   ┌─ 10px border ─┐
+   │ ┌─ 20px pad ─┐│
+   │ │ 140px cont ││
+   │ └─────────────┘│
+   └────────────────┘
+   Largura REAL: 200px (EXATO!)
+*/
+
+
+/* ==========================================
+   COMPARAÇÃO VISUAL
+   ========================================== */
+
+/* Lado a lado para comparação */
+.comparacao {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.box-content-example {
+  box-sizing: content-box;
+  width: 150px;
+  padding: 15px;
+  border: 5px solid #3498db;
+  background-color: #fff;
+  /* Tamanho REAL: 150 + 30 + 10 = 190px */
+}
+
+.box-border-example {
+  box-sizing: border-box;
+  width: 150px;
+  padding: 15px;
+  border: 5px solid #e74c3c;
+  background-color: #fff;
+  /* Tamanho REAL: 150px (como especificado!) */
+}
+
+
+/* ==========================================
+   USO PRÁTICO
+   ========================================== */
+
+/* ✅ BOAS PRÁTICAS: Use border-box em TUDO */
+
+* {
+  box-sizing: border-box;  /* Aplica a TODOS os elementos */
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;     /* Herda do elemento pai */
+}
+
+
+/* ==========================================
+   EXEMPLOS: Por que border-box é melhor
+   ========================================== */
+
+/* Exemplo 1: Layout com largura específica */
+.container {
+  width: 1200px;
+  padding: 20px;
+  /* Com border-box: container tem exatamente 1200px
+     Com content-box: container teria 1240px (problema!) */
+}
+
+/* Exemplo 2: Grid de 3 colunas iguais */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.grid-item {
+  box-sizing: border-box;  /* Essencial para não quebrar o grid */
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+/* Exemplo 3: Inputs e formulários */
+.formulario input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;  /* Impede o input de ficar maior que 100% */
+}
+
+/* Exemplo 4: Cards com padding */
+.card {
+  box-sizing: border-box;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Sem border-box, o card seria 340px (300 + 40)
+   Com border-box, o card é exatamente 300px */
+
+
+/* ==========================================
+   PROBLEMAS COM content-box
+   ========================================== */
+
+/*
+❌ PROBLEMAS DO content-box (padrão antigo):
+
+1. Cálculo complicado
+   width: 200px; padding: 20px; border: 5px;
+   Tamanho real = 200 + 40 + 10 = 250px
+   Você precisa fazer contas para prever o tamanho real!
+
+2. Layouts quebram fácil
+   Se você quer 3 colunas de 33%, adicionar padding quebra o layout
+
+3. Responsive é mais difícil
+   Ao adicionar padding/border, o tamanho total muda
+
+4. Javascript precisa fazer mais cálculos
+   offsetWidth vs clientWidth precisa levar em conta padding/border
+
+5. Inputs e textareas ficam maiores que desejado
+   Um input width: 100% + padding fica > 100%
+*/
+
+
+/* ==========================================
+   RESUMO FINAL
+   ========================================== */
+
+/**
+ * content-box (PADRÃO - NÃO USE):
+ * ❌ width = apenas conteúdo
+ * ❌ Padding e border são ADICIONADOS
+ * ❌ Cálculos complicados
+ * ❌ Layouts quebram fácil
+ * 
+ * border-box (RECOMENDADO - USE SEMPRE):
+ * ✅ width = conteúdo + padding + border
+ * ✅ Você especifica o tamanho FINAL
+ * ✅ Cálculos simples
+ * ✅ Layouts previsíveis
+ * ✅ Responsive friendly
+ * ✅ Javascript fica mais fácil
+ * 
+ * REGRA DE OURO:
+ * Sempre use border-box!
+ * 
+ * Sempre coloque no início do seu CSS:
+ * 
+ * * {
+ *   box-sizing: border-box;
+ * }
+ * 
+ * ou de forma mais refinada:
+ * 
+ * html {
+ *   box-sizing: border-box;
+ * }
+ * 
+ * *, *::before, *::after {
+ *   box-sizing: inherit;
+ * }
+ */

@@ -1,0 +1,266 @@
+/**
+ * AULA: Propriedade PADDING
+ * 
+ * Padding é o espaço INTERNO do elemento.
+ * Cria espaçamento entre o CONTEÚDO e a BORDA do elemento.
+ * 
+ * Diferente de Margin que é externo.
+ * Diferente de Border que é a borda em si.
+ * 
+ * REGRA DO BOX MODEL:
+ * Conteúdo → PADDING → BORDER → MARGIN
+ */
+
+/* ==========================================
+   SINTAXE SHORTHAND
+   ========================================== 
+   
+   Padding segue a mesma lógica de Margin!
+   
+   - 1 valor:  padding: 20px;                (aplica nos 4 lados)
+   - 2 valores: padding: 10px 20px;          (cima/baixo | esquerda/direita)
+   - 3 valores: padding: 10px 20px 30px;     (cima | esquerda/direita | baixo)
+   - 4 valores: padding: 10px 20px 30px 40px;(cima | direita | baixo | esquerda - RELÓGIO)
+*/
+
+/* ==========================================
+   DETALHAMENTO DO SHORTHAND
+   ========================================== */
+
+/*
+Padding com 1 valor:
+padding: 20px;
+→ Aplica 20px em TODOS os 4 lados (cima, direita, baixo, esquerda)
+Resultado: topo=20px, direita=20px, baixo=20px, esquerda=20px
+
+Padding com 2 valores:
+padding: 10px 20px;
+→ Primeiro valor = eixo VERTICAL (cima e baixo)
+→ Segundo valor = eixo HORIZONTAL (esquerda e direita)
+Resultado: topo=10px, direita=20px, baixo=10px, esquerda=20px
+
+Padding com 3 valores:
+padding: 10px 20px 30px;
+→ Primeiro = cima (top)
+→ Segundo = esquerda e direita (left e right)
+→ Terceiro = baixo (bottom)
+Resultado: topo=10px, direita=20px, baixo=30px, esquerda=20px
+
+Padding com 4 valores (REGRA DO RELÓGIO - sentido horário):
+padding: 10px 20px 30px 40px;
+→ Sentido: CIMA → DIREITA → BAIXO → ESQUERDA
+→ 1º valor (10px) = cima (top)
+→ 2º valor (20px) = direita (right)
+→ 3º valor (30px) = baixo (bottom)
+→ 4º valor (40px) = esquerda (left)
+Resultado: topo=10px, direita=20px, baixo=30px, esquerda=40px
+*/
+
+/* ==========================================
+   PROPRIEDADES INDIVIDUAIS
+   ========================================== */
+
+/* padding-top: aplica padding apenas na PARTE SUPERIOR */
+.elemento-topo {
+  padding-top: 20px;
+}
+
+/* padding-right: aplica padding apenas no LADO DIREITO */
+.elemento-direita {
+  padding-right: 20px;
+}
+
+/* padding-bottom: aplica padding apenas na PARTE INFERIOR */
+.elemento-baixo {
+  padding-bottom: 20px;
+}
+
+/* padding-left: aplica padding apenas no LADO ESQUERDO */
+.elemento-esquerda {
+  padding-left: 20px;
+}
+
+
+/* ==========================================
+   EXEMPLOS PRÁTICOS
+   ========================================== */
+
+/* Exemplo 1: Padding simples em todos os lados */
+.card {
+  padding: 20px;  /* 20px em todos os 4 lados */
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+}
+
+/* Exemplo 2: Padding vertical maior que horizontal */
+.titulo {
+  padding: 30px 15px;  /* 30px em cima/baixo, 15px em esquerda/direita */
+  background-color: #333;
+  color: white;
+}
+
+/* Exemplo 3: Padding assimétrico */
+.caixa-destaque {
+  padding: 10px 20px 30px 40px;
+  /* cima: 10px
+     direita: 20px
+     baixo: 30px
+     esquerda: 40px */
+  border-left: 5px solid #e74c3c;
+}
+
+/* Exemplo 4: Padding em botão */
+.botao {
+  padding: 12px 24px;  /* vertical: 12px, horizontal: 24px */
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Exemplo 5: Padding em input */
+.input {
+  padding: 10px 15px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Exemplo 6: Padding diferente para heading */
+.secao h2 {
+  padding: 20px 0 10px 0;  /* cima: 20px, baixo: 10px, laterais: 0 */
+  border-bottom: 2px solid #333;
+}
+
+/* Exemplo 7: Padding em lista */
+.lista-itens li {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+
+/* ==========================================
+   RELAÇÃO COM BOX MODEL
+   ========================================== */
+
+/*
+BOX MODEL (do interno para externo):
+┌─────────────────────────────────────┐
+│          MARGIN (externo)           │
+│  ┌─────────────────────────────┐    │
+│  │    BORDER (borda)           │    │
+│  │  ┌─────────────────────┐    │    │
+│  │  │ PADDING (interno)   │    │    │
+│  │  │ ┌─────────────────┐ │    │    │
+│  │  │ │   CONTEÚDO      │ │    │    │
+│  │  │ └─────────────────┘ │    │    │
+│  │  └─────────────────────┘    │    │
+│  └─────────────────────────────┘    │
+└─────────────────────────────────────┘
+
+O PADDING afeta:
+✓ A distância do conteúdo para a borda
+✓ O tamanho visual da borda (a borda fica mais "inflada")
+✓ A cor de fundo do elemento
+
+O PADDING NÃO afeta:
+✗ O espaço externo entre elementos (use margin para isso)
+✗ A cor de fundo (usa a cor do próprio elemento)
+*/
+
+.exemplo-box {
+  content: "Conteúdo";
+  padding: 20px;              /* Espaço interno */
+  border: 3px solid #333;     /* Borda */
+  margin: 20px;               /* Espaço externo */
+  background-color: #ffeb3b;  /* Fundo */
+}
+
+
+/* ==========================================
+   COMPARAÇÃO: PADDING vs MARGIN
+   ========================================== */
+
+/**
+ * PADDING (Interno):
+ * ✓ Espaço DENTRO da borda
+ * ✓ Faz parte da cor/fundo do elemento
+ * ✓ Afeta tamanho visual do elemento
+ * ✓ NÃO pode ser negativo
+ * ✓ Não sofre colapso
+ * ✓ Aumenta o tamanho total (a menos que use box-sizing: border-box)
+ * 
+ * MARGIN (Externo):
+ * ✓ Espaço FORA da borda
+ * ✓ Não faz parte da cor/fundo
+ * ✓ Afeta espaçamento entre elementos
+ * ✓ PODE ser negativo
+ * ✓ Sofre margin collapse
+ * ✓ Não afeta diretamente o tamanho do elemento
+ */
+
+/* Exemplo visual da diferença */
+.padding-exemplo {
+  width: 200px;
+  padding: 20px;              /* Espaço INTERNO */
+  background-color: #3498db;
+  color: white;
+}
+
+.margin-exemplo {
+  width: 200px;
+  margin: 20px;               /* Espaço EXTERNO */
+  background-color: #e74c3c;
+  color: white;
+}
+
+
+/* ==========================================
+   PROPERTY: box-sizing
+   ========================================== 
+   
+   Por padrão (box-sizing: content-box):
+   - padding aumenta o tamanho total do elemento
+   
+   Com box-sizing: border-box:
+   - width inclui padding e border
+   - O elemento mantém o tamanho especificado
+   
+   Recomendação: Use border-box!
+*/
+
+* {
+  box-sizing: border-box;  /* Incluir padding no width */
+}
+
+.com-border-box {
+  width: 200px;           /* 200px total (inclui padding) */
+  padding: 20px;
+  border: 1px solid #333;
+  /* Conteúdo real = 200px - 20px - 20px - 1px - 1px = 158px */
+}
+
+
+/**
+ * RESUMO FINAL:
+ * 
+ * Padding é ESPAÇO INTERNO
+ * Use para criar distância do conteúdo da borda
+ * Afeta o visual e o tamanho do elemento
+ * NÃO pode ser negativo
+ * Use box-sizing: border-box para melhor controle
+ * 
+ * Quando usar:
+ * ✓ Em cards e containers
+ * ✓ Em botões
+ * ✓ Em inputs e formulários
+ * ✓ Em títulos e headings
+ * ✓ Em caixas e painéis
+ * 
+ * Ordem de aprendizado:
+ * 1. Padding (interno) ← Você está aqui
+ * 2. Border (borda)
+ * 3. Margin (externo)
+ * 4. box-sizing
+ */

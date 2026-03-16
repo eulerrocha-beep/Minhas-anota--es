@@ -1,0 +1,244 @@
+/* ===============================
+   CORES HEXADECIMAIS (HEX) NO CSS
+   =============================== 
+   
+   As cores em formato HEX (hexadecimal) são uma forma popular
+   de especificar cores na web.
+   
+   Formato: #RRGGBB
+   - Um # seguido de 6 dígitos hexadecimais
+   - Cada par representa a intensidade de uma cor RGB
+   
+   SISTEMA HEXADECIMAL:
+   Usa números 0-9 e letras A-F
+   0 = 0, 1 = 1, ... 9 = 9, A = 10, B = 11, C = 12, D = 13, E = 14, F = 15
+   FF em hex = 255 em decimal (máximo)
+   00 em hex = 0 em decimal (mínimo)
+*/
+
+/* ====================================
+   ESTRUTURA: #RRGGBB
+   ==================================== */
+
+/* RR → Vermelho (Red)
+   Valor: 00 (sem vermelho) até FF (máximo vermelho) */
+
+/* GG → Verde (Green)
+   Valor: 00 (sem verde) até FF (máximo verde) */
+
+/* BB → Azul (Blue)
+   Valor: 00 (sem azul) até FF (máximo azul) */
+
+
+/* ====================================
+   CORES BÁSICAS
+   ==================================== */
+
+.vermelho {
+    color: #FF0000;  /* Vermelho puro: máximo R, mínimo G e B */
+}
+
+.verde {
+    color: #00FF00;  /* Verde puro: mínimo R, máximo G, mínimo B */
+}
+
+.azul {
+    color: #0000FF;  /* Azul puro: mínimo R e G, máximo B */
+}
+
+.preto {
+    color: #000000;  /* Preto: sem cor nenhuma (0,0,0) */
+}
+
+.branco {
+    color: #FFFFFF;  /* Branco: máxima intensidade de todas (255,255,255) */
+}
+
+.cinza {
+    color: #808080;  /* Cinza: intensidades iguais de RGB (128,128,128) */
+}
+
+
+/* ====================================
+   CORES COMUMENTE USADAS
+   ==================================== */
+
+.laranja {
+    color: #FFA500;  /* FF (255 vermelho), A5 (165 verde), 00 (0 azul) */
+}
+
+.rosa {
+    color: #FFC0CB;
+}
+
+.roxo {
+    color: #800080;
+}
+
+.marrom {
+    color: #A52A2A;
+}
+
+.amarelo {
+    color: #FFFF00;  /* FF (vermelho máximo), FF (verde máximo), 00 (sem azul) */
+}
+
+
+/* ====================================
+   FORMA ABREVIADA (Shorthand)
+   ==================================== 
+   
+   Quando cada par de dígitos é REPETIDO,
+   você pode usar a forma curta #RGB
+*/
+
+.vermelho-short {
+    color: #F00;    /* Equivalente a #FF0000 */
+}
+
+.verde-short {
+    color: #0F0;    /* Equivalente a #00FF00 */
+}
+
+.azul-short {
+    color: #00F;    /* Equivalente a #0000FF */
+}
+
+.branco-short {
+    color: #FFF;    /* Equivalente a #FFFFFF */
+}
+
+.preto-short {
+    color: #000;    /* Equivalente a #000000 */
+}
+
+.cinza-short {
+    color: #888;    /* Equivalente a #888888 */
+}
+
+
+/* ====================================
+   TONS DE CINZA
+   ==================================== 
+   
+   Para cinzas, os valores R, G, B são iguais
+*/
+
+.cinza-claro {
+    color: #CCCCCC;  /* Cinza claro */
+}
+
+.cinza-medio {
+    color: #808080;  /* Cinza médio */
+}
+
+.cinza-escuro {
+    color: #333333;  /* Cinza muito escuro */
+}
+
+
+/* ====================================
+   CORES EM DIFERENTES CONTEXTOS
+   ==================================== */
+
+/* Cor de texto */
+.texto-azul {
+    color: #0066CC;
+}
+
+/* Cor de fundo */
+.fundo-claro {
+    background-color: #F0F0F0;
+}
+
+/* Cor da borda */
+.borda-vermelha {
+    border: 2px solid #E74C3C;
+}
+
+/* Múltiplas propriedades */
+.card-destaque {
+    color: #FFFFFF;           /* Texto branco */
+    background-color: #2C3E50; /* Fundo azul escuro */
+    border: 3px solid #F39C12; /* Borda laranja */
+}
+
+
+/* ====================================
+   EXEMPLO: Paleta de Cores
+   ==================================== */
+
+:root {
+    /* Cores primárias */
+    --cor-primaria: #3498DB;    /* Azul */
+    --cor-secundaria: #E74C3C;  /* Vermelho */
+    --cor-sucesso: #27AE60;     /* Verde */
+    
+    /* Cores neutras */
+    --cor-fundo: #FFFFFF;       /* Branco */
+    --cor-texto: #2C3E50;       /* Cinza escuro */
+    --cor-borda: #BDC3C7;       /* Cinza claro */
+}
+
+.botao-primario {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+}
+
+.mensagem-sucesso {
+    color: var(--cor-sucesso);
+    border: 1px solid var(--cor-sucesso);
+}
+
+
+/* ====================================
+   DICA: CONVERTER HEX PARA DECIMAL
+   ==================================== 
+   
+   Às vezes você recebe cores em RGB(255, 165, 0) e precisa converter para HEX:
+   
+   Processo:
+   1. Pegue cada valor decimal (R, G, B)
+   2. Converta cada um para hexadecimal
+   3. Combine: #RRGGBB
+   
+   Exemplo: RGB(255, 165, 0) → #FFA500
+   - 255 em hex = FF
+   - 165 em hex = A5
+   - 0 em hex = 00
+   - Resultado: #FFA500 (laranja)
+   
+   Ferramentas úteis:
+   - Color picker (DevTools do navegador)
+   - Convertidores online
+   - Editores de cor profissionais
+*/
+
+
+/**
+ * VANTAGENS DO HEX:
+ * ✅ Formato compacto (apenas 6 caracteres para cor total)
+ * ✅ Largamente suportado por todos os navegadores
+ * ✅ Fácil de copiar e colar
+ * ✅ Forma curta disponível (#RGB)
+ * 
+ * COMPARAÇÃO COM OUTROS FORMATOS:
+ * - RGB: rgb(255, 165, 0)
+ * - RGBA: rgba(255, 165, 0, 1)
+ * - HSL: hsl(39, 100%, 50%)
+ * - HEX: #FFA500 ← Mais compacto!
+ * 
+ * QUANDO USAR HEX:
+ * ✓ Na maioria dos casos (é o padrão)
+ * ✓ Quando você não precisa de transparência
+ * ✓ Para máxima compatibilidade
+ * 
+ * QUANDO NÃO USAR HEX:
+ * ✗ Quando você precisa de transparência (use RGBA ou HSLA)
+ * ✗ Quando está gerenciando cores com variáveis CSS
+ * 
+ * DICAS EXTRAS:
+ * - Letras maiúsculas ou minúsculas não fazem diferença (#ff0000 = #FF0000)
+ * - HEX não possui transparência (para isso use RGBA ou HSLA)
+ * - É um dos formatos mais usados em design e desenvolvimento web
+ */

@@ -1,0 +1,267 @@
+/* ==========================================
+   PROPRIEDADE: FLEX-DIRECTION
+   ========================================== 
+   
+   A propriedade flex-direction define a direção do eixo principal
+   e a ordem em que os flex items são distribuídos no container.
+   
+   EIXOS FLEXBOX:
+   - Main Axis (Eixo Principal): definido por flex-direction
+   - Cross Axis (Eixo Transversal): perpendicular ao eixo principal
+   
+   Todas as propriedades dependem desses eixos!
+*/
+
+/* ========================================== 
+   OPÇÃO 1: row (PADRÃO)
+   ========================================== 
+   
+   Direção: Horizontal (esquerda → direita)
+   Eixo Principal: Horizontal
+   Eixo Transversal: Vertical
+   
+   Uso: Layouts lado a lado (menus, cards em linha)
+*/
+.container-row {
+  display: flex;
+  flex-direction: row;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+}
+
+.container-row .item {
+  background-color: #3498db;
+  padding: 20px;
+  margin: 10px;
+  color: white;
+  flex: 1;
+}
+
+/* Exemplo visual:
+   [Item 1] [Item 2] [Item 3]
+   ←─── Eixo Principal (main axis) ───→
+*/
+
+
+/* ========================================== 
+   OPÇÃO 2: row-reverse
+   ========================================== 
+   
+   Direção: Horizontal invertida (direita → esquerda)
+   Eixo Principal: Horizontal (invertido)
+   Eixo Transversal: Vertical
+   
+   Uso: Quando você quer inverter a ordem dos itens
+*/
+.container-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+}
+
+.container-row-reverse .item {
+  background-color: #e74c3c;
+  padding: 20px;
+  margin: 10px;
+  color: white;
+  flex: 1;
+}
+
+/* Exemplo visual:
+   [Item 3] [Item 2] [Item 1]
+   ←─── Eixo Principal (main axis) ───→
+*/
+
+
+/* ========================================== 
+   OPÇÃO 3: column
+   ========================================== 
+   
+   Direção: Vertical (cima → baixo)
+   Eixo Principal: Vertical
+   Eixo Transversal: Horizontal
+   
+   Uso: Layouts verticais (navegação, feedbacks, listas)
+*/
+.container-column {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  max-width: 300px;
+}
+
+.container-column .item {
+  background-color: #2ecc71;
+  padding: 20px;
+  margin: 10px;
+  color: white;
+  text-align: center;
+}
+
+/* Exemplo visual:
+   ┌─────────┐
+   │ Item 1  │  ↓
+   ├─────────┤  ↓ Eixo Principal (main axis)
+   │ Item 2  │  ↓
+   ├─────────┤  ↓
+   │ Item 3  │  ↓
+   └─────────┘
+*/
+
+
+/* ========================================== 
+   OPÇÃO 4: column-reverse
+   ========================================== 
+   
+   Direção: Vertical invertida (baixo → cima)
+   Eixo Principal: Vertical (invertido)
+   Eixo Transversal: Horizontal
+   
+   Uso: Quando você quer inverter a ordem dos itens verticamente
+*/
+.container-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  max-width: 300px;
+}
+
+.container-column-reverse .item {
+  background-color: #f39c12;
+  padding: 20px;
+  margin: 10px;
+  color: white;
+  text-align: center;
+}
+
+/* Exemplo visual:
+   ┌─────────┐
+   │ Item 3  │  ↑
+   ├─────────┤  ↑ Eixo Principal (main axis)
+   │ Item 2  │  ↑
+   ├─────────┤  ↑
+   │ Item 1  │  ↑
+   └─────────┘
+*/
+
+
+/* ========================================== 
+   COMPORTAMENTO COM JUSTIFY-CONTENT
+   ========================================== 
+   
+   justify-content afeta o EIXO PRINCIPAL
+   
+   Se flex-direction: row
+   → justify-content alinha HORIZONTALMENTE
+   
+   Se flex-direction: column
+   → justify-content alinha VERTICALMENTE
+*/
+
+/* Exemplo: row + justify-content */
+.flex-row-centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  /* Centra horizontalmente */
+  background-color: #ecf0f1;
+  padding: 20px;
+}
+
+/* Exemplo: column + justify-content */
+.flex-column-spaced {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;  /* Distribui verticalmente */
+  height: 300px;
+  background-color: #ecf0f1;
+  padding: 20px;
+}
+
+
+/* ========================================== 
+   COMPORTAMENTO COM ALIGN-ITEMS
+   ========================================== 
+   
+   align-items afeta o EIXO TRANSVERSAL
+   
+   Se flex-direction: row
+   → align-items alinha VERTICALMENTE
+   
+   Se flex-direction: column
+   → align-items alinha HORIZONTALMENTE
+*/
+
+/* Exemplo: row + align-items */
+.flex-row-aligned {
+  display: flex;
+  flex-direction: row;
+  align-items: center;  /* Centra verticalmente */
+  height: 150px;
+  background-color: #ecf0f1;
+}
+
+/* Exemplo: column + align-items */
+.flex-column-aligned {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centra horizontalmente */
+  background-color: #ecf0f1;
+  padding: 20px;
+}
+
+
+/* ========================================== 
+   TABELA COMPARATIVA
+   ========================================== 
+
+   ┌─────────────────┬────────┬────────────────────┐
+   │ flex-direction  │ Eixo   │ justify-content    │
+   ├─────────────────┼────────┼────────────────────┤
+   │ row             │ Horiz  │ Alinha horizontal  │
+   │ row-reverse     │ Horiz  │ Alinha horizontal  │
+   │ column          │ Vert   │ Alinha vertical    │
+   │ column-reverse  │ Vert   │ Alinha vertical    │
+   └─────────────────┴────────┴────────────────────┘
+*/
+
+
+/* ========================================== 
+   RESUMO E BOAS PRÁTICAS
+   ========================================== 
+   
+   Quando usar cada um:
+   
+   row (PADRÃO):
+   ✓ Menu horizontal
+   ✓ Cards em linha
+   ✓ Navegação
+   ✓ Layout duas colunas lado a lado
+   
+   row-reverse:
+   ✓ Inverter ordem de elementos
+   ✓ Design responsive (inverter em mobile)
+   ✓ Casos especiais de layout
+   
+   column:
+   ✓ Menu vertical/sidebar
+   ✓ Feed de dados
+   ✓ Layout com foco em altura
+   ✓ Fila ou lista
+   
+   column-reverse:
+   ✓ Histórico de mensagens (mais recente em cima)
+   ✓ Inversão específica
+   ✓ Muito menos comum que as outras
+   
+   💡 DICA: flex-direction é a propriedade mais fundamental
+           do Flexbox. Entender bem como muda os eixos é crucial!
+*/
+
+
+
+
+
+
